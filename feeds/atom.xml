@@ -1,0 +1,27 @@
+---
+layout: nil
+baseurl: "http://roundcube.github.io"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Roundcube Webmail Project News</title>
+  <link href="{{ page.baseurl }}/feeds/atom.xml" rel="self" />
+  <link href="{{ page.baseurl }}" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ page.baseurl }}</id>
+  <author>
+    <name>Roundcube Webmail Dev Team</name>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <title>{{ post.title }}</title>
+    <link href="{{ page.baseurl }}{{ post.url }}" />
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ page.baseurl }}{{ post.id }}</id>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+
+</feed>

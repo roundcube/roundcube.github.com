@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>{{ page.title }}</title>
+
+	{% include head.html %}
+</head>
+<body class="article">
+
+<div id="main">
+	<div class="topshadow"></div>
+	<div class="leftshadow"></div>
+	<div class="rightshadow"></div>
+
+	<div id="header">
+		<a href="./"><img src="images/logo.png" class="pngimage" width="212" height="56" alt="Roundcube - open source webmail software" /></a>
+		{% include nav.html %}
+	</div>
+
+	<div id="bodycontent">
+
+	<h1>{{ page.title }}</h1>
+	
+	<span class="newsdate">{{ page.date | date_to_long_string }}</span>
+
+	<div class="bodytext">
+	{{ content }}
+
+	<p class="pagination">&#8672; <a href="/news/">Back to list</a></p>
+	</div>
+
+	<div id="rightcol">
+		<div class="rightbox">
+			<div class="rightboxtop"></div>
+			<div class="rightboxcontent">
+				<h2>Related Posts</h2>
+				<ul class="narrow">
+				{% for rel in site.related_posts %}
+					<li class="rightboxlink"><a href="{{ rel.url }}">{{ rel.title }}</a></li>
+				{% endfor %}
+				</ul>
+
+				<h2>Tags</h2>
+				<ul class="narrow inline">
+				{% for tag in page.tags %}
+					<li><a href="{{ site.baseurl }}news/{{ tag }}">{{ tag }}</a></li>
+				{% endfor %}
+				</ul>
+
+			</div>
+			<div class="rightboxbottom"></div>
+		</div>
+	</div>
+
+	{% include footer.html %}
+</div>
+
+</body>
+</html>

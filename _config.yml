@@ -1,0 +1,5 @@
+safe: true
+baseurl: /
+permalink: news/:year/:month/:day/:title
+paginate: 6
+paginate_path: news/page:num

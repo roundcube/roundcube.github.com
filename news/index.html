@@ -1,0 +1,56 @@
+---
+layout: default
+title: Roundcube Webmail News
+navtitle: News
+permalink: /
+---
+<h1>The Roundcube project news</h1>
+
+<div class="bodytext" style="min-height:125ex">
+
+{% for post in paginator.posts %}
+{% include newsitem.html %}
+{% endfor %}
+
+<p class="pagination">
+{% if paginator.next_page_path != nil %}
+	<span class="left">&#8672; <a href="{{ paginator.next_page_path }}">Older posts</a></span>
+{% endif %}
+{% if paginator.previous_page_path != nil %}
+	<span class="left"><a href="{{ paginator.previous_page_path }}">Newer posts</a> &#8674;</span>
+{% endif %}
+</p>
+
+<h3>Want more?</h3>
+
+<ul>
+	<li>Subscribe to the news <a href="{{ site.baseurl }}feeds/atom.xml">RSS Feed</a>.</li>
+	<li>Find more Roundcube related feeds on our <a href="http://sourceforge.net/projects/roundcubemail/">Sourceforge project page</a>.</li>
+</ul>
+
+</div>
+
+<div id="rightcol">
+	<div class="rightbox">
+		<div class="rightboxtop"></div>
+		<div class="rightboxcontent">
+			<h2 class="inboxtitle">Latest posts from the <a href="http://roundcubeinbox.wordpress.com">Roundcube&nbsp;Inbox</a> blog</h2>
+			
+			
+		</div>
+		<div class="rightboxbottom"></div>
+	</div>
+
+	<div class="rightbox">
+		<div class="rightboxtop"></div>
+		<div class="rightboxcontent">
+			<h2>Tags</h2>
+			<ul class="narrow inline">
+			{% for tag in site.tags %}
+				<li><a href="{{ site.baseurl }}news/{{ tag | first }}">{{ tag | first }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div class="rightboxbottom"></div>
+	</div>
+</div>

@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>{{ page.title }}</title>
-   <meta name="author" content="Roundcube Webmail Dev Team" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>{{ page.title }}</title>
+
+	{% include head.html %}
 </head>
-<body>
-	
+<body class="{{ page.bodyclass }}">
+
+<div id="main">
+	<div class="topshadow"></div>
+	<div class="leftshadow"></div>
+	<div class="rightshadow"></div>
+
+	<div id="header">
+		<a href="./"><img src="images/logo.png" class="pngimage" width="212" height="56" alt="Roundcube - open source webmail software" /></a>
+		{% include nav.html %}
+	</div>
+
+	<div id="bodycontent">
+
 	{{ content }}
-	
+
+	{% include footer.html %}
+</div>
+
 </body>
+</html>

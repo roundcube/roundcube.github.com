@@ -1,0 +1,25 @@
+/*
+  Roundcube.net CSS hacks for Internet Explorer <= 7
+  Version 1.0
+*/
+
+body {
+	font-size: 9pt;
+	margin-top: 0px;
+}
+
+p {
+	margin: 1em 0;
+}
+
+ul {
+	margin: 1em 0 0.3em 1.4em;
+}
+
+#screenthumbs div img.mirror {
+	top: -7px;
+}
+
+#screenthumbs div p.tooltip {
+	top: -45px;
+}
