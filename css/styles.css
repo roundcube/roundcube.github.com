@@ -83,6 +83,10 @@ blockquote {
 	margin-right: 35px;
 }
 
+blockquote.bodytext {
+	width: 35em;
+}
+
 .bqstart {
 	position: absolute;
 	left: -40px;
