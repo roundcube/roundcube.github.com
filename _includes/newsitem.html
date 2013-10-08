@@ -1,5 +1,5 @@
 <div class="newsitem">
 	<span class="newsdate">{{ post.date | date_to_long_string }}</span>
 	<h2><a href="{{ post.url }}" class="newslink">{{ post.title }}</a></h2>
-	<p class="newstext">{{ post.excerpt }} <a href="{{ post.url }}" class="readmore">Read more...</a></p>
+	<div class="newstext">{{ post.excerpt }} <a href="{{ post.url }}" class="readmore">Read more...</a></div>
 </div>

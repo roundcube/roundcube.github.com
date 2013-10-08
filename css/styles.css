@@ -20,6 +20,10 @@ a.blind, a.blind:visited {
 	border: 0;
 }
 
+a.strong {
+	font-weight: bold;
+}
+
 img {
 	border: 0;
 }
@@ -37,6 +41,10 @@ h1 {
 h2 {
 	font-size: 12pt;
 	margin: 1.5em 0 0.2em 0;
+}
+
+h2.logotitle {
+    margin-bottom: 0;
 }
 
 h3 {
@@ -344,8 +352,13 @@ blockquote {
 	font-style: italic;
 }
 
-p.paginator {
-	margin-top: 30px;
+p.pagination {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.pagination .right {
+	float: right;
 }
 
 .rightbox .newsitem {
@@ -602,7 +615,7 @@ li.rightboxlink {
 #screenthumbs div p.tooltip {
 	position: relative;
 	top: -32px;
-	display: block;
+	display: none;
 	width: 130px;
 	color: white;
 	margin: 0;

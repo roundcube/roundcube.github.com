@@ -1,0 +1,161 @@
+---
+layout: default
+title: Search the Roundcube.net platforms
+---
+<h1>Search the Roundcube.net platforms</h1>
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+	var siteSearch;
+	
+	function sitesearch_complete()
+	{
+		// Grab our content div, clear it.
+		var contentDiv = document.getElementById('searchresults');
+		contentDiv.innerHTML = '';
+		
+		// Check that we got results
+		if (siteSearch.results && siteSearch.results.length > 0) {
+			// Loop through our results, printing them to the page.
+			for (var i = 0; i < siteSearch.results.length; i++) {
+				var result = siteSearch.results[i];
+				// TODO: filter ads, if any
+				contentDiv.appendChild(result.html.cloneNode(true));
+			}
+
+			// add the paging links so the user can see more results.
+			sitesearch_pagination();
+		}
+		else {
+			var span = document.createElement('span');
+			span.className = 'alert';
+			span.innerHTML = 'Sorry, no results found :-(';
+			contentDiv.appendChild(span);
+		}
+	}
+	
+	function sitesearch_pagination()
+	{
+		// The cursor object has all things to do with pagination
+		var cursor = siteSearch.cursor;
+		var curPage = cursor.currentPageIndex; // check what page the app is on
+		
+		if (cursor.pages.length > 1) {
+			var pagesDiv = document.createElement('div');
+			pagesDiv.className = 'gs-pagination';
+			pagesDiv.innerHTML = 'Pages:&nbsp;&nbsp;';
+		
+			for (var i = 0; i < cursor.pages.length; i++) {
+				var page = cursor.pages[i];
+				if (curPage == i) { // if we are on the curPage, then don't make a link
+					var label = document.createElement('span');
+					label.innerHTML = page.label;
+					pagesDiv.appendChild(label);
+				}
+				else {
+					// If we aren't on the current page, then we want a link to this page.
+					// So we create a link that calls the gotoPage() method on the searcher.
+					var link = document.createElement('a');
+					link.href = 'javascript:siteSearch.gotoPage('+i+');';
+					link.innerHTML = page.label;
+					pagesDiv.appendChild(link);
+				}
+			}
+			
+			document.getElementById('searchresults').appendChild(pagesDiv);
+		}
+		
+		// display results count
+		if (cursor) {
+			var countsDiv = document.createElement('p');
+			countsDiv.className = 'hint';
+			countsDiv.innerHTML = cursor.estimatedResultCount + ' results found';
+			document.getElementById('searchresults').appendChild(countsDiv);
+		}
+	}
+	
+	function exec_sitesearch(form)
+	{
+		var query = form.elements.q.value;
+		if (query && window.siteSearch) {
+			var site = 'roundcube.net'
+			for (var i=0; i < form.elements.site.length; i++) {
+				if (form.elements.site[i].checked) {
+					site = form.elements.site[i].value;
+					break;
+				}
+			}
+			location.href = '/search/#' + encodeURIComponent(query)+'@'+site;
+			siteSearch.setSiteRestriction(site);
+			siteSearch.execute(query);
+		}
+			
+		return false;
+	}
+
+	google.load('search', '1');
+	google.setOnLoadCallback(function()
+	{
+		siteSearch = new google.search.WebSearch();
+		siteSearch.setResultSetSize(google.search.Search.LARGE_RESULTSET);
+		siteSearch.setLinkTarget(google.search.Search.LINK_TARGET_SELF);
+		siteSearch.setSearchCompleteCallback(this, sitesearch_complete, null);
+		siteSearch.setRestriction(google.search.Search.RESTRICT_EXTENDED_ARGS, { lr:'lang_en', filter:1 });
+
+		if (window.location.hash) {
+			var q = location.hash.substr(1).split('@');
+			var site = q[1] || 'roundcube.net';
+			var query = decodeURIComponent(q[0]);
+			siteSearch.setSiteRestriction(site);
+			siteSearch.execute(query);
+
+			// update form fields
+			document.getElementById('gsq').value = query;
+			var form = document.forms.gs;
+			for (var i=0; i < form.elements.site.length; i++) {
+				form.elements.site[i].checked = form.elements.site[i].value == site;
+			}
+		}
+		else if (document.getElementById('gsq').value != '')
+			document.forms.gs.submit();
+	});
+
+</script>
+
+<div id="searchform" class="bodytext" style="margin-top:2em">
+	<form name="gs" action="/search" onsubmit="return exec_sitesearch(this)">
+		<input type="text" name="q" id="gsq" size="40" />
+		<input type="submit" value="Search" />
+		<span class="poweredby" style="margin-left:1em">Powered by Google</span>
+		
+		<div class="searchopts">
+			Site:
+			<label><input type="radio" name="site" value="roundcube.net" checked="true" />&nbsp;All</label>
+			<label><input type="radio" name="site" value="lists.roundcube.net" />&nbsp;Mailing lists</label>
+			<label><input type="radio" name="site" value="trac.roundcube.net" />&nbsp;Trac</label>
+		</div>
+	</form>
+</div>
+
+<div id="searchresults" class="bodytext" style="margin-top:1.5em">
+	<span class="hint">Type your search terms in the field above and press the magic button</span>
+</div>
+
+<noscript><p class="alert">The site search requires Javascript enabled!</p></noscript>
+
+<div id="rightcol">
+	<div class="rightbox">
+		<div class="rightboxtop"></div>
+		<div class="rightboxcontent">
+			<h2>Directly search on these sites</h2>
+			<ul>
+				<li class="rightboxlink"><a href="http://www.roundcubeforum.net/index.php?action=search">Online forum</a></li>
+				<li class="rightboxlink"><a href="http://trac.roundcube.net/search">Bug tracker</a></li>
+			</ul>
+		</div>
+		<div class="rightboxbottom"></div>
+	</div>
+</div>
+
+

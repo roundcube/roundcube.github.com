@@ -93,15 +93,17 @@ permalink: /
 <p class="bodytext"><a href="/license">More details about licensing and the exceptions for skins and plug-ins</a></p>
 
 <div id="rightcol">
-	<div class="rightboxgray">
-		<img src="images/mailview_small.jpg" width="224" height="155" alt="Mail view" /><br />
-		<img src="images/mailview_mirror.png" class="pngimage" width="224" height="58" alt="" />
-		<p class="adboxtext" style="margin-top:-38px">
-			Roundcube provides a streamlined user interface. The default skin includes icons
-			designed by Stephen Horlander and Kevin Gerich for Mozilla.org.
-		</p>
-		<p style="margin-top:10px">
-			<a href="screens" title="See more screen shots"><img src="images/button_screenshots.png" width="150" height="43" alt="Screenshots" /></a>
+	{% include aboutrightcol.html %}
+
+	<div class="rightbox">
+		<div class="rightboxtop"></div>
+		<div class="rightboxcontent">
+			<h1>Services Using and Supporting Roundcube</h1>
+			<p>Get to know the top-notch services that not only use but also actively support
+				our free software.</p>
+			<p><a href="about/supporters/" class="strong">See our Supporters</a></p>
+		</div>
+		<div class="rightboxbottom"></div>
 	</div>
 
 	<div class="rightbox">
@@ -111,8 +113,7 @@ permalink: /
 			<p>The <a href="http://kolab.org">Kolab</a> Groupware Solution uses Roundcube as its web client.
 			  It offers a full email and groupware server out of the box including LDAP address books, calendars, tasks, mobile synchronization and much more.</p>
 		</div>
-		<div class="rightboxbottom"><img src="images/rightbox_bottom.gif" width="255" height="8" alt="" /></div>
+		<div class="rightboxbottom"></div>
 	</div>
-
 </div>
 

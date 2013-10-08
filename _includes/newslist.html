@@ -1,0 +1,22 @@
+<h1>{{ page.title }}</h1>
+
+<div class="bodytext" style="min-height:125ex">
+
+{% for post in posts limit:10 %}
+{% include newsitem.html %}
+{% endfor %}
+
+<p class="pagination">&#8672; <a href="/news/">Back to News Overview</a></p>
+
+</div>
+
+<div id="rightcol">
+	<div class="rightbox">
+		<div class="rightboxtop"></div>
+		<div class="rightboxcontent">
+			{% include roundcubeinbox.html %}
+			
+		</div>
+		<div class="rightboxbottom"></div>
+	</div>
+</div>

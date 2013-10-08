@@ -4,7 +4,7 @@ title: Roundcube Webmail News
 navtitle: News
 permalink: /
 ---
-<h1>The Roundcube project news</h1>
+<h1>The Roundcube Project News</h1>
 
 <div class="bodytext" style="min-height:125ex">
 
@@ -14,11 +14,12 @@ permalink: /
 
 <p class="pagination">
 {% if paginator.next_page_path != nil %}
-	<span class="left">&#8672; <a href="{{ paginator.next_page_path }}">Older posts</a></span>
+	<span class="right"><a href="{{ paginator.next_page_path }}">Older posts</a> &#8674;</span>
 {% endif %}
 {% if paginator.previous_page_path != nil %}
-	<span class="left"><a href="{{ paginator.previous_page_path }}">Newer posts</a> &#8674;</span>
+	<span class="left">&#8672; <a href="{{ paginator.previous_page_path }}">Newer posts</a></span>
 {% endif %}
+<br style="clear:both" />
 </p>
 
 <h3>Want more?</h3>
@@ -34,9 +35,7 @@ permalink: /
 	<div class="rightbox">
 		<div class="rightboxtop"></div>
 		<div class="rightboxcontent">
-			<h2 class="inboxtitle">Latest posts from the <a href="http://roundcubeinbox.wordpress.com">Roundcube&nbsp;Inbox</a> blog</h2>
-			
-			
+			{% include roundcubeinbox.html %}
 		</div>
 		<div class="rightboxbottom"></div>
 	</div>

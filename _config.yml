@@ -1,4 +1,5 @@
 safe: true
+encoding: UTF-8
 baseurl: /
 permalink: news/:year/:month/:day/:title
 paginate: 6
