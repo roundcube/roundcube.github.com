@@ -1,6 +1,7 @@
 safe: true
 encoding: UTF-8
 baseurl: /
+hostname: "http://roundcube.net"
 permalink: news/:year/:month/:day/:title
 paginate: 6
 paginate_path: news/page:num
