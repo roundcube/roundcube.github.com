@@ -12,7 +12,7 @@ body {
 
 a, a:active, a:visited {
 	color: #930F09;
-	border: 0;
+	border-width: 0;
 }
 
 a.blind, a.blind:visited {
@@ -157,9 +157,9 @@ blockquote.bodytext {
 
 #homescreen {
 	position: relative;
-	top: 10px;
-	left: -23px;
-	height: 510px;
+	top: 0px;
+	left: 0px;
+	min-height: 560px;
 }
 
 #homescreenshot {
@@ -168,10 +168,35 @@ blockquote.bodytext {
 	left: 26px;
 }
 
+#homescreenshotv10 {
+	position: absolute;
+	top: 0px;
+	left: -60px;
+}
+
 #homescreenmirror {
 	position: absolute;
 	top: 366px;
 	left: 26px;
+}
+
+#homenewsheadlines {
+	position: relative;
+	top: 440px;
+	width: 520px;
+	margin-bottom: 2em;
+}
+
+#homenewsheadlines h2 {
+	margin-bottom: 1em;
+}
+
+.newsheadlines td {
+	padding: 2px;
+}
+
+.newsheadlines td.newsdate {
+	padding-right: 1em;
 }
 
 #releasedbadge {
@@ -479,7 +504,7 @@ li.rightboxlink {
 	text-align: left;
 	vertical-align: bottom;
 	font-family: Arial, Helvetica, sans-serif;
-	padding: 0.5em 1em 0.3em 0.6em;
+	padding: 0.4em 1em 0.4em 0.6em;
 	border: 1px solid #999;
 }
 
@@ -505,11 +530,11 @@ li.rightboxlink {
 
 .dltable tbody td.dlchecksum {
 	font-family: monospace;
-	font-size: 85%;
+	font-size: 1em;
 }
 
 .dltable td.dlbutton {
-	padding: 4px 6px;
+	padding: 4px 6px 3px 6px;
 	border-left: none;
 	text-align: right;
 }
@@ -662,6 +687,7 @@ body.home #rightcol {
 
 body.home #footer {
 	background: transparent;
+	padding-left: 0;
 }
 
 .newtag {
@@ -672,6 +698,93 @@ body.home #footer {
 	padding-left: 0.5em;
 }
 
+.btn,
+.btn:visited {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+.btn-download,
+.btn-download:visited {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  background-color: #79bb1c;
+  *background-color: #61a402;
+  background-image: -moz-linear-gradient(top, #85cb20, #61a402);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#85cb20), to(#61a402));
+  background-image: -webkit-linear-gradient(top, #85cb20, #61a402);
+  background-image: -o-linear-gradient(top, #85cb20, #61a402);
+  background-image: linear-gradient(to bottom, #85cb20, #61a402);
+  background-repeat: repeat-x;
+  border-color: #addd67 #4d8101 #4d8101 #addd67;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-download:active {
+	color: #fff;
+	border-width: 1px;
+	background: #61a402 !important;
+}
+
+.btn-download .caps {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 6px 8px;
+}
+
+.btn-download .topline {
+	text-transform: uppercase;
+}
+
+.btn-download .version {
+	display: block;
+	text-align: center;
+	line-height: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	color: #ddd;
+}
 
 /* Google site search styles */
 

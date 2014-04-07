@@ -5,10 +5,23 @@ date: 2013-11-03T15:40:00Z
 ---
 
 <div id="homescreen">
-	<img id="homescreenshadow" src="images/homescreen_shadow.png" width="560" height="485" alt="" />
-	<img id="homescreenshot" src="images/homescreen.jpg" width="510" height="346" style="" alt="screen of Roundcube webmail" />
+	<img id="homescreenshotv10" src="images/homescreen_v1.0.jpg" width="640" height="412" style="" alt="Welcome Roundcube Webmail 1.0" />
+
+	<div id="homenewsheadlines">
+		<h2>Latest News</h2>
+		<table class="newsheadlines">
+		{% for post in site.posts limit:4 %}
+		<tr>
+			<td class="newsdate">{{ post.date | date_to_long_string }}</td>
+			<td class="link"><a href="{{ post.url }}" class="newslink">{{ post.title }}</a></td>
+		</tr>
+		{% endfor %}
+		</table>
+	</div>
 </div>
+<!--
 <div id="releasedbadge" class="pngimage" ><span class="caps">Just Released</span> Version {% include version.txt %}</div>
+-->
 
 <div id="rightcol">
 	<h1>Roundcube webmail...</h1>
@@ -19,11 +32,11 @@ date: 2013-11-03T15:40:00Z
 		<a href="/about">More information...</a>
 	</p>
 	
-	<p style="height:46px">
+	<p style="height:46px; margin-top:23px; margin-left:32px">
 		{% include downloadbutton.html %}
 	</p>
 	
-	<h2>Features</h2>
+	<h2 style="margin-top:60px">Features</h2>
 	<ul>
 		<li>Multilingual capabilities</li>
 		<li>Find-as-you-type address book</li>
