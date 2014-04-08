@@ -22,7 +22,7 @@ And mainly we were busy cleaning up the codebase, fixing a lot of bugs, making i
 more stable and writing more documentation.
 
 With this release, we'd also like to introduce the Roundcube plugins repository at
-[plugins.roundcube.net](plugins.roundcube.net). This central platform should help you
+[plugins.roundcube.net](http://plugins.roundcube.net). This central platform should help you
 find the right plugins for your Roundcube installation and makes it simple to keep them up-to-date.
 The installation and update mechanism is based on [Composer](https://getcomposer.org)
 and [Packagist](https://packagist.org/).
