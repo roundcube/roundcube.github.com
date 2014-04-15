@@ -608,13 +608,14 @@ li.rightboxlink {
 
 #screenthumbs .reflection {
 	position: relative;
-	left: 4px;
+	left: 6px;
 	top: -4px;
 	width: 120px;
 	height: 32px;
 	overflow: hidden;
 }
 
+.rightboxgray .reflection img,
 #screenthumbs .reflection img {
 	-webkit-transform: scaleY(-1);
 	   -moz-transform: scaleY(-1);
@@ -625,7 +626,8 @@ li.rightboxlink {
 	filter: alpha(opacity='20');
 }
 
-#screenthumbs .overlay {
+.rightboxgray .reflection .overlay,
+#screenthumbs .reflection .overlay {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -639,6 +641,26 @@ li.rightboxlink {
 	background: -ms-linear-gradient(top, rgba(132,132,132,0) 0%, rgba(132,132,132,1) 100%);
 	background: linear-gradient(to bottom, rgba(132,132,132,0) 0%, rgba(132,132,132,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00848484', endColorstr='#848484', GradientType=0);
+}
+
+.rightboxgray .reflection {
+	position: relative;
+	width: 224px;
+	height: 58px;
+	left: 0;
+	top: -2px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.rightboxgray .reflection .overlay {
+	width: 224px;
+	height: 58px;
+}
+
+.rightboxgray .adboxtext {
+	position: relative;
+	z-index: 3;
 }
 
 #screenthumbs div p.tooltip {
