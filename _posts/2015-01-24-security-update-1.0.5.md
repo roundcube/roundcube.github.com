@@ -5,7 +5,7 @@ date: 2015-01-24 16:52:00Z
 tags: updates security
 ---
 We just published a security update to the stable version 1.0.
-Beside a recently reported Cross-Site-Scriping vulnerability,
+Beside a recently reported Cross-Site-Scripting vulnerability,
 this release also contains some bug fixes and improvements we
 found important for the long term support branch of Roundcube.
 
