@@ -159,7 +159,7 @@ blockquote.bodytext {
 	position: relative;
 	top: 0px;
 	left: 0px;
-	min-height: 560px;
+	min-height: 785px;
 }
 
 #homescreenshot {
@@ -180,9 +180,16 @@ blockquote.bodytext {
 	left: 26px;
 }
 
+#homecambaignbanner {
+	position: absolute;
+	top: 385px;
+	left: -27px;
+	width: 550px;
+}
+
 #homenewsheadlines {
 	position: relative;
-	top: 440px;
+	top: 650px;
 	width: 520px;
 	margin-bottom: 2em;
 }
