@@ -2,7 +2,7 @@
 layout: article
 title: Roundcube Next is coming and we need your help
 date: 2015-05-03 17:00:00Z
-categories: []
+tags: announcement
 ---
 Roundcube prouldy announces the crowd funding campaign to
 bring our vision of a better email experience to reality.
@@ -22,7 +22,7 @@ to drive the professional software development process behind this plan.
 Please join the fun at [roundcu.be/next](http://igg.me/at/roundcubenext) and support our
 crowd funding campaign either directly or by simply spreading the word about it.
 
-[![Roundcube Next Campaign Video](//img.youtube.com/vi/m8J8Ec-uzSg/0.jpg)](http://www.youtube.com/watch?v=m8J8Ec-uzSg)
+[![Roundcube Next Campaign Video](//img.youtube.com/vi/_8s2ssoUeYI/0.jpg)](http://www.youtube.com/watch?v=_8s2ssoUeYI)
 
 
 
