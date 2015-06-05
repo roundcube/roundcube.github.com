@@ -858,3 +858,21 @@ body.home #footer {
 	font-style: italic;
 }
 
+a.IndiegogoButton,
+a.IndiegogoButton:visited {
+	display: inline-block;
+	font-family: "Benton Sans","Helvetica","sans-serif";
+	font-weight: bold;
+	padding: 4px 12px;
+	color: #fff;
+	background-color: #eb1478;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+a.FlattrButton + a.IndiegogoButton {
+	margin-left: 1.5em;
+	position: relative;
+	top: -8px;
+}
