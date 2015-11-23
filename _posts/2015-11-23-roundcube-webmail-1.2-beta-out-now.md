@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Roundcube Webmail 1.1-beta out now
+title: Roundcube Webmail 1.2-beta out now
 date: 2015-11-23 16:30:25Z
 tags: releases
 ---
