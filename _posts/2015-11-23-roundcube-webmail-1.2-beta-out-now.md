@@ -20,7 +20,7 @@ The PGP encryption support in Roundcube comes with two options:
 
 ## Mailvelope
 
-The integration of this [browser plugin]((https://www.mailvelope.com)) for Firefox 
+The integration of this [browser plugin](https://www.mailvelope.com) for Firefox 
 and Chrome comes  out of the box in Roundcube 1.2 and is enabled if the Mailvelope 
 API is detected in a user's browser. See the [Mailvelope documentation](https://www.mailvelope.com/en/help#watchlist) 
 how to enable it for your site.
