@@ -99,6 +99,18 @@ lastmod: 2016-04-19T20:07:00Z
 	<div class="tableboxbottom"></div>
 </div>
 
+<h2>PGP signatures for package verification</h2>
+<p>Release tarballs listed above are signed with PGP to allow you to verify the authencity. We sign them with 
+	the identity &quot;<em>Roundcube Developers &lt;devs@roundcube.net&gt;</em>&quot; alias <strong>41C4F7D5</strong>
+	and the public key can be downloaded from the <a href="http://pgp.mit.edu/pks/lookup?op=vindex&search=0x5AB2BAA141C4F7D5">pgp.mit.edu</a> 
+	keyserver or from <a href="/download/pubkey.asc">our&nbsp;website</a>. The signatures can be found with the according
+	release item on the <a href="https://github.com/roundcube/roundcubemail/releases">GitHub releases page</a>.
+</p>
+
+<p>After downloading the <a href="/download/pubkey.asc">pubkey</a> and the signature file, verify packages with<br>
+	<pre><tt>&nbsp; gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</tt></pre>
+</p>
+
 <h2>Installation</h2>
 
 <ul>
