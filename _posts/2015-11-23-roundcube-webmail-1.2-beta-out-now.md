@@ -41,7 +41,7 @@ See the plugin's README for details.
 Also read [this blogpost](https://kolabian.wordpress.com/2015/10/13/enigma-plugin-pgp-encryption/) 
 about the Enigma plugin and how it works.
 
-**IMPORTANT**: with this version, we finally deprecate some [old Roundcube library functions](https://github.com/roundcube/roundcubemail/blob/master/program/include/bc.php).
+**IMPORTANT**: with this version, we finally deprecate some [old Roundcube library functions](https://github.com/roundcube/roundcubemail/blob/release-1.2/program/include/bc.php).
 Please test your plugins thoroughly and look for deprecation warnings in the logs.
 
 See the complete Changelog at [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog) 
