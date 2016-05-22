@@ -5,7 +5,7 @@ date: 2016-05-22 12:34:23Z
 tags: releases stable
 ---
 We proudly announce the stable version 1.2.0 of Roundcube Webmail which is now available for download.
-It introduces new features since version 1.1 covering on security and PGP encryption topics:
+It introduces new features since version 1.1 covering security and PGP encryption topics:
 
 * PHP7 compatibility
 * PGP encryption
