@@ -288,6 +288,7 @@ blockquote.bodytext {
 
 .bodytext {
 	width: 38em;
+	min-height: 30em;
 	line-height: 1.4em;
 }
 
