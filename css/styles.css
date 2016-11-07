@@ -292,6 +292,10 @@ blockquote.bodytext {
 	line-height: 1.4em;
 }
 
+.bodytext.unlimited {
+	min-height: 0;
+}
+
 #bodycontent li {
 	line-height: 1.4em;
 	padding-bottom: 0.1em;
