@@ -1,6 +1,5 @@
 safe: true
 encoding: UTF-8
-# baseurl: /
 url: https://roundcube.net
 enforce_ssl: roundcube.net
 hostname: "https://roundcube.net"
