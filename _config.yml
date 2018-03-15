@@ -6,3 +6,4 @@ hostname: "https://roundcube.net"
 permalink: news/:year/:month/:day/:title
 paginate: 6
 paginate_path: news/page:num
+exclude: [vendor]
