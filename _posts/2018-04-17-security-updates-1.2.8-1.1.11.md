@@ -18,3 +18,7 @@ See the full changelog in the release notes on the according Github download pag
 
 We strongly recommend to update all productive installations of Roundcube 1.2.x and 1.1.x respectively.
 Please do backup your data before updating!
+
+# UPDATE
+
+An unintended regression was added with the fix for the IMAP command injection vulnerability which [has also been fixed](/news/2018/04/19/updates-1.2.9-1.1.12-released) now. We therefore recommend to update to versions [1.2.9](https://github.com/roundcube/roundcubemail/releases/tag/1.2.9) and [1.1.11](https://github.com/roundcube/roundcubemail/releases/tag/1.1.12) right away.
