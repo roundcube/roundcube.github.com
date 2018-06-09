@@ -25,20 +25,36 @@ ul.ul-striped li:nth-child(even){
   background-color: #f5f5f5;
 }
 
+ul.donateinline {
+  list-style: none;
+}
+
 ul.donateinline li {
   list-style: none;
   float: left;
   margin-right: 2rem;
 }
 
-ul.screens {
-  padding: 0;
+ul.tags {
+  list-style: none;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-ul.tags li,
-ul.screens li {
-  list-style: none;
+ul.tags li {
   float: left;
+  margin: 0.5rem;
+}
+
+ul.screens {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+ul.screens li {
+  display: inline-block;
   margin: 0.5rem;
 }
 
