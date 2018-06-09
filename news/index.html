@@ -8,9 +8,11 @@ lastmod: 2017-10-31T20:26:00Z
     <div class="col-md-8">
         <h1>The Roundcube Project News</h1>
 
-        {% for post in paginator.posts %}
-        {% include newsitem.html %}
-        {% endfor %}
+        <div class="artical-list">
+            {% for post in paginator.posts %}
+            {% include newsitem.html %}
+            {% endfor %}
+        </div>
 
         <nav>
             <ul class="pagination justify-content-center">
