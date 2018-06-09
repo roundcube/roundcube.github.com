@@ -4,66 +4,60 @@ title: Roundcube - Free and Open Source Webmail Software
 date: 2017-06-26T19:20:00Z
 ---
 
-<div id="homescreen">
-	<img id="homescreenshotv10" src="/images/homescreen_v1.3.jpg" width="640" height="412" style="" alt="Welcome Roundcube Webmail 1.3" />
-<!--
-	<div id="homecambaignbanner">
-		<a href="https://www.indiegogo.com/projects/roundcube-next--2" title="Visit our crowdfunding page for more information">
-			<img src="/images/roundcube-next-banner.png" width="549" height="216" alt="Become part of the Roundcube Next generation" border="0" />
-		</a>
-	</div>
--->
-	<div id="homenewsheadlines">
-		<h2>Latest News</h2>
-		<table class="newsheadlines">
-		{% for post in site.posts limit:4 %}
-		<tr>
-			<td class="newsdate">{{ post.date | date_to_long_string }}</td>
-			<td class="link"><a href="{{ post.url }}" class="newslink">{{ post.title }}</a></td>
-		</tr>
-		{% endfor %}
-		</table>
-	</div>
-</div>
-<!--
-<div id="releasedbadge" class="pngimage" ><span class="caps">Just Released</span> Version {% include version.txt %}</div>
--->
-
-<div id="rightcol">
-	<h1>Roundcube webmail...</h1>
-	<p>
-		...is a browser-based multilingual IMAP client with an application-like user interface.
-		It provides full functionality you expect from an email client, including MIME support,
-		address book, folder manipulation, message searching and spell checking.
-		<a href="/about">More information...</a>
-	</p>
-	
-	<p style="height:46px; margin-top:23px; margin-left:32px">
-		{% include downloadbutton.html %}
-	</p>
-	
-	<h2 style="margin-top:60px">Features</h2>
-	<ul>
-		<li>Multilingual capabilities</li>
-		<li>Find-as-you-type address book</li>
-		<li>Richtext/HTML message composing</li>
-		<li>Searching messages and contacts</li>
-		<li>Canned response templates<span class="newtag">New!</span></li>
-		<li>Int. domain names (IDNA)</li>
-		<li>Shared folders and ACL</li>
-		<li>Full featured address book</li>
-		<li>Extensible using the Plug-in API</li>
-	</ul>
-	<a href="/about/#features">Complete list of features</a>
-	
-	<div style="text-align:left">
-		<p class="poweredby">Powered by:</p>
-		<a href="https://sourceforge.net/projects/roundcubemail"><img src="//sflogo.sourceforge.net/sflogo.php?group_id=139281&type=12" alt="Get Roundcube Webmail at SourceForge.net." border="0" height="30" width="120" /></a>
-
-		<p class="ohlohbadge">
-			<script type="text/javascript" src="//www.openhub.net/p/240/widgets/project_thin_badge.js"></script>
-		</p>
-	</div>
-	
+<div id="banner">
+    <img id="homescreenshotv10" src="/images/banner.png" width="1140" height="400" class="img-fluid" alt="Welcome Roundcube Webmail" />
 </div>
 
+<main role="main" class="container" style="padding-top: 2rem;">
+    <h1>Roundcube webmail...</h1>
+    <p>
+        ...is a browser-based multilingual IMAP client with an application-like user interface.
+        It provides full functionality you expect from an email client, including MIME support,
+        address book, folder manipulation, message searching and spell checking.
+        <a href="/about">More information...</a>
+    </p>
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-8">
+                {% include downloadbutton.html %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Features</h2>
+                <ul>
+                    <li>Multilingual capabilities</li>
+                    <li>Find-as-you-type address book</li>
+                    <li>Richtext/HTML message composing</li>
+                    <li>Searching messages and contacts</li>
+                    <li>Canned response templates<span class="newtag">New!</span></li>
+                    <li>Int. domain names (IDNA)</li>
+                    <li>Shared folders and ACL</li>
+                    <li>Full featured address book</li>
+                    <li>Extensible using the Plug-in API</li>
+                </ul>
+
+                <a href="/about/#features">Complete list of features</a>
+            </div>
+            <div class="col-md-4">
+                <br />
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <span class="text-white">Latest News</span>
+                    </div>
+                    <ul class="list-group list-group-flush ul-striped">
+                        {% for post in site.posts limit:4 %}
+                            <li class="list-group-item">
+                                <a href="{{ post.url }}" class="newslink">{{ post.title }}</a><br />
+                                <span class="postdate text-muted font-italic small">{{ post.date | date_to_long_string }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 250px;"></div>
+</main>

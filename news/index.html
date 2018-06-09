@@ -4,52 +4,57 @@ title: Roundcube Webmail News
 navtitle: News
 lastmod: 2017-10-31T20:26:00Z
 ---
-<h1>The Roundcube Project News</h1>
+<div class="row">
+    <div class="col-md-8">
+        <h1>The Roundcube Project News</h1>
 
-<div class="bodytext" style="min-height:125ex">
+        {% for post in paginator.posts %}
+        {% include newsitem.html %}
+        {% endfor %}
 
-{% for post in paginator.posts %}
-{% include newsitem.html %}
-{% endfor %}
+        <nav>
+            <ul class="pagination justify-content-center">
+                {% if paginator.next_page_path != nil %}
+                    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts</a></li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Older posts</a></li>
+                {% endif %}
 
-<p class="pagination">
-{% if paginator.next_page_path != nil %}
-	<span class="right"><a href="{{ paginator.next_page_path }}">Older posts</a> &#8674;</span>
-{% endif %}
-{% if paginator.previous_page_path != nil %}
-	<span class="left">&#8672; <a href="{{ paginator.previous_page_path }}">Newer posts</a></span>
-{% endif %}
-<br style="clear:both" />
-</p>
+                {% if paginator.previous_page_path != nil %}
+                    <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path }}" tabindex="-1">Newer posts</a></li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Newer posts</a></li>
+                {% endif %}
+            </ul>
+        </nav>
 
-<h3>Want more?</h3>
+        <h3>Want more?</h3>
+        <ul>
+            <li>Subscribe to the news <a href="/feeds/atom.xml">RSS Feed</a>.</li>
+        </ul>
+    </div>
 
-<ul>
-	<li>Subscribe to the news <a href="/feeds/atom.xml">RSS Feed</a>.</li>
-	<li>Find more Roundcube related feeds on our <a href="http://sourceforge.net/projects/roundcubemail/">Sourceforge project page</a>.</li>
-</ul>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Latest posts from the planet Roundcube blogs
+            </div>
+            <ul class="list-group list-group-flush ul-striped">
+                {% include roundcubeinbox.html %}
+            </ul>
+        </div>
 
-</div>
+        <br />
 
-<div id="rightcol">
-	<div class="rightbox">
-		<div class="rightboxtop"></div>
-		<div class="rightboxcontent">
-			{% include roundcubeinbox.html %}
-		</div>
-		<div class="rightboxbottom"></div>
-	</div>
-
-	<div class="rightbox">
-		<div class="rightboxtop"></div>
-		<div class="rightboxcontent">
-			<h2>Tags</h2>
-			<ul class="narrow inline">
-			{% for tag in site.tags %}
-				<li><a href="/news/{{ tag | first }}">{{ tag | first }}</a></li>
-			{% endfor %}
-			</ul>
-		</div>
-		<div class="rightboxbottom"></div>
-	</div>
+        <div class="card">
+            <div class="card-header">
+                Tags
+            </div>
+            <ul class="tags">
+                {% for tag in site.tags %}
+                    <li><a href="/news/{{ tag | first }}">{{ tag | first }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>

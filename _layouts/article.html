@@ -1,60 +1,66 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>{{ page.title }}</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	{% include head.html %}
+    <title>{{ page.title }}</title>
+
+    <meta name="keywords" content="round,cube,roundcube,webmail,email,mail,client,software,solution,application,imap,php,open source,free,github,development" />
+    <meta name="description" content="Free and open source webmail software for the masses, written in PHP" />
+
+    {% include head.html %}
 </head>
-<body class="article">
+<body>
 
-<div id="main">
-	<div class="topshadow"></div>
-	<div class="leftshadow"></div>
-	<div class="rightshadow"></div>
+{% include nav.html %}
 
-	<div id="header">
-		<a href="/"><img src="/images/logo.png" class="pngimage" width="212" height="56" alt="Roundcube - open source webmail software" /></a>
-		{% include nav.html %}
-	</div>
+<main role="main" class="container">
 
-	<div id="bodycontent">
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ page.title }}</h1>
+        <span class="newsdate">{{ page.date | date_to_long_string }}</span>
 
-	<h1>{{ page.title }}</h1>
-	
-	<span class="newsdate">{{ page.date | date_to_long_string }}</span>
+        <div class="bodytext">
+        {{ content }}
 
-	<div class="bodytext">
-	{{ content }}
+        <p class="pagination">&#8672; <a href="/news/">Back to list</a></p>
+        </div>
+    </div>
 
-	<p class="pagination">&#8672; <a href="/news/">Back to list</a></p>
-	</div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Related Posts
+            </div>
+            <ul class="list-group list-group-flush ul-striped">
+                {% for rel in site.related_posts %}
+                    <li class="list-group-item"><a href="{{ rel.url }}">{{ rel.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
 
-	<div id="rightcol">
-		<div class="rightbox">
-			<div class="rightboxtop"></div>
-			<div class="rightboxcontent">
-				<h2>Related Posts</h2>
-				<ul class="narrow">
-				{% for rel in site.related_posts %}
-					<li class="rightboxlink"><a href="{{ rel.url }}">{{ rel.title }}</a></li>
-				{% endfor %}
-				</ul>
+        <br />
 
-				<h2>Tags</h2>
-				<ul class="narrow inline">
-				{% for tag in page.tags %}
-					<li><a href="/news/{{ tag }}">{{ tag }}</a></li>
-				{% endfor %}
-				</ul>
-
-			</div>
-			<div class="rightboxbottom"></div>
-		</div>
-	</div>
-
-	{% include footer.html %}
+        <div class="card">
+            <div class="card-header">
+                Tags
+            </div>
+            <ul class="tags">
+                {% for tag in page.tags %}
+                    <li><a href="/news/{{ tag }}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
+
+<div style="height: 250px;"></div>
+
+</main>
+
+{% include footer.html %}
 
 </body>
 </html>

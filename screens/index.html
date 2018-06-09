@@ -3,178 +3,56 @@ layout: default
 title: Roundcube Webmail Screenshots
 navtitle: Screenshots
 ---
-<script type="text/javascript" src="/js/jquery.tools.min.js"></script>
-
 <h1>Impressions of Roundcube's User Interface</h1>
 
-<div class="tablebox">
-	<div class="tableboxtop"></div>
-	<div class="tableboxcontent" style="position:relative;">
+<ul class="screens">
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/mailview.jpg" width="120" height="82" class="img-thumbnail" alt="Three-paned mailbox view with drag-n-drop" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/mailblocked.jpg" width="120" height="82" class="img-thumbnail" alt="Message viewer with privacy protection" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/htmlview.jpg" width="120" height="82" class="img-thumbnail" alt="Multilingual HTML message display" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/mailcompose.jpg" width="120" height="82" class="img-thumbnail" alt="Compose HTML mails with attachments" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/addressbook.jpg" width="120" height="82" class="img-thumbnail" alt="Address book with LDAP integration" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/addressedit.jpg" width="120" height="82" class="img-thumbnail" alt="Extensible contact management form" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/settings.jpg" width="120" height="82" class="img-thumbnail" alt="Versatile user settings" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/foldermanagement.jpg" width="120" height="82" class="img-thumbnail" alt="Easy IMAP folder management" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/identities.jpg" width="120" height="82" class="img-thumbnail" alt="Sender identities with signature" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/calendar.jpg" width="120" height="82" class="img-thumbnail" alt="Plugins like a calendar module" /></a></li>
+    <li><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/managesieve.jpg" width="120" height="82" class="img-thumbnail" alt="...or Managsieve filter configuration" /></a></li>
+</ul>
 
-		<a href="#" id="arrowprev" title="Show previous screen"></a>
-			
-		<div id="screenview">
-			<img src="/images/screens_shadow.png" width="665" height="458" alt="" />
-			<img id="screenimage" src="/images/screens/mailview.jpg" width="650" height="442" alt="Screenshow #01" />
-		</div>
-
-		<a href="#" id="arrownext" title="Show next screen"></a>
-		
-		<div id="thumbscroller">
-		<div id="screenthumbs">
-			<div id="thumb00" class="active">
-				<img src="/images/thumbs/mailview.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #01" />
-				<div class="reflection">
-					<img src="/images/thumbs/mailview.jpg" width="120" height="32" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Three-paned mailbox view with drag-n-drop</p>
-			</div>
-			<div id="thumb01">
-				<img src="/images/thumbs/mailblocked.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #02" />
-				<div class="reflection">
-					<img src="/images/thumbs/mailblocked.jpg" width="120" height="32" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Message viewer with privacy protection</p>
-			</div>
-			<div id="thumb02">
-				<img src="/images/thumbs/htmlview.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #03" />
-				<div class="reflection">
-					<img src="/images/thumbs/htmlview.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Multilingual HTML message display</p>
-			</div>
-			<div id="thumb03">
-				<img src="/images/thumbs/mailcompose.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #04" />
-				<div class="reflection">
-					<img src="/images/thumbs/mailcompose.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Compose HTML mails with attachments</p>
-			</div>
-			<div id="thumb04">
-				<img src="/images/thumbs/addressbook.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #05" />
-				<div class="reflection">
-					<img src="/images/thumbs/addressbook.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Address book with LDAP integration</p>
-			</div>
-			<div id="thumb05">
-				<img src="/images/thumbs/addressedit.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #06" />
-				<div class="reflection">
-					<img src="/images/thumbs/addressedit.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Extensible contact management form</p>
-			</div>
-			<div id="thumb06">
-				<img src="/images/thumbs/settings.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #07" />
-				<div class="reflection">
-					<img src="/images/thumbs/settings.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Versatile user settings</p>
-			</div>
-			<div id="thumb07">
-				<img src="/images/thumbs/foldermanagement.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #08" />
-				<div class="reflection">
-					<img src="/images/thumbs/foldermanagement.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Easy IMAP folder management</p>
-			</div>
-			<div id="thumb08">
-				<img src="/images/thumbs/identities.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #09" />
-				<div class="reflection">
-					<img src="/images/thumbs/identities.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Sender identities with signature</p>
-			</div>
-			<div id="thumb09">
-				<img src="/images/thumbs/calendar.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #10" />
-				<div class="reflection">
-					<img src="/images/thumbs/calendar.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">Plugins like a calendar module</p>
-			</div>
-			<div id="thumb10">
-				<img src="/images/thumbs/managesieve.jpg" class="thumbnail" width="120" height="82" alt="Thumbnail #11" />
-				<div class="reflection">
-					<img src="/images/thumbs/managesieve.jpg" width="120" height="82" alt="" />
-					<div class="overlay"></div>
-				</div>
-				<p class="tooltip">...or Managsieve filter configuration</p>
-			</div>
-		</div>
-		</div>
-
-	</div>
-	<div class="tableboxbottom"></div>
+<div id="viewer" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" width="650" height="411" class="img-fluid" alt="" />
+            </div>
+            <div class="modal-footer" style="justify-content: flex-start;">
+                <p></p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">
+    $('#viewer').on('show.bs.modal', function(e) {
+        var source = $(e.relatedTarget);
+        var url = source.children('img').attr('src');
+        url = url.replace('/thumbs/', '/screens/');
 
-	var screens = [
-		'/images/screens/mailview.jpg',
-		'/images/screens/mailblocked.jpg',
-		'/images/screens/htmlview.jpg',
-		'/images/screens/mailcompose.jpg',
-		'/images/screens/addressbook.jpg',
-		'/images/screens/addressedit.jpg',
-		'/images/screens/settings.jpg',
-		'/images/screens/foldermanagement.jpg',
-		'/images/screens/identities.jpg',
-		'/images/screens/calendar.jpg',
-		'/images/screens/managesieve.jpg'
-	];
-	var maxindex = screens.length-1;
-
-	$(function() {
-		var index = 0;
-		
-		// initialize scrollable
-		var scroller = $("#thumbscroller").scrollable({
-			items: '#screenthumbs',
-			hoverClass: 'hover',
-			size: 5,
-			api: true
-		});
-		
-		$("#screenthumbs div").bind('click', function(e){
-			var id = parseInt($(this).attr('id').replace(/thumb0?/, ''));
-			load_thumbnail(id);
-		});
-		
-		$('#arrownext').bind('click', function(e){
-			load_thumbnail(++index);
-			scroller.click(index);
-			return false;
-		});
-		
-		$('#arrowprev').bind('click', function(e){
-			load_thumbnail(--index);
-			scroller.click(index);
-			return false;
-		});
-		
-		var load_thumbnail = function(id) {
-			index = id;
-			$('#screenimage').attr('src', screens[id].replace(/\/screens\//, '/thumbs/'));
-			$('#screenimage').attr('src', screens[id]);
-			$('#arrowprev')[index>0?'show':'hide']();
-			$('#arrownext')[index<maxindex?'show':'hide']();
-		}
-	});
-
+        $(this).find('.modal-body > img').attr('src', url);
+        $(this).find('.modal-footer > p').text(source.children('img').attr('alt'));
+    });
 </script>
+
+<div style="clear: both;"></div>
+<br /><br />
 
 <h2>Seen enough?</h2>
 
 <p>Download the source and install Roundcube on a standard <a href="http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29">LAMP</a> server.</p>
 
-<p>{% include downloadbutton.html %}</p>
+{% include downloadbutton.html %}
