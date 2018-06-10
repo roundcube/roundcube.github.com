@@ -108,6 +108,7 @@ ul.screens li {
 a.backlink {
   display: block;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 a.backlink::before {
