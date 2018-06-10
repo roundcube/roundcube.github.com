@@ -7,8 +7,12 @@ date: 2017-06-26T19:20:00Z
 <div id="banner">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 text-center pt-2 pb-4 pt-md-5">
+            <div class="col-md-5 text-center pt-2 pb-4 pt-lg-5 pt-md-3">
                 <img src="/images/logo_masses.png" width="424" height="112" class="img-fluid" alt="Roundcube - open source webmail software" />
+				
+			    <div class="d-none d-md-block col mt-lg-5 mt-md-4 banner-download">
+				    {% include downloadbutton.html %}
+			    </div>
             </div>
             <div class="col-md-7 text-center text-md-right">
                 <img src="/images/banner.png" width="647" height="393" class="img-fluid" alt="Welcome Roundcube Webmail" />
@@ -25,11 +29,11 @@ date: 2017-06-26T19:20:00Z
         ...is a browser-based multilingual IMAP client with an application-like user interface.
         It provides full functionality you expect from an email client, including MIME support,
         address book, folder manipulation, message searching and spell checking.
-        <a href="/about">More information...</a>
+        <a href="/about" class="read-link">More information</a>
     </p>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 offset-md-8">
+            <div class="col-md-4 offset-md-8 d-block d-md-none p-2">
                 {% include downloadbutton.html %}
             </div>
         </div>
@@ -41,14 +45,14 @@ date: 2017-06-26T19:20:00Z
                     <li>Find-as-you-type address book</li>
                     <li>Richtext/HTML message composing</li>
                     <li>Searching messages and contacts</li>
-                    <li>Canned response templates<span class="newtag">New!</span></li>
+                    <li>Canned response templates</li>
                     <li>Int. domain names (IDNA)</li>
                     <li>Shared folders and ACL</li>
                     <li>Full featured address book</li>
                     <li>Extensible using the Plug-in API</li>
                 </ul>
 
-                <a href="/about/#features">Complete list of features</a>
+                <a href="/about/#features" class="read-link">Complete list of features</a>
             </div>
             <div class="col-md-4">
                 <br />

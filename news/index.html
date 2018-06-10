@@ -30,13 +30,17 @@ lastmod: 2017-10-31T20:26:00Z
             </ul>
         </nav>
 
+        <br />
+
         <h3>Want more?</h3>
         <ul>
-            <li>Subscribe to the news <a href="/feeds/atom.xml">RSS Feed</a>.</li>
+            <li>Subscribe to the news <a href="/feeds/atom.xml" class="rss-link" target="_blank">RSS Feed</a></li>
         </ul>
+
+        <br />
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 right-col">
         <div class="card">
             <div class="card-header bg-dark">
                 <span class="text-white">Latest posts from the planet Roundcube blogs</span>
@@ -54,7 +58,7 @@ lastmod: 2017-10-31T20:26:00Z
             </div>
             <ul class="tags">
                 {% for tag in site.tags %}
-                    <li><a href="/news/{{ tag | first }}">{{ tag | first }}</a></li>
+                    <li><a href="/news/{{ tag | first }}" class="tag-link">{{ tag | first }}</a></li>
                 {% endfor %}
             </ul>
         </div>

@@ -2,6 +2,13 @@ html, body {
   height: 100%;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -6rem;
+  visibility: hidden;
+}
+
 #banner {
   margin-top: 66px;
   padding: 15px 0;
@@ -108,15 +115,54 @@ ul.screens li {
 a.backlink {
   display: block;
   margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 
-a.backlink::before {
-  margin-right: 5px;
-  content: "\00ab";
-}
-
-a.readmore::after {
+a.back-link::before,
+a.tag-link::before,
+a.read-link::after,
+a.external-link::after,
+a.rss-link::after,
+a.asc-link::after,
+a.irc-link::after {
   margin-left: 5px;
-  content: "\00bb";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+a.back-link::before {
+  margin-left: 0;
+  margin-right: 5px;
+  content: "\f100";
+}
+
+a.tag-link::before {
+  margin-left: 0;
+  margin-right: 5px;
+  content: "\f02b";
+}
+
+a.read-link::after {
+  content: "\f101";
+}
+
+a.external-link::after {
+  content: "\f35d";
+}
+
+a.rss-link::after {
+  content: "\f09e";
+}
+/*
+a.asc-link::after {
+  content: "\f084";
+}
+*/
+a.irc-link::after {
+  content: "\f086";
+}
+
+@media (max-width: 767px) {
+  div.right-col {
+    padding-top: 2rem;
+  }
 }

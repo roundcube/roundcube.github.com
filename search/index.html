@@ -123,39 +123,27 @@ title: Search the Roundcube.net platforms
 
 </script>
 
-<div class="col-md-4 float-md-right">
-    <div class="card latestnews">
-        <div class="card-header bg-dark">
-            <span class="text-white">Directly search on these sites</span>
-        </div>
-        <ul class="list-group list-group-flush ul-striped">
-            <li class="list-group-item"><a href="http://www.roundcubeforum.net/index.php?action=search">Online forum</a></li>
-            <li class="list-group-item"><a href="https://github.com/roundcube/roundcubemail/issues">Bug tracker</a></li>
-        </ul>
-    </div>
-</div>
-
-<br />
-
 <form name="gs" action="/search" onsubmit="return exec_sitesearch(this);" class="form-inline">
-    <div class="form-group mb-2">
+    <div class="form-group my-2 col-12 col-md-4 col-lg-3 px-0">
         <label for="staticEmail2" class="sr-only">Search</label>
         <input type="text" name="q" id="gsq" class="form-control" />
     </div>
 
-    <span style="margin-left: 1rem; margin-right: 0.5rem;">Site:</span>
+    <div class="form-group m-2 col-12 col-md-4 col-lg-3 px-0">
+        <div class="px-0 px-sm-2">Site:</div>
 
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="site" id="inlineRadio1" value="roundcube.net" checked="true">
-        <label class="form-check-label" for="inlineRadio1">All</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="site" id="inlineRadio1" value="roundcube.net" checked="true">
+            <label class="form-check-label" for="inlineRadio1">All</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="site" id="inlineRadio2" value="lists.roundcube.net">
+            <label class="form-check-label" for="inlineRadio2">Mailing lists</label>
+        </div>
     </div>
 
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="site" id="inlineRadio2" value="lists.roundcube.net">
-        <label class="form-check-label" for="inlineRadio2">Mailing lists</label>
-    </div>
-
-    <button type="submit" class="btn btn-primary mb-2">Search</button>
+    <button type="submit" class="btn btn-primary my-2">Search</button>
 </form>
 
 <span class="text-muted">Powered by Google</span>
@@ -165,3 +153,18 @@ title: Search the Roundcube.net platforms
 </div>
 
 <noscript><p class="text-danger">The site search requires Javascript enabled!</p></noscript>
+
+<br />
+<br />
+
+<div class="col">
+    <div class="card">
+        <div class="card-header bg-dark">
+            <span class="text-white">Directly search on these sites</span>
+        </div>
+        <ul class="list-group list-group-flush ul-striped">
+            <li class="list-group-item"><a href="http://www.roundcubeforum.net/index.php?action=search" class="external-link" target="_blank">Online forum</a></li>
+            <li class="list-group-item"><a href="https://github.com/roundcube/roundcubemail/issues" class="external-link" target="_blank">Bug tracker</a></li>
+        </ul>
+    </div>
+</div>
