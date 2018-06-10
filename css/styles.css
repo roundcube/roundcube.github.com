@@ -71,11 +71,13 @@ ul.screens li {
   margin-bottom: 1rem;
 }
 
-.artical > h3 > a {
+.artical > div.title > h3 > a {
   color: #444;
+  margin-right: 1rem;
 }
 
-.artical > p {
+.artical > div.title > h3,
+.artical > div.snippet > p {
   display: inline;
 }
 
@@ -101,4 +103,19 @@ ul.screens li {
 .footer a:focus,
 .footer a:hover {
   color: #007bff;
+}
+
+a.backlink {
+  display: block;
+  margin-top: 3rem;
+}
+
+a.backlink::before {
+  margin-right: 5px;
+  content: "\00ab";
+}
+
+a.readmore::after {
+  margin-left: 5px;
+  content: "\00bb";
 }
