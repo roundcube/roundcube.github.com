@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>{{ page.title }}</title>
 
-    <meta name="keywords" content="round,cube,roundcube,webmail,email,mail,client,software,solution,application,imap,php,open source,free,github,development" />
-    <meta name="description" content="Free and open source webmail software for the masses, written in PHP" />
+    <meta name="keywords" content="round,cube,roundcube,webmail,email,mail,client,software,solution,application,imap,php,open source,free,github,development">
+    <meta name="description" content="Free and open source webmail software for the masses, written in PHP">
 
     {% include head.html %}
 </head>
@@ -21,17 +21,17 @@
     <div class="col-md-8">
         <h1>{{ page.title }}</h1>
 
-        <ul class="tags m-0 px-0">
+        <ul class="tags m-0 px-0 clearfix">
             {% for tag in page.tags %}
-                <li><a href="/news/{{ tag }}" class="tag-link">{{ tag }}</a></li>
+                <li class="float-left m-1"><a href="/news/{{ tag }}" class="tag-link text-info">{{ tag }}</a></li>
             {% endfor %}
         </ul>
 
-        <p class="text-muted font-italic" style="clear: both;">{{ page.date | date_to_long_string }}</p>
+        <p class="text-muted font-italic">{{ page.date | date_to_long_string }}</p>
 
         {{ content }}
 
-        <a href="/news/" class="back-link">Return to News overview</a>
+        <a href="/news/" class="back-link d-block mt-4">Return to News overview</a>
     </div>
 
     <div class="col-md-4 right-col">
@@ -48,7 +48,7 @@
     </div>
 </div>
 
-<div style="height: 250px;"></div>
+<div class="clearfooter"></div>
 
 </main>
 

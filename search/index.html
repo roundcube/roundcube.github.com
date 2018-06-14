@@ -4,8 +4,8 @@ title: Search the Roundcube.net platforms
 ---
 <h1>Search the Roundcube.net platforms</h1>
 
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
+<script src="https://www.google.com/jsapi"></script>
+<script>
 
     var siteSearch;
 
@@ -126,7 +126,7 @@ title: Search the Roundcube.net platforms
 <form name="gs" action="/search" onsubmit="return exec_sitesearch(this);" class="form-inline">
     <div class="form-group my-2 col-12 col-md-4 col-lg-3 px-0">
         <label for="staticEmail2" class="sr-only">Search</label>
-        <input type="text" name="q" id="gsq" class="form-control" />
+        <input type="text" name="q" id="gsq" class="form-control">
     </div>
 
     <div class="form-group m-2 col-12 col-md-4 col-lg-3 px-0">
@@ -148,14 +148,14 @@ title: Search the Roundcube.net platforms
 
 <span class="text-muted">Powered by Google</span>
 
-<div id="searchresults" style="margin-top:1.5em">
+<div id="searchresults" class="mt-4">
     <span class="text-muted">Type your search terms in the field above and press the magic button</span>
 </div>
 
 <noscript><p class="text-danger">The site search requires Javascript enabled!</p></noscript>
 
-<br />
-<br />
+<br>
+<br>
 
 <div class="col">
     <div class="card">

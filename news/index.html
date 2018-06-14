@@ -30,14 +30,14 @@ lastmod: 2017-10-31T20:26:00Z
             </ul>
         </nav>
 
-        <br />
+        <br>
 
         <h3>Want more?</h3>
         <ul>
             <li>Subscribe to the news <a href="/feeds/atom.xml" class="rss-link" target="_blank">RSS Feed</a></li>
         </ul>
 
-        <br />
+        <br>
     </div>
 
     <div class="col-md-4 right-col">
@@ -50,15 +50,15 @@ lastmod: 2017-10-31T20:26:00Z
             </ul>
         </div>
 
-        <br />
+        <br>
 
         <div class="card">
             <div class="card-header bg-dark">
                 <span class="text-white">Tags</span>
             </div>
-            <ul class="tags">
+            <ul class="tags pt-1 px-2">
                 {% for tag in site.tags %}
-                    <li><a href="/news/{{ tag | first }}" class="tag-link">{{ tag | first }}</a></li>
+                    <li class="float-left m-1"><a href="/news/{{ tag | first }}" class="tag-link text-info">{{ tag | first }}</a></li>
                 {% endfor %}
             </ul>
         </div>
