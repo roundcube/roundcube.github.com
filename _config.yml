@@ -5,3 +5,4 @@ exclude: [vendor]
 gems: [jekyll-paginate]
 paginate: 6
 paginate_path: "/news/page:num/"
+environment: "production"
