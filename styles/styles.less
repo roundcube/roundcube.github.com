@@ -65,11 +65,17 @@ ul.screens,
   }
 }
 
+.download-btn > a::before,
 a.back-link::before,
 a.tag-link::before,
+a.mail-list-link::before {
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
 a.read-link::after,
 a.external-link::after,
-a.mail-list-link::before,
 a.rss-link::after,
 a.asc-link::after,
 a.irc-link::after {
@@ -78,15 +84,15 @@ a.irc-link::after {
   font-weight: 900;
 }
 
+.download-btn > a::before {
+  content: @fa-var-download;
+}
+
 a.back-link::before {
-  margin-left: 0;
-  margin-right: 5px;
   content: @fa-var-angle-double-left;
 }
 
 a.tag-link::before {
-  margin-left: 0;
-  margin-right: 5px;
   content: @fa-var-tag;
 }
 
