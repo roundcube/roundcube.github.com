@@ -1,0 +1,190 @@
+@import (reference) "fontawesome";
+@nav-height: 66px;
+@nav-offset: 6rem;
+
+a.anchor {
+  top: @nav-offset * -1;
+}
+
+#banner {
+  margin-top: @nav-height;
+  background-color: #c6e6f4;
+}
+
+main {
+  padding-top: @nav-offset;
+
+  h1, .h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  h2, .h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+
+  h3, .h3 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+}
+
+.artical-list > .artical:nth-child(even),
+ul.ul-striped li:nth-child(even){
+  background-color: #f5f5f5;
+}
+
+.artical-list + nav {
+  margin-top: 2rem;
+}
+
+ul.tags,
+ul.screens,
+.footer ul {
+  list-style: none;
+}
+
+.artical {
+  > div.title > h3 > a {
+    color: #444;
+  }
+
+  > div.snippet > p {
+    display: inline;
+  }
+}
+
+.footer {
+  background-color: #f5f5f5;
+
+  a {
+    font-weight: 500;
+    color: #495057;
+
+    &:focus,
+    &:hover {
+      color: #007bff;
+    }
+  }
+}
+
+.download-btn > a::before,
+a.back-link::before,
+a.tag-link::before,
+a.mail-list-link::before {
+  margin-right: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+a.read-link::after,
+a.external-link::after,
+a.rss-link::after,
+a.asc-link::after,
+a.irc-link::after {
+  margin-left: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.download-btn > a::before {
+  content: @fa-var-download;
+}
+
+a.back-link::before {
+  content: @fa-var-angle-double-left;
+}
+
+a.tag-link::before {
+  content: @fa-var-tag;
+}
+
+a.read-link::after {
+  content: @fa-var-angle-double-right;
+}
+
+a.external-link::after {
+  content: @fa-var-external-link-alt;
+}
+
+a.rss-link::after {
+  content: @fa-var-rss;
+}
+
+a.mail-list-link::before {
+  margin-left: 0;
+  margin-right: 5px;
+  font-weight: 400;
+  content: @fa-var-envelope;
+}
+/*
+a.asc-link::after {
+  content: @fa-var-key;
+}
+*/
+a.irc-link::after {
+  content: @fa-var-comments;
+}
+
+@media (max-width: 767px) {
+  div.right-col {
+    padding-top: 2rem;
+  }
+}
+
+#modal-loading i {
+  font-size: 10em;
+  opacity: 0.5;
+}
+
+.modal-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+@media (min-width: 576px) {
+  .modal-arrow {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-arrow {
+    font-size: 4rem;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .modal-arrow {
+    font-size: 5rem;
+  }
+}
+
+.modal-arrow {
+  &.right-arrow {
+    right: 0;
+  }
+
+  a:active,
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 900px) {
+  #viewer > .modal-dialog {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 3200px) {
+  #viewer > .modal-dialog {
+    max-width: 1920px;
+  }
+}
