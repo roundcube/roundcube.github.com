@@ -13,11 +13,30 @@ a.anchor {
 
 main {
   padding-top: @nav-offset;
+
+  h1, .h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  h2, .h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+
+  h3, .h3 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
 }
 
 .artical-list > .artical:nth-child(even),
 ul.ul-striped li:nth-child(even){
   background-color: #f5f5f5;
+}
+
+.artical-list + nav {
+  margin-top: 2rem;
 }
 
 ul.tags,
