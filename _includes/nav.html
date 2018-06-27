@@ -1,9 +1,23 @@
-<div id="mainnav">
-	<a href="/about/"{% if page.url contains 'about/' %} class="active"{% endif %}>About</a></li>
-	<a href="/news/"{% if page.url contains 'news/' %} class="active"{% endif %}>News</a></li>
-	<a href="/screens/"{% if page.url contains 'screens/' %} class="active"{% endif %}>Screenshots</a></li>
-	<a href="/download/"{% if page.url contains 'download/' %} class="active"{% endif %}>Download</a></li>
-	<a href="/support/"{% if page.url contains 'support/' %} class="active"{% endif %}>Support</a></li>
-	<a href="/contribute/"{% if page.url contains 'contribute/' %} class="active"{% endif %}>Contribute</a></li>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="/"><img src="/images/badge.png" width="40" height="40" alt="Roundcube - open source webmail software"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item {% if page.url contains 'about/' %}active{% endif %}"><a href="/about/" class="nav-link">About{% if page.url contains 'about/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
+        <li class="nav-item {% if page.url contains 'news/' %}active{% endif %}"><a href="/news/" class="nav-link">News{% if page.url contains 'news/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
+        <li class="nav-item {% if page.url contains 'screens/' %}active{% endif %}"><a href="/screens/" class="nav-link">Screenshots{% if page.url contains 'screens/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
+        <li class="nav-item {% if page.url contains 'download/' %}active{% endif %}"><a href="/download/" class="nav-link">Download{% if page.url contains 'download/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
+        <li class="nav-item"><a href="https://plugins.roundcube.net" class="nav-link" target="_blank">Plugins</a></li>
+        <li class="nav-item {% if page.url contains 'support/' %}active{% endif %}"><a href="/support/" class="nav-link">Support{% if page.url contains 'support/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
+        <li class="nav-item {% if page.url contains 'contribute/' %}active{% endif %}"><a href="/contribute/" class="nav-link">Contribute{% if page.url contains 'contribute/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
+    </ul>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item"><a class="nav-link p-2" aria-label="GitHub" href="https://github.com/roundcube/roundcubemail" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+        <li class="nav-item"><a class="nav-link p-2" aria-label="GitHub" href="https://twitter.com/roundcube" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en" class="h-100">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>{{ page.title }}</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<meta name="keywords" content="round,cube,roundcube,webmail,email,mail,client,software,solution,application,imap,php,open source,free,github,development" />
-	<meta name="description" content="Free and open source webmail software for the masses, written in PHP" />
+    <title>{{ page.title }}</title>
 
-	{% include head.html %}
+    <meta name="keywords" content="round,cube,roundcube,webmail,email,mail,client,software,solution,application,imap,php,open source,free,github,development">
+    <meta name="description" content="Free and open source webmail software for the masses, written in PHP">
+
+    {% include head.html %}
 </head>
-<body class="home">
+<body class="d-flex flex-column h-100">
 
-<div id="main">
-	<div id="header">
-		<a href="/"><img src="/images/logo.png" class="pngimage" width="212" height="56" alt="Roundcube - open source webmail software" /></a>
-		{% include nav.html %}
-	</div>
+{% include nav.html %}
 
-	{{ content }}
+{{ content }}
 
-	{% include footer.html %}
-</div>
-
-<a href="https://github.com/roundcube/roundcubemail"><img style="position:absolute; top:0; right:0; border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+{% include footer.html %}
 
 </body>
 </html>

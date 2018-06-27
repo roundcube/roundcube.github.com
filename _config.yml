@@ -4,6 +4,8 @@ url: https://roundcube.net
 enforce_ssl: roundcube.net
 hostname: "https://roundcube.net"
 permalink: news/:year/:month/:day/:title
-paginate: 6
-paginate_path: news/page:num
 exclude: [vendor]
+gems: [jekyll-paginate]
+paginate: 6
+paginate_path: "/news/page:num/"
+environment: "production"
