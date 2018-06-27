@@ -16,16 +16,16 @@ lastmod: 2017-10-31T20:26:00Z
 
         <nav>
             <ul class="pagination justify-content-center">
-                {% if paginator.next_page_path != nil %}
-                    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts</a></li>
-                {% else %}
-                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Older posts</a></li>
-                {% endif %}
-
                 {% if paginator.previous_page_path != nil %}
                     <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path }}" tabindex="-1">Newer posts</a></li>
                 {% else %}
                     <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Newer posts</a></li>
+                {% endif %}
+
+                {% if paginator.next_page_path != nil %}
+                    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts</a></li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Older posts</a></li>
                 {% endif %}
             </ul>
         </nav>
