@@ -7,5 +7,5 @@ Starting with the upcoming version 0.8, Roundcube will be licensed under the GNU
 
 Together with the change to GPLv3+ we also added an exception paragraph to the Roundcube license agreement which explicitly excludes skins & plugins from the terms of the GPL. This shall give a maximum flexibility to skin designers and plugin developers to choose any other license for their work or even to create commercial or proprietary components.
 
-More details about the new license, the exception and background of this change can be found here: [roundcube.net/license](http://roundcube.net/license)
+More details about the new license, the exception and background of this change can be found here: [roundcube.net/license](https://roundcube.net/license)
 

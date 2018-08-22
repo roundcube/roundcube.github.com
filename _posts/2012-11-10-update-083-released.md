@@ -6,5 +6,5 @@ tags: releases updates
 ---
 Today we can announce another service release of the Roundcube webmail package. This update adds small bug fixes and improvements to the 0.8 stable series. It also fixes a possible, although unintended, DoS to the webserver running Roundcube. See the included CHANGELOG file for details.
 
-We consider it stable and we recommend to update all existing Roundcube installation with this release. Download it from [roundcube.net/download](http://roundcube.net/download)
+We consider it stable and we recommend to update all existing Roundcube installation with this release. Download it from [roundcube.net/download](https://roundcube.net/download)
 

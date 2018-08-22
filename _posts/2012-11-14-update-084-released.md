@@ -8,5 +8,5 @@ We just published new packages for Roundcube webmail. This service update mainly
 
 If you installed 0.8.3, please immediately update your installation with this new version. The buggy previous version makes the compose screen to randomly reload itself which may result in a loss of the unsent message.
 
-Download from [roundcube.net/download](http://roundcube.net/download)
+Download from [roundcube.net/download](https://roundcube.net/download)
 

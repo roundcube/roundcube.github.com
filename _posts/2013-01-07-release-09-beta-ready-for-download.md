@@ -21,5 +21,5 @@ We're proud to announce this beta release of the next major version 0.9. With th
 
 And of course plenty of small improvements and bug fixes.
 
-See the complete Changelog at [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog) and download the new packages from [roundcube.net/download](http://roundcube.net/download). Please note that this is a beta release and we recommend to test it on a separate environment.
+See the complete Changelog at [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog) and download the new packages from [roundcube.net/download](https://roundcube.net/download). Please note that this is a beta release and we recommend to test it on a separate environment.
 

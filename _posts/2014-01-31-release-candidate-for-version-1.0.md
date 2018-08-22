@@ -13,5 +13,5 @@ So we invite all early adopters to test this release candidate and report
 remaining bugs to our bug tracker.
 
 See the complete Changelog at [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog)  
-and download the new packages from  [roundcube.net/download](http://roundcube.net/download). 
+and download the new packages from  [roundcube.net/download](https://roundcube.net/download). 
 

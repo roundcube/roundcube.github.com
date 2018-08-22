@@ -10,5 +10,5 @@ After getting several requests about donations for our project we decided to ope
 
 Nevertheless your donations show us your appreciation and this motivates our devs to keep up the development.
 
-Got to [roundcube.net/donation](http://roundcube.net/donation) for more details.
+Got to [roundcube.net/donation](https://roundcube.net/donation) for more details.
 
