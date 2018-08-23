@@ -35,4 +35,4 @@ and 1.1.x will switch in to LTS low maintenance mode which means they will only
 receive important security updates but no longer any regular improvement updates.
 
 See the complete [Changelog](https://github.com/roundcube/roundcubemail/wiki/Changelog) in our wiki 
-and download the new packages from [roundcube.net/download](http://roundcube.net/download).
+and download the new packages from [roundcube.net/download](https://roundcube.net/download).

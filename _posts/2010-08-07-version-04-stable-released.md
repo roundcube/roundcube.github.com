@@ -10,5 +10,5 @@ After the big new features in 0.4-beta this release now completes the unfinished
 
 With this release the skins have been excluded from the GPL license terms (see README file). This allows you to choose whatever license you want for your custom skins and even opens the door for creating commercial skins.
 
-We recommend to update all existing Roundcube installations with this release. Get it from [roundcube.net/download](http://roundcube.net/download)
+We recommend to update all existing Roundcube installations with this release. Get it from [roundcube.net/download](https://roundcube.net/download)
 

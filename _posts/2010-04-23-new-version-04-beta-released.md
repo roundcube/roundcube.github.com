@@ -12,5 +12,5 @@ While it's still called a beta release we consider it to be stable enough for
 
 productive environments. However the new features may have some minor issues which we are happy to hear about.
 
-Download the 0.4-beta version now from [roundcube.net/download](http://roundcube.net/download)
+Download the 0.4-beta version now from [roundcube.net/download](https://roundcube.net/download)
 

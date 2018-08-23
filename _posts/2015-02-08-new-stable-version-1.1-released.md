@@ -37,5 +37,5 @@ and Internet Explorer < 9. IE7/IE8 support can be restored by
 enabling the 'legacy_browser' plugin.
 
 See the complete Changelog at [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog) 
-and download the new packages from  [roundcube.net/download](http://roundcube.net/download). 
+and download the new packages from  [roundcube.net/download](https://roundcube.net/download). 
 

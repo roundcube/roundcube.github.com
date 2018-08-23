@@ -12,7 +12,7 @@ The latter one only affects versions 0.8.6 and older.
 Please update your installations with the new versions or patch them with the
 fixes listed below for the various older versions of Roundcube.
 
-Download the latest version from [roundcube.net/download](http://roundcube.net/download)
+Download the latest version from [roundcube.net/download](https://roundcube.net/download)
 
 [Patch for 0.9.x](https://github.com/roundcube/roundcubemail/commit/4109bb26ce.diff)
 

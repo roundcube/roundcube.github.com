@@ -8,5 +8,5 @@ After another round of bugfixing we're happy to announce the stable release of R
 
 With this release Roundcube also passes the email standards project's acid test. See [www.email-standards.org/acid-test](http://www.email-standards.org/acid-test)
 
-We recommend to update all existing Roundcube installations with this version. Get it now from [roundcube.net/download](http://roundcube.net/download) and have fun!
+We recommend to update all existing Roundcube installations with this version. Get it now from [roundcube.net/download](https://roundcube.net/download) and have fun!
 

@@ -8,5 +8,5 @@ categories: []
 ---
 The next major release has now reached stable state and is available for download. The important new features in 0.5 are: full support for shared folders and namespaces, Internationalized Domain Names (IDNA) as well as SMTP Delivery Status Notifications. The UI for managing IMAP folders has changed a bit and provides new space for further extensions and plugins.
 
-We recommend to update all existing Roundcube installations with this release. Get it now from [roundcube.net/download](http://roundcube.net/download)
+We recommend to update all existing Roundcube installations with this release. Get it now from [roundcube.net/download](https://roundcube.net/download)
 

@@ -45,7 +45,7 @@ about the Enigma plugin and how it works.
 Please test your plugins thoroughly and look for deprecation warnings in the logs.
 
 See the complete Changelog at [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog) 
-and download the new packages from  [roundcube.net/download](http://roundcube.net/download). 
+and download the new packages from  [roundcube.net/download](https://roundcube.net/download). 
 
 Please note that this is a beta release and we recommend to test it on a
 separate environment. And don't forget to backup your data before installing it.

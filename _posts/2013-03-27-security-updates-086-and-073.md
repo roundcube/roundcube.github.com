@@ -6,7 +6,7 @@ tags: updates security
 ---
 We just published new releases which fix a recently reported vulnerability that allows an attacker to access files on the server. Please update your installations with the new versions or patch them with the fix which is also published in the downloads section or our sourceforge.net page.
 
-Download the latest version from [roundcube.net/download](http://roundcube.net/download)
+Download the latest version from [roundcube.net/download](https://roundcube.net/download)
 
 Patch for 0.9.x: [ow.ly/jtQD0](http://ow.ly/jtQD0)
 

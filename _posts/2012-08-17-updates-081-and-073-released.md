@@ -8,5 +8,5 @@ As usual when a new stable release arrives, there are a few things that didn't m
 
 At the same same time, we also pushed out a small update for the 0.7 series with some of the important fixes back-ported. That's for those who didn't dare to switch to the new and shiny 0.8 release branch.
 
-See the complete Changelog at [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog) and download the new packages from [roundcube.net/download](http://roundcube.net/download).
+See the complete Changelog at [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog) and download the new packages from [roundcube.net/download](https://roundcube.net/download).
 

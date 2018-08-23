@@ -34,7 +34,7 @@ plugin for publishing.
 After lots of testing and collecting your feedback, this version is considered stable
 and we recommend to update all productive installations of Roundcube.
 
-Download the fresh webmail and framework packages from [roundcube.net/download](http://roundcube.net/download)
+Download the fresh webmail and framework packages from [roundcube.net/download](https://roundcube.net/download)
 
 Read the full list of changes here: [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog)
 

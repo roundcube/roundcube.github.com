@@ -48,7 +48,7 @@ the removed 3rd party javascript modules by executing the following install scri
     $ bin/install-jsdeps.sh
 
 See the complete [Changelog](http://trac.roundcube.net/wiki/Changelog) 
-and download the new packages from [roundcube.net/download](http://roundcube.net/download). 
+and download the new packages from [roundcube.net/download](https://roundcube.net/download). 
 
 Please note that this is a beta release and we recommend to test it on a
 separate environment. And don't forget to backup your data before installing it.

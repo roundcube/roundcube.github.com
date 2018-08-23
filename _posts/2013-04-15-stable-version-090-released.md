@@ -21,7 +21,7 @@ Another major change since the 0.8 series is the new database abstraction layer.
 
 After lots of testing and collecting your feedback, this version is considered stable and it also includes the recently discovered vulnerability that allows an attacker to modify its users preferences in a way that he can then read arbitrary files from the server. We therefore recommend to update all productive installations of Roundcube.
 
-Download both the webmail and the framework packages from [roundcube.net/download](http://roundcube.net/download)
+Download both the webmail and the framework packages from [roundcube.net/download](https://roundcube.net/download)
 
 Read the full list of changes here: [trac.roundcube.net/wiki/Changelog](http://trac.roundcube.net/wiki/Changelog)
 

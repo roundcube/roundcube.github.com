@@ -25,7 +25,7 @@ With the upcoming stable release of 1.3.0 the old 1.x series will only receive i
 security fixes.
 
 See the complete [Changelog](https://github.com/roundcube/roundcubemail/wiki/Changelog) 
-and download the new packages from [roundcube.net/download](http://roundcube.net/download). 
+and download the new packages from [roundcube.net/download](https://roundcube.net/download). 
 
 Please note that this is a release candidate and we recommend to test it on a
 separate environment. And don't forget to backup your data before installing it.
