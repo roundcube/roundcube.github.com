@@ -72,7 +72,8 @@ ul.screens,
 .download-btn > a::before,
 a.back-link::before,
 a.tag-link::before,
-a.mail-list-link::before {
+a.mail-list-link::before,
+td.link > a::before {
   margin-right: 5px;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -125,6 +126,17 @@ a.asc-link::after {
 */
 a.irc-link::after {
   content: @fa-var-comments;
+}
+
+@media (max-width: 575px) {
+  td.link > a::before {
+    content: @fa-var-download;
+    margin-right: 0;
+  }
+
+  td.link > a > span {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -186,5 +198,29 @@ a.irc-link::after {
 @media (min-width: 3200px) {
   #viewer > .modal-dialog {
     max-width: 1920px;
+  }
+}
+
+table.download-table {
+  td.package {
+    width: 20%;
+  }
+
+  td.link,
+  td.size {
+    width: 15%;
+  }
+}
+
+@media (max-width: 991px) {
+  table.download-table {
+    td.package {
+      width: 50%;
+    }
+
+    td.link,
+    td.size {
+      width: 25%;
+    }
   }
 }
