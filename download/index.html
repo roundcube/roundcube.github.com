@@ -27,7 +27,7 @@ lastmod: 2019-02-28T19:32:00Z
     <tbody>
         {% for source in site.data.versions.[dist.id].sources %}
             <tr>
-                <td class="package">{{ source.type }}{% if source.type == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
+                <td class="package">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
                 <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
                 <td class="size text-nowrap">{{ source.size }}</td>
                 <td class="checksum d-none d-lg-table-cell text-monospace">{{ source.checksum }}</td>
