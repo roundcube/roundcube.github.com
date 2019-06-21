@@ -6,119 +6,36 @@ lastmod: 2019-02-28T19:32:00Z
 ---
 <h1>Download your version of Roundcube</h1>
 
-<h2>Stable version - 1.3.9</h2>
-<table class="table table-striped download-table">
-<thead>
-    <tr>
-        <th class="package">Package</th>
-        <th class="link"></th>
-        <th class="size text-nowrap">Size</th>
-        <th class="checksum d-none d-lg-table-cell">SHA-256 checksum</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td class="package">Dependent <sup><a href="#fn1" class="text-muted">1</a></sup></td></td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.3.9/roundcubemail-1.3.9.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">3.1 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">7775176dfcb1e4ed39586d95a4fad0ee7b4a582e071233b4e3bf7d59040c1b5a</td>
-    </tr>
-    <tr>
-        <td class="package">Complete</td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.3.9/roundcubemail-1.3.9-complete.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">5.3 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">726db4ffb33a7154dd432cbb99810ab9d02512c7f1987a6119e9ac7f595521ad</td>
-    </tr>
-    <tr>
-        <td class="package">Framework</td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.3.9/roundcube-framework-1.3.9.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">1.2 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">63cdf111dd10a8977cf9c472d27821d48788e41a9f19dfe2d995599ccd90f1d4</td>
-    </tr>
-</tbody>
-</table>
+{% for dist in site.data.versions.distributions %}
+    <a class="anchor d-block invisible position-relative" id="{{ dist.id }}"></a>
+    <h2>{{ dist.name }}{% if site.data.versions.[dist.id].version %} - {{ site.data.versions.[dist.id].version }}{% endif %}</h2>
 
-<h2>Old stable - 1.2.9</h2>
-<table class="table table-striped download-table">
-<thead>
-    <tr>
-        <th class="package">Package</th>
-        <th class="link"></th>
-        <th class="size text-nowrap">Size</th>
-        <th class="checksum d-none d-lg-table-cell">SHA-256 checksum</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td class="package">Dependent <sup><a href="#fn1" class="text-muted">1</a></sup></td></td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.2.9/roundcubemail-1.2.9.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">3.4 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">7b4967606e0c7e0b3b97aa49914f62aac50e6d778019eae503c332cea5829d4d</td>
-    </tr>
-    <tr>
-        <td class="package">Complete</td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.2.9/roundcubemail-1.2.9-complete.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">3.7 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">0fed9def3b9441f93388c81ab47de58cd3b301f221c892d9c3fdcd3fd949797b</td>
-    </tr>
-</tbody>
-</table>
+    {% if dist.id == "lts" %}
+        <p class="text-muted">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
+            will go into these release branches.</p>
+    {% endif %}
 
-<h2>LTS versions</h2>
-<p class="text-muted">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
-    will go into these release branches.</p>
-
-<table class="table table-striped download-table">
-<thead>
-    <tr>
-        <th class="package">Package</th>
-        <th class="link"></th>
-        <th class="size text-nowrap">Size</th>
-        <th class="checksum d-none d-lg-table-cell">SHA-256 checksum</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td class="package">1.1.12</td></td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.1.12/roundcubemail-1.1.12-complete.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">4.5 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">f67c7809fa5d61b103d1630f85fe6648d936d8719129bae9366bc7036dbe7107</td>
-    </tr>
-</tbody>
-</table>
-
-<a class="anchor d-block invisible position-relative" id="beta"></a>
-<h2>Beta version - 1.4-rc1</h2>
-<table class="table table-striped download-table">
-<thead>
-    <tr>
-        <th class="package">Package</th>
-        <th class="link"></th>
-        <th class="size text-nowrap">Size</th>
-        <th class="checksum d-none d-lg-table-cell">SHA-256 checksum</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td class="package">Dependent <sup><a href="#fn1" class="text-muted">1</a></sup></td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.4-rc1/roundcubemail-1.4-rc1.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">4.1 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">73041cffbb6c5c56f50d4875d50465a36b5afdaf2a39af2737e4628f34c2a948</td>
-    </tr>
-    <tr>
-        <td class="package">Complete</td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.4-rc1/roundcubemail-1.4-rc1-complete.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">6.6 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">24a6c8ba9dcd4105f578fba1fadef27c878693612b74d8b781f98ac89de3285c</td>
-    </tr>
-    <tr>
-        <td class="package">Framework</td>
-        <td class="link"><a href="https://github.com/roundcube/roundcubemail/releases/download/1.4-rc1/roundcube-framework-1.4-rc1.tar.gz" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
-        <td class="size text-nowrap">1.2 MB</td>
-        <td class="checksum d-none d-lg-table-cell text-monospace">e2fd7d7e1242205c081cd627fac15dce67eb58fdf87aa629080fd75635de63e4</td>
-    </tr>
-</tbody>
-</table>
+    <table class="table table-striped download-table">
+    <thead>
+        <tr>
+            <th class="package">Package</th>
+            <th class="link"></th>
+            <th class="size text-nowrap">Size</th>
+            <th class="checksum d-none d-lg-table-cell">SHA-256 checksum</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for source in site.data.versions.[dist.id].sources %}
+            <tr>
+                <td class="package">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
+                <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
+                <td class="size text-nowrap">{{ source.size }}</td>
+                <td class="checksum d-none d-lg-table-cell text-monospace">{{ source.checksum }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+{% endfor %}
 
 <a class="anchor d-block invisible position-relative" id="fn1"></a>
 <p class="text-muted">1. Dependent packages only contain sources which are licensed under the GPL but they require some third-party

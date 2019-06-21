@@ -2,21 +2,26 @@
 layout: default
 title: Roundcube Webmail Screenshots
 navtitle: Screenshots
+screenshots: [
+    { "file": "mailbox.png", "title": "Three-paned mailbox view" },
+    { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
+    { "file": "cnmailbox.png", "title": "Multilingual display" },
+    { "file": "compose.png", "title": "Compose HTML mails with attachments" },
+    { "file": "addressbook.png", "title": "Address book with LDAP integration" },
+    { "file": "editcontact.png", "title": "Extensible contact management form" },
+    { "file": "settings.png", "title": "Versatile user settings" },
+    { "file": "folders.png", "title": "Easy IMAP folder management" },
+    { "file": "identities.png", "title": "Sender identities with signature" },
+    { "file": "enigma.png", "title": "Plugins like Engima for signing and encrypting emails" },
+    { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
+]
 ---
 <h1>Impressions of Roundcube's User Interface</h1>
 
 <ul id="screenshots" class="screens text-center text-lg-left p-0 w-100">
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/mailbox.png" width="140" height="97" class="img-thumbnail" alt="Three-paned mailbox view"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/viewmail.png" width="140" height="97" class="img-thumbnail" alt="Message viewer with privacy protection"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/cnmailbox.png" width="140" height="97" class="img-thumbnail" alt="Multilingual display"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/compose.png" width="140" height="97" class="img-thumbnail" alt="Compose HTML mails with attachments"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/addressbook.png" width="140" height="97" class="img-thumbnail" alt="Address book with LDAP integration"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/editcontact.png" width="140" height="97" class="img-thumbnail" alt="Extensible contact management form"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/settings.png" width="140" height="97" class="img-thumbnail" alt="Versatile user settings"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/folders.png" width="140" height="97" class="img-thumbnail" alt="Easy IMAP folder management"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/identities.png" width="140" height="97" class="img-thumbnail" alt="Sender identities with signature"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/enigma.png" width="140" height="97" class="img-thumbnail" alt="Plugins like Engima for signing and encrypting emails"></a></li>
-    <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/managesieve.png" width="140" height="97" class="img-thumbnail" alt="...or Managesieve filter configuration"></a></li>
+    {% for screenshot in page.screenshots %}
+        <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
+    {% endfor %}
 </ul>
 
 <div id="viewer" class="modal" tabindex="-1" role="dialog">
