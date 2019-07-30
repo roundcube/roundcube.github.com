@@ -20,45 +20,49 @@ screenshots: [
 
 <ul id="screenshots" class="screens text-center text-lg-left p-0 w-100">
     {% for screenshot in page.screenshots %}
-        <li class="m-1 d-inline-block"><a href="#" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
+        <li class="m-1 d-inline-block"><a id="screenshot{{ forloop.index + 1 }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
     {% endfor %}
 </ul>
 
 <div id="viewer" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content bg-transparent">
-            <div class="modal-body text-center p-0"></div>
+            <div class="modal-body text-center p-0">
+                <div id='modal-loading' class='text-center py-5'><i class='fas fa-circle-notch fa-spin'></i></div>
+                <img src='#' style='display: none;' class='img-fluid' onload='screen_loaded(this);'>
+                <div class='modal-arrow p-2 d-flex align-items-center left-arrow'><a href='#' onclick="move_screen('prev'); return false;" class='fas fa-chevron-left text-secondary'></a></div>
+                <div class='modal-arrow p-2 d-flex align-items-center right-arrow'><a href='#' onclick="move_screen('next'); return false;" class='fas fa-chevron-right text-secondary'></a></div>
+            </div>
             <div class="modal-footer bg-dark justify-content-start">
-                <p class="text-white"></p>
+                <p class="text-white mb-0"></p>
             </div>
         </div>
     </div>
 </div>
 
 <script>
+    var viewer = document.getElementById('viewer');
     $('#viewer').on('show.bs.modal', function(e) {
-        var source = $(e.relatedTarget);
-        var url = source.children('img').attr('src');
-        url = url.replace('/thumbs/', '/screens/');
+            var source = e.relatedTarget;
+            var screen = source.querySelector('img');
 
-        var content = $('<img>')
-            .addClass('img-fluid')
-            .attr('src', url)
-            .hide()
-            .on('load', function() {
-                $('#modal-loading').hide();
-                $(this).show();
-            });
+            this.querySelector('.modal-body > img').src = screen.getAttribute('src').replace('/thumbs/', '/screens/');
+            this.querySelector('.modal-footer > p').textContent = screen.getAttribute('alt');
+            this.setAttribute('data-cur-index', source.id.replace('screenshot', ''));
+        })
+        .on ('hidden.bs.modal', function(e) {
+            var screen = this.querySelector('.modal-body > img');
+            screen.style.display = 'none';
+            screen.src = '#';
 
-        $(this).find('.modal-body').html("<div id='modal-loading' class='text-center py-5'><i class='fas fa-circle-notch fa-spin'></i></div>").append(content);
-        $(this).find('.modal-body').append("<div class='modal-arrow p-2 d-flex align-items-center left-arrow'><a href='#' onclick=\"move_screen('prev'); return false;\" class='fas fa-chevron-left text-secondary'></a></div>");
-        $(this).find('.modal-body').append("<div class='modal-arrow p-2 d-flex align-items-center right-arrow'><a href='#' onclick=\"move_screen('next'); return false;\" class='fas fa-chevron-right text-secondary'></a></div>");
-        $(this).find('.modal-footer > p').text(source.children('img').attr('alt'));
-        $(this).data('cur-index', source.parent().index());
-    });
+            document.getElementById("modal-loading").style.display = 'block';
+            this.querySelector('.modal-footer > p').textContent = '';
+            this.setAttribute('data-cur-index', '');
+        });
 
-    $(document).on('keyup', function(e) {
-        if ($('.modal-content').is(':visible')) {
+    document.addEventListener('keyup', function(e) {
+        // Is the modal viewer open?
+        if (document.getElementById('viewer').offsetParent) {
             if (e.which === 37) { // left
                 move_screen('prev');
             }
@@ -68,19 +72,25 @@ screenshots: [
         }
     });
 
+    function screen_loaded(img) {
+        document.getElementById('modal-loading').style.display = 'none';
+        img.style.display = 'block';
+    }
+
     function move_screen(direction) {
-        var current = $('#viewer').data('cur-index');
+        var current = parseInt(viewer.getAttribute('data-cur-index'));
+        var total = document.getElementById('screenshots').getElementsByTagName('li').length;
         var target = 0;
 
         if (direction == 'prev') {
-            target = (current === 0) ? ($('#screenshots > li').length - 1) : (current - 1);
+            target = (current === 1) ? total : (current - 1);
         }
         else {
-            target = (current === ($('#screenshots > li').length - 1)) ? 0 : (current + 1);
+            target = (current === total) ? 1 : (current + 1);
         }
 
         $('#viewer').modal('hide');
-        $('#screenshots > li:eq(' + target+ ') > a').trigger('click');
+        document.getElementById('screenshot' + target).click();
     }
 </script>
 
