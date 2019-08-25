@@ -20,7 +20,7 @@ screenshots: [
 
 <ul id="screenshots" class="screens text-center text-lg-left p-0 w-100">
     {% for screenshot in page.screenshots %}
-        <li class="m-1 d-inline-block"><a id="screenshot{{ forloop.index + 1 }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
+        <li class="m-1 d-inline-block"><a id="screenshot{{ forloop.index }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
     {% endfor %}
 </ul>
 

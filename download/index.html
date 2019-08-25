@@ -8,7 +8,7 @@ lastmod: 2019-08-28T12:32:00Z
 
 {% for dist in site.data.versions.distributions %}
     <a class="anchor d-block invisible position-relative" id="{{ dist.id }}"></a>
-    <h2>{{ dist.name }}{% if site.data.versions.[dist.id].version %} - {{ site.data.versions.[dist.id].version }}{% endif %}</h2>
+    <h2>{{ dist.name }}{% if site.data.versions[dist.id].version %} - {{ site.data.versions[dist.id].version }}{% endif %}</h2>
 
     {% if dist.id == "lts" %}
         <p class="text-muted">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
@@ -25,7 +25,7 @@ lastmod: 2019-08-28T12:32:00Z
         </tr>
     </thead>
     <tbody>
-        {% for source in site.data.versions.[dist.id].sources %}
+        {% for source in site.data.versions[dist.id].sources %}
             <tr>
                 <td class="package">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
                 <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
