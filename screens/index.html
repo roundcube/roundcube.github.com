@@ -2,27 +2,32 @@
 layout: default
 title: Roundcube Webmail Screenshots
 navtitle: Screenshots
-screenshots: [
-    { "file": "mailbox.png", "title": "Three-paned mailbox view" },
-    { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
-    { "file": "cnmailbox.png", "title": "Multilingual display" },
-    { "file": "compose.png", "title": "Compose HTML mails with attachments" },
-    { "file": "addressbook.png", "title": "Address book with LDAP integration" },
-    { "file": "editcontact.png", "title": "Extensible contact management form" },
-    { "file": "settings.png", "title": "Versatile user settings" },
-    { "file": "folders.png", "title": "Easy IMAP folder management" },
-    { "file": "identities.png", "title": "Sender identities with signature" },
-    { "file": "enigma.png", "title": "Plugins like Engima for signing and encrypting emails" },
-    { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
-]
 ---
 <h1>Impressions of Roundcube's User Interface</h1>
 
-<ul id="screenshots" class="screens text-center text-lg-left p-0 w-100">
-    {% for screenshot in page.screenshots %}
-        <li class="m-1 d-inline-block"><a id="screenshot{{ forloop.index }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/images/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
-    {% endfor %}
-</ul>
+{% for skin in site.data.screenshots %}
+    {% if skin.devices.size > 1 %}
+        <ul class="nav nav-tabs" role="tablist">
+            {% for device in skin.devices %}
+                <li class="nav-item">
+                    <a class="nav-link text-capitalize {% if forloop.first %} active {% endif %}" id="{{ skin.dir }}-{{ device }}-tab" data-toggle="tab" href="#{{ skin.dir }}-{{ device }}" role="tab" aria-controls="{{ skin.dir }}-{{ device }}" aria-selected="true">{{ device }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <div class="tab-content">
+        {% for device in skin.devices %}
+            <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ skin.dir }}-{{ device }}" role="tabpanel" aria-labelledby="{{ skin.dir }}-{{ device }}-tab">
+                <ul id="screenshots-{{ skin.dir }}-{{ device }}" class="screens text-center text-lg-left p-0 w-100 mt-3">
+                    {% for screenshot in skin.screenshots %}
+                        <li class="m-1 d-inline-block"><a id="screenshots-{{ skin.dir }}-{{ device }}-{{ forloop.index }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/screens/skins/{{ skin.dir }}/{{ device }}/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
 
 <div id="viewer" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -48,7 +53,8 @@ screenshots: [
 
             this.querySelector('.modal-body > img').src = screen.getAttribute('src').replace('/thumbs/', '/screens/');
             this.querySelector('.modal-footer > p').textContent = screen.getAttribute('alt');
-            this.setAttribute('data-cur-index', source.id.replace('screenshot', ''));
+            this.setAttribute('data-cur-index', source.id.replace(/^screenshots-[a-z]+-[a-z]+-/, ''));
+            this.setAttribute('data-cur-source', source.id.replace(/-[0-9]+$/, ''));
         })
         .on ('hidden.bs.modal', function(e) {
             var screen = this.querySelector('.modal-body > img');
@@ -58,6 +64,7 @@ screenshots: [
             document.getElementById("modal-loading").style.display = 'block';
             this.querySelector('.modal-footer > p').textContent = '';
             this.setAttribute('data-cur-index', '');
+            this.setAttribute('data-cur-source', '');
         });
 
     document.addEventListener('keyup', function(e) {
@@ -78,8 +85,9 @@ screenshots: [
     }
 
     function move_screen(direction) {
+        var source = viewer.getAttribute('data-cur-source');
         var current = parseInt(viewer.getAttribute('data-cur-index'));
-        var total = document.getElementById('screenshots').getElementsByTagName('li').length;
+        var total = document.getElementById(source).getElementsByTagName('li').length;
         var target = 0;
 
         if (direction == 'prev') {
@@ -90,7 +98,7 @@ screenshots: [
         }
 
         $('#viewer').modal('hide');
-        document.getElementById('screenshot' + target).click();
+        document.getElementById(source + '-' + target).click();
     }
 </script>
 
