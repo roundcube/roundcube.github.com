@@ -90,6 +90,7 @@ a.irc-link::after {
 }
 
 .download-btn > a::before {
+  margin-right: 10px;
   content: @fa-var-download;
 }
 
@@ -143,6 +144,10 @@ a.irc-link::after {
   div.right-col {
     padding-top: 2rem;
   }
+}
+
+#viewer .modal-body {
+  min-height: 1px; /* IE11 fix for modal window height */
 }
 
 #modal-loading i {
