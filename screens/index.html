@@ -5,7 +5,15 @@ navtitle: Screenshots
 ---
 <h1>Impressions of Roundcube's User Interface</h1>
 
+<p>Roundcube comes with {{ site.data.screenshots.size }} different skins. These skins are maintained by the Roundcube developers. Below are some screenshots of them in use. You can also <a href="https://github.com/roundcube/roundcubemail/wiki/Skins#extending-skins" class="external-link" target="_blank">create your own skin</a> or <a href="https://github.com/roundcube/roundcubemail/wiki/Skins#extending-skins" class="external-link" target="_blank">extend an existing skin</a> to make Roundcube look just right for you.</p>
+
 {% for skin in site.data.screenshots %}
+    <h2 class="mb-0">
+        {{ skin.name }}
+    </h2>
+    <span class="text-muted mt-0">Author: {{ skin.author }}</span>
+    <p class="my-2">{{ skin.desc }}</p>
+
     {% if skin.devices.size > 1 %}
         <ul class="nav nav-tabs" role="tablist">
             {% for device in skin.devices %}
@@ -101,13 +109,3 @@ navtitle: Screenshots
         document.getElementById(source + '-' + target).click();
     }
 </script>
-
-<div class="clearfix"></div>
-
-<br>
-
-<h2>Seen enough?</h2>
-
-<p>Download the source and install Roundcube on a standard <a href="https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29" class="external-link" target="_blank">LAMP</a> server.</p>
-
-{% include downloadbutton.html %}
