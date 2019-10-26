@@ -15,7 +15,7 @@
 
 {% include nav.html %}
 
-<main role="main" class="flex-shrink-0 container pb-5">
+<main class="flex-shrink-0 container pb-5">
 
 <div class="row">
     <div class="col-md-8">
@@ -23,7 +23,7 @@
 
         <ul class="tags m-0 px-0 clearfix">
             {% for tag in page.tags %}
-                <li class="float-left m-1"><a href="/news/{{ tag }}" class="tag-link text-info">{{ tag }}</a></li>
+                <li class="float-left m-1"><a href="/news/{{ tag }}" class="rc-icon tag-link text-info">{{ tag }}</a></li>
             {% endfor %}
         </ul>
 
@@ -31,7 +31,7 @@
 
         {{ content }}
 
-        <a href="/news/" class="back-link d-block mt-4">Return to News overview</a>
+        <a href="/news/" class="rc-icon back-link d-block mt-4">Return to News overview</a>
     </div>
 
     <div class="col-md-4 right-col">

@@ -5,7 +5,7 @@ navtitle: News
 lastmod: 2017-10-31T20:26:00Z
 ---
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-lg-8">
         <h1>The Roundcube Project News</h1>
 
         <div class="artical-list">
@@ -14,34 +14,17 @@ lastmod: 2017-10-31T20:26:00Z
             {% endfor %}
         </div>
 
-        <nav>
-            <ul class="pagination justify-content-center">
-                {% if paginator.previous_page_path != nil %}
-                    <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path }}" tabindex="-1">Newer posts</a></li>
-                {% else %}
-                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Newer posts</a></li>
-                {% endif %}
+        <a class="btn btn-link {% if paginator.previous_page_path == nil %}disabled{% endif %} my-3 ml-lg-5" href="{{ paginator.previous_page_path }}" tabindex="-1"><i class="fas fa-angle-left"></i> Newer posts</a>
+        <a class="btn btn-link {% if paginator.next_page_path == nil %}disabled{% endif %} float-right my-3 mr-lg-5" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts <i class="fas fa-angle-right"></i></a>
 
-                {% if paginator.next_page_path != nil %}
-                    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts</a></li>
-                {% else %}
-                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Older posts</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-
-        <br>
-
-        <h3>Want more?</h3>
-        <ul>
-            <li>Subscribe to the news <a href="/feeds/atom.xml" class="rss-link" target="_blank">RSS Feed</a></li>
+        <h3 class="d-none d-lg-block">Want more?</h3>
+        <ul class="d-none d-lg-block">
+            <li>Subscribe to the news <a href="/feeds/atom.xml" class="rc-icon rss-link" target="_blank">RSS Feed</a></li>
         </ul>
-
-        <br>
     </div>
 
-    <div class="col-md-4 right-col">
-        <div class="card">
+    <div class="col-lg-4 right-col">
+        <div class="card mb-4">
             <div class="card-header bg-dark">
                 <span class="text-white">Latest posts from the planet Roundcube blogs</span>
             </div>
@@ -50,15 +33,13 @@ lastmod: 2017-10-31T20:26:00Z
             </ul>
         </div>
 
-        <br>
-
         <div class="card">
             <div class="card-header bg-dark">
                 <span class="text-white">Tags</span>
             </div>
             <ul class="tags pt-1 px-2">
                 {% for tag in site.tags %}
-                    <li class="float-left m-1"><a href="/news/{{ tag | first }}" class="tag-link text-info">{{ tag | first }}</a></li>
+                    <li class="float-left m-1"><a href="/news/{{ tag | first }}" class="rc-icon tag-link text-info">{{ tag | first }}</a></li>
                 {% endfor %}
             </ul>
         </div>

@@ -1,6 +1,7 @@
 @import (reference) "fontawesome";
 @nav-height: 66px;
 @nav-offset: 6rem;
+@color-primary: #37beff;
 
 a.anchor {
   top: @nav-offset * -1;
@@ -69,29 +70,18 @@ ul.screens,
   }
 }
 
-.download-btn > a::before,
-a.back-link::before,
-a.tag-link::before,
-a.mail-list-link::before,
-td.link > a::before {
+.rc-icon::before,
+.rc-icon::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.rc-icon::before {
   margin-right: 5px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
 }
 
-a.read-link::after,
-a.external-link::after,
-a.rss-link::after,
-a.asc-link::after,
-a.irc-link::after {
+.rc-icon::after {
   margin-left: 5px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-.download-btn > a::before {
-  margin-right: 10px;
-  content: @fa-var-download;
 }
 
 a.back-link::before {
@@ -129,14 +119,39 @@ a.irc-link::after {
   content: @fa-var-comments;
 }
 
-@media (max-width: 575px) {
-  td.link > a::before {
-    content: @fa-var-download;
-    margin-right: 0;
+.btn-rc-download {
+  color: #fff;
+  background-color: @color-primary;
+  border-color: @color-primary;
+
+  &:hover {
+    color: #fff;
+    background-color: darken(@color-primary, 5%);
+    border-color: darken(@color-primary, 7%);
   }
 
-  td.link > a > span {
-    display: none;
+  &::before {
+    margin-right: 10px;
+    content: @fa-var-download;
+  }
+
+  &.btn-sm {
+    @media (max-width: 575px) {
+      & > span {
+        display: none;
+      }
+
+      &::before {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+      &::before {
+        margin-right: 0;
+        content: '';
+      }
+    }
   }
 }
 
@@ -162,28 +177,7 @@ a.irc-link::after {
   height: 100%;
   font-size: 2rem;
   opacity: 0.5;
-}
 
-@media (min-width: 576px) {
-  .modal-arrow {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .modal-arrow {
-    font-size: 4rem;
-  }
-}
-
-
-@media (min-width: 992px) {
-  .modal-arrow {
-    font-size: 5rem;
-  }
-}
-
-.modal-arrow {
   &.right-arrow {
     right: 0;
   }
@@ -192,16 +186,26 @@ a.irc-link::after {
   a:hover {
     text-decoration: none;
   }
-}
 
-@media (min-width: 900px) {
-  #viewer > .modal-dialog {
-    max-width: 60%;
+  @media (min-width: 576px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 5rem;
   }
 }
 
-@media (min-width: 3200px) {
-  #viewer > .modal-dialog {
+#viewer > .modal-dialog {
+  @media (min-width: 900px) {
+    max-width: 60%;
+  }
+
+  @media (min-width: 3200px) {
     max-width: 1920px;
   }
 }
@@ -215,10 +219,8 @@ table.download-table {
   td.size {
     width: 15%;
   }
-}
 
-@media (max-width: 991px) {
-  table.download-table {
+  @media (max-width: 991px) {
     td.package {
       width: 50%;
     }

@@ -5,7 +5,7 @@ navtitle: Screenshots
 ---
 <h1>Impressions of Roundcube's User Interface</h1>
 
-<p>Roundcube comes with {{ site.data.screenshots.size }} different skins. These skins are maintained by the Roundcube developers. Below are some screenshots of them in use. You can also <a href="https://github.com/roundcube/roundcubemail/wiki/Skins#extending-skins" class="external-link" target="_blank">create your own skin</a> or <a href="https://github.com/roundcube/roundcubemail/wiki/Skins#extending-skins" class="external-link" target="_blank">extend an existing skin</a> to make Roundcube look just right for you.</p>
+<p>Roundcube comes with {{ site.data.screenshots.size }} different skins. These skins are maintained by the Roundcube developers. Below are some screenshots of them in use. You can also <a href="https://github.com/roundcube/roundcubemail/wiki/Skins#extending-skins" class="rc-icon external-link" target="_blank">create your own skin</a> or <a href="https://github.com/roundcube/roundcubemail/wiki/Skins#extending-skins" class="rc-icon external-link" target="_blank">extend an existing skin</a> to make Roundcube look just right for you.</p>
 
 {% for skin in site.data.screenshots %}
     <h2 class="mb-0">
@@ -26,7 +26,7 @@ navtitle: Screenshots
 
     <div class="tab-content">
         {% for device in skin.devices %}
-            <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ skin.dir }}-{{ device }}" role="tabpanel" aria-labelledby="{{ skin.dir }}-{{ device }}-tab">
+            <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ skin.dir }}-{{ device }}" role="tabpanel" {% if skin.devices.size > 1 %}aria-labelledby="{{ skin.dir }}-{{ device }}-tab"{% endif %}>
                 <ul id="screenshots-{{ skin.dir }}-{{ device }}" class="screens text-center text-lg-left p-0 w-100 mt-3">
                     {% for screenshot in skin.screenshots %}
                         <li class="m-1 d-inline-block"><a id="screenshots-{{ skin.dir }}-{{ device }}-{{ forloop.index }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/screens/skins/{{ skin.dir }}/{{ device }}/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
@@ -41,10 +41,10 @@ navtitle: Screenshots
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content bg-transparent">
             <div class="modal-body text-center p-0">
-                <div id='modal-loading' class='text-center py-5'><i class='fas fa-circle-notch fa-spin'></i></div>
-                <img src='#' style='display: none;' class='img-fluid' onload='screen_loaded(this);'>
-                <div class='modal-arrow p-2 d-flex align-items-center left-arrow'><a href='#' onclick="move_screen('prev'); return false;" class='fas fa-chevron-left text-secondary'></a></div>
-                <div class='modal-arrow p-2 d-flex align-items-center right-arrow'><a href='#' onclick="move_screen('next'); return false;" class='fas fa-chevron-right text-secondary'></a></div>
+                <div id="modal-loading" class="text-center py-5"><i class="fas fa-circle-notch fa-spin"></i></div>
+                <img src="#" style="display: none;" class="img-fluid" onload="screen_loaded(this);" alt="">
+                <div class="modal-arrow p-2 d-flex align-items-center left-arrow"><a href="#" onclick="move_screen(true); return false;" class="fas fa-chevron-left text-secondary"></a></div>
+                <div class="modal-arrow p-2 d-flex align-items-center right-arrow"><a href="#" onclick="move_screen(); return false;" class="fas fa-chevron-right text-secondary"></a></div>
             </div>
             <div class="modal-footer bg-dark justify-content-start">
                 <p class="text-white mb-0"></p>
@@ -55,19 +55,22 @@ navtitle: Screenshots
 
 <script>
     var viewer = document.getElementById('viewer');
-    $('#viewer').on('show.bs.modal', function(e) {
+    $(viewer).on('show.bs.modal', function(e) {
             var source = e.relatedTarget;
-            var screen = source.querySelector('img');
+            var img = source.querySelector('img');
+            var screen = this.querySelector('.modal-body > img');
 
-            this.querySelector('.modal-body > img').src = screen.getAttribute('src').replace('/thumbs/', '/screens/');
-            this.querySelector('.modal-footer > p').textContent = screen.getAttribute('alt');
+            screen.src = img.getAttribute('src').replace('/thumbs/', '/screens/');
+            screen.alt = img.getAttribute('alt');
+            this.querySelector('.modal-footer > p').textContent = img.getAttribute('alt');
             this.setAttribute('data-cur-index', source.id.replace(/^screenshots-[a-z]+-[a-z]+-/, ''));
             this.setAttribute('data-cur-source', source.id.replace(/-[0-9]+$/, ''));
         })
-        .on ('hidden.bs.modal', function(e) {
+        .on('hidden.bs.modal', function(e) {
             var screen = this.querySelector('.modal-body > img');
             screen.style.display = 'none';
             screen.src = '#';
+            screen.alt = '';
 
             document.getElementById("modal-loading").style.display = 'block';
             this.querySelector('.modal-footer > p').textContent = '';
@@ -79,10 +82,10 @@ navtitle: Screenshots
         // Is the modal viewer open?
         if (document.getElementById('viewer').offsetParent) {
             if (e.which === 37) { // left
-                move_screen('prev');
+                move_screen(true);
             }
             else if (e.which === 39) { // right
-                move_screen('next');
+                move_screen();
             }
         }
     });
@@ -92,20 +95,20 @@ navtitle: Screenshots
         img.style.display = 'block';
     }
 
-    function move_screen(direction) {
+    function move_screen(reverse) {
         var source = viewer.getAttribute('data-cur-source');
         var current = parseInt(viewer.getAttribute('data-cur-index'));
         var total = document.getElementById(source).getElementsByTagName('li').length;
         var target = 0;
 
-        if (direction == 'prev') {
+        if (reverse) {
             target = (current === 1) ? total : (current - 1);
         }
         else {
             target = (current === total) ? 1 : (current + 1);
         }
 
-        $('#viewer').modal('hide');
+        $(viewer).modal('hide');
         document.getElementById(source + '-' + target).click();
     }
 </script>
