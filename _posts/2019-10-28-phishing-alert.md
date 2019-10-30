@@ -11,7 +11,7 @@ The fake emails pretend to come from „Roundcube Webmail“ or alike and trick 
 
 Please understand that
 
-> **ROUNDCUBE IS NOT A SEVICE AND YOU DO NOT HAVE AN ACCOUNT WITH US!**
+> **ROUNDCUBE IS NOT A SERVICE AND YOU DO NOT HAVE AN ACCOUNT WITH US!**
 
 Roundcube is free software your email hosting provider has installed on their servers.
 
