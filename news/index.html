@@ -26,10 +26,16 @@ lastmod: 2017-10-31T20:26:00Z
     <div class="col-lg-4 right-col">
         <div class="card mb-4">
             <div class="card-header bg-dark">
-                <span class="text-white">Latest posts from the planet Roundcube blogs</span>
+                <span class="text-white">Latest blog posts</span>
             </div>
             <ul class="list-group list-group-flush ul-striped">
-                {% include roundcubeinbox.html %}
+                {% for blog in site.data.blogs limit:6 %}
+                    <li class="list-group-item">
+                        <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
+                        {{ blog.preview }}<br>
+                        <span class="postdate text-muted font-italic small">{{ blog.date | date: "%d %B %Y"  }}</span>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
 
