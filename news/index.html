@@ -17,10 +17,7 @@ lastmod: 2017-10-31T20:26:00Z
         <a class="btn btn-link {% if paginator.previous_page_path == nil %}disabled{% endif %} my-3 ml-lg-5" href="{{ paginator.previous_page_path }}" tabindex="-1"><i class="fas fa-angle-left"></i> Newer posts</a>
         <a class="btn btn-link {% if paginator.next_page_path == nil %}disabled{% endif %} float-right my-3 mr-lg-5" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts <i class="fas fa-angle-right"></i></a>
 
-        <h3 class="d-none d-lg-block">Want more?</h3>
-        <ul class="d-none d-lg-block">
-            <li>Subscribe to the news <a href="/feeds/atom.xml" class="rc-icon rss-link" target="_blank">RSS Feed</a></li>
-        </ul>
+        <p class="text-muted small d-none d-lg-block mt-4">Subscribe to the news <a href="/feeds/atom.xml" class="rc-icon rss-link" target="_blank">RSS Feed</a></p>
     </div>
 
     <div class="col-lg-4 right-col">
@@ -29,7 +26,7 @@ lastmod: 2017-10-31T20:26:00Z
                 <span class="text-white">Latest blog posts</span>
             </div>
             <ul class="list-group list-group-flush ul-striped">
-                {% for blog in site.data.blogs limit:6 %}
+                {% for blog in site.data.blogs limit:5 %}
                     <li class="list-group-item">
                         <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
                         {{ blog.preview }}<br>
