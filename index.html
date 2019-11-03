@@ -30,7 +30,7 @@ date: 2018-08-25T13:20:00Z
         or <a href="/download#beta">download&nbsp;1.4-rc2</a> now.</div>
 
     <h1>Roundcube webmail...</h1>
-    <p>
+    <p class="mb-0">
         ...is a browser-based multilingual IMAP client with an application-like user interface.
         It provides full functionality you expect from an email client, including MIME support,
         address book, folder manipulation, message searching and spell checking.
@@ -43,7 +43,7 @@ date: 2018-08-25T13:20:00Z
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-lg-7">
                 <h2>Features</h2>
                 <ul>
                     <li>Multilingual capabilities</li>
@@ -59,13 +59,13 @@ date: 2018-08-25T13:20:00Z
 
                 <a href="/about/#features" class="rc-icon read-link">Complete list of features</a>
             </div>
-            <div class="col-md-4 right-col">
+            <div class="col-lg-5 mt-4">
                 <div class="card">
                     <div class="card-header bg-dark">
                         <span class="text-white">Latest News</span>
                     </div>
                     <ul class="list-group list-group-flush ul-striped">
-                        {% for post in site.posts limit:4 %}
+                        {% for post in site.posts limit:5 %}
                             <li class="list-group-item">
                                 <a href="{{ post.url }}" class="newslink">{{ post.title }}</a><br>
                                 <span class="postdate text-muted font-italic small">{{ post.date | date_to_long_string }}</span>
