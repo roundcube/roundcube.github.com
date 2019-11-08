@@ -6,7 +6,7 @@
         "desc": "Released with Roundcube version 1.4.0, Elastic is Roundcube's the first official responsive skin. It has support for desktops, tablets and phones.",
         "devices": ['desktop', 'tablet', 'phone'],
         "screenshots": [
-            { "file": "mailbox.png", "title": "Three-paned mailbox view" },
+            { "file": "mailbox.png", "title": "Mailbox view" },
             { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
             { "file": "cnmailbox.png", "title": "Multilingual display" },
             { "file": "compose.png", "title": "Compose HTML mails with attachments" },
