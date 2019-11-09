@@ -3,7 +3,6 @@ layout: home
 title: Roundcube - Free and Open Source Webmail Software
 date: 2018-08-25T13:20:00Z
 ---
-
 <div id="banner" class="py-2">
     <div class="container">
         <div class="row">
@@ -21,7 +20,7 @@ date: 2018-08-25T13:20:00Z
     </div>
 </div>
 
-<main role="main" class="flex-shrink-0 container pt-4 pb-5">
+<main class="flex-shrink-0 container pt-4 pb-5">
     <div class="alert alert-success" role="alert">
         <i class="fas fa-bullhorn"></i>
         <b>Roundcube 1.4 is coming!</b>
@@ -31,11 +30,11 @@ date: 2018-08-25T13:20:00Z
         or <a href="/download#beta">download&nbsp;1.4-rc2</a> now.</div>
 
     <h1>Roundcube webmail...</h1>
-    <p>
+    <p class="mb-0">
         ...is a browser-based multilingual IMAP client with an application-like user interface.
         It provides full functionality you expect from an email client, including MIME support,
         address book, folder manipulation, message searching and spell checking.
-        <a href="/about" class="read-link">More information</a>
+        <a href="/about" class="rc-icon read-link">More information</a>
     </p>
     <div class="container">
         <div class="row">
@@ -44,29 +43,37 @@ date: 2018-08-25T13:20:00Z
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-lg-7">
                 <h2>Features</h2>
                 <ul>
-                    <li>Multilingual capabilities</li>
-                    <li>Find-as-you-type address book</li>
-                    <li>Richtext/HTML message composing</li>
-                    <li>Searching messages and contacts</li>
-                    <li>Canned response templates</li>
-                    <li>Int. domain names (IDNA)</li>
-                    <li>Shared folders and ACL</li>
-                    <li>Full featured address book</li>
-                    <li>Extensible using the Plug-in API</li>
+                    <li>Drag-&amp;-drop message management</li>
+                    <li>Full support for MIME and HTML messages</li>
+                    <li>Multiple sender identities</li>
+                    <li>Full featured address book with groups and LDAP connectors</li>
+                    <li>Find-as-you-type address book integration</li>
+                    <li>Threaded message listing</li>
+                    <li>IDNA support</li>
+                    <li>Spell checking</li>
+                    <li>Responsive skin (multi-device support)</li>
+                    <li>Shared/global IMAP folders</li>
+                    <li>Support for access control lists (ACL)</li>
+                    <li>Built-in caching for fast mailbox access</li>
+                    <li>Unlimited users and messages</li>
+                    <li>Import/export functions</li>
+                    <li>Plug-in API for flexible extensions</li>
+                    <li>XSS attack protection</li>
+                    <li>Support for PGP encryption</li>
                 </ul>
 
-                <a href="/about/#features" class="read-link">Complete list of features</a>
+                <a href="/about/#features" class="rc-icon read-link">Complete list of features</a>
             </div>
-            <div class="col-md-4 right-col">
+            <div class="col-lg-5 mt-4">
                 <div class="card">
                     <div class="card-header bg-dark">
                         <span class="text-white">Latest News</span>
                     </div>
                     <ul class="list-group list-group-flush ul-striped">
-                        {% for post in site.posts limit:4 %}
+                        {% for post in site.posts limit:5 %}
                             <li class="list-group-item">
                                 <a href="{{ post.url }}" class="newslink">{{ post.title }}</a><br>
                                 <span class="postdate text-muted font-italic small">{{ post.date | date_to_long_string }}</span>

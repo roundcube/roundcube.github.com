@@ -28,7 +28,7 @@ lastmod: 2019-08-28T12:32:00Z
         {% for source in site.data.versions[dist.id].sources %}
             <tr>
                 <td class="package">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
-                <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn btn-success btn-sm"><span>Download</span></a>
+                <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a>
                 <td class="size text-nowrap">{{ source.size }}</td>
                 <td class="checksum d-none d-lg-table-cell text-monospace">{{ source.checksum }}</td>
             </tr>
@@ -49,9 +49,9 @@ lastmod: 2019-08-28T12:32:00Z
                 <span class="text-white"><i class="fab fa-github fa-fw mr-1"></i> GitHub</span>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">All recent versions are listed on our <a href="https://github.com/roundcube/roundcubemail/releases" class="external-link" target="_blank">Github releases</a> page - complete with release notes and signatures.</li>
-                <li class="list-group-item">To get the bleeding edge development version check out the files directly from our <a href="https://github.com/roundcube/roundcubemail/" class="external-link" target="_blank">Github repository</a>.</li>
-                <li class="list-group-item">Archives of older releases can be found on <a href="https://sourceforge.net/projects/roundcubemail/files/" class="external-link" target="_blank">sourceforge.net</a>.</li>
+                <li class="list-group-item">All recent versions are listed on our <a href="https://github.com/roundcube/roundcubemail/releases" class="rc-icon external-link" target="_blank">Github releases</a> page - complete with release notes and signatures.</li>
+                <li class="list-group-item">To get the bleeding edge development version check out the files directly from our <a href="https://github.com/roundcube/roundcubemail/" class="rc-icon external-link" target="_blank">Github repository</a>.</li>
+                <li class="list-group-item">Archives of older releases can be found on <a href="https://sourceforge.net/projects/roundcubemail/files/" class="rc-icon external-link" target="_blank">sourceforge.net</a>.</li>
             </ul>
         </div>
     </div>
@@ -62,8 +62,8 @@ lastmod: 2019-08-28T12:32:00Z
                 <span class="text-white"><i class="fab fa-docker fa-fw mr-1"></i> Docker</span>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">The Roundcube Docker image is available on <a href="https://hub.docker.com/r/roundcube/roundcubemail/" class="external-link" target="_blank">Docker Hub</a>.</li>
-                <li class="list-group-item">More information on Docker and a quick start guide is available in the <a href="https://docs.docker.com/" class="external-link" target="_blank">Docker documentation</a>.</li>
+                <li class="list-group-item">The Roundcube Docker image is available on <a href="https://hub.docker.com/r/roundcube/roundcubemail/" class="rc-icon external-link" target="_blank">Docker Hub</a>.</li>
+                <li class="list-group-item">More information on Docker and a quick start guide is available in the <a href="https://docs.docker.com/" class="rc-icon external-link" target="_blank">Docker documentation</a>.</li>
             </ul>
         </div>
     </div>
@@ -74,10 +74,10 @@ lastmod: 2019-08-28T12:32:00Z
                 <span class="text-white"><i class="fas fa-box-open fa-fw mr-1"></i> Other</span>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Roundcube can also be installed through auto installers like <a href="https://www.softaculous.com/" class="external-link" target="_blank">softaculous.com</a>
-                    or <a href="https://www.cpanel.net/" class="external-link" target="_blank">cPanel.</a></li>
-                <li class="list-group-item">The <a href="https://bitnami.com/stack/roundcube" class="external-link" target="_blank">BitNami Roundcube Stack</a> provides a one-click installer for various platforms and cloud services.</li>
-                <li class="list-group-item">Via the <a href="https://cloudron.io/appstore.html?app=net.roundcube.cloudronapp" class="external-link" target="_blank">Cloudron</a> app store.
+                <li class="list-group-item">Roundcube can also be installed through auto installers like <a href="https://www.softaculous.com/" class="rc-icon external-link" target="_blank">softaculous.com</a>
+                    or <a href="https://www.cpanel.net/" class="rc-icon external-link" target="_blank">cPanel.</a></li>
+                <li class="list-group-item">The <a href="https://bitnami.com/stack/roundcube" class="rc-icon external-link" target="_blank">BitNami Roundcube Stack</a> provides a one-click installer for various platforms and cloud services.</li>
+                <li class="list-group-item">Via the <a href="https://cloudron.io/appstore.html?app=net.roundcube.cloudronapp" class="rc-icon external-link" target="_blank">Cloudron</a> app store.
                     Each Cloudron is a fully equipped mail server and has sieve integration.</li>
                 <li class="list-group-item">Various Unix/Linux distributions provide Roundcube via their package managers. Check your local package repository.</li>
             </ul>
@@ -88,25 +88,25 @@ lastmod: 2019-08-28T12:32:00Z
 <h2>PGP signatures for package verification</h2>
 <p>Release tarballs listed above are signed with PGP to allow you to verify the authencity. We sign them with
     the identity <b>Roundcube Developers &lt;devs@roundcube.net&gt;</b> alias <b>41C4F7D5</b>
-    and the public key can be downloaded from the <a href="https://pgp.mit.edu/pks/lookup?op=vindex&search=0x5AB2BAA141C4F7D5" class="external-link" target="_blank">pgp.mit.edu</a>
-    keyserver or from <a href="/download/pubkey.asc" class="asc-link">our website</a>. The signatures can be found with the according
-    release item on the <a href="https://github.com/roundcube/roundcubemail/releases" class="external-link" target="_blank">GitHub releases page</a>.
+    and the public key can be downloaded from the <a href="https://pgp.mit.edu/pks/lookup?op=vindex&search=0x5AB2BAA141C4F7D5" class="rc-icon external-link" target="_blank">pgp.mit.edu</a>
+    keyserver or from <a href="/download/pubkey.asc" class="rc-icon asc-link">our website</a>. The signatures can be found with the according
+    release item on the <a href="https://github.com/roundcube/roundcubemail/releases" class="rc-icon external-link" target="_blank">GitHub releases page</a>.
 </p>
 
-<p>After downloading the <a href="/download/pubkey.asc" class="asc-link">pubkey</a> and the signature file, verify packages with</p>
+<p>After downloading the <a href="/download/pubkey.asc" class="rc-icon asc-link">pubkey</a> and the signature file, verify packages with</p>
 <p class="bg-light p-3 text-monospace">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</p>
 
 <h2>Installation</h2>
 
 <ul>
-    <li>Instructions on how to download and <a href="https://github.com/roundcube/roundcubemail/wiki/Installation" class="external-link" target="_blank">install Roundcube</a> can be found in our Wiki.</li>
-    <li>Continue reading how to <a href="https://github.com/roundcube/roundcubemail/wiki/Configuration" class="external-link" target="_blank">configure</a> Roundcube and your webserver.</li>
+    <li>Instructions on how to download and <a href="https://github.com/roundcube/roundcubemail/wiki/Installation" class="rc-icon external-link" target="_blank">install Roundcube</a> can be found in our Wiki.</li>
+    <li>Continue reading how to <a href="https://github.com/roundcube/roundcubemail/wiki/Configuration" class="rc-icon external-link" target="_blank">configure</a> Roundcube and your webserver.</li>
 </ul>
 
 <h2>Plugins</h2>
 
 <p>The basic installation of Roundcube is not the end of the world. There are plenty of 3rd party plugins available that extend
-    the functionality or add new features. Check out our <a href="https://plugins.roundcube.net/" class="external-link" target="_blank">Plugins Repository</a>
+    the functionality or add new features. Check out our <a href="https://plugins.roundcube.net/" class="rc-icon external-link" target="_blank">Plugins Repository</a>
     and find what you're missing and read the instructions how to install plugins and keep them up-to-date.</p>
 
 <h2>Complete Email Server Packages with Roundcube</h2>
@@ -120,7 +120,7 @@ lastmod: 2019-08-28T12:32:00Z
             <div class="card-body">
                 <p>The <a href="https://kolab.org" class="font-weight-bold" target="_blank">Kolab Groupware</a> Solution provides a complete email and groupware server pre-packaged for various linux distributions
                   with Roundcube sitting on top as its web client. It offers easy configurable LDAP address books, calendars, tasks, mobile synchronization and more.
-                  An enterprise version with professional support is available from <a href="https://kolabsystems.com" class="external-link" target="_blank">Kolab Systems</a>.</p>
+                  An enterprise version with professional support is available from <a href="https://kolabsystems.com" class="rc-icon external-link" target="_blank">Kolab Systems</a>.</p>
             </div>
         </div>
     </div>
