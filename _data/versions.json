@@ -6,6 +6,28 @@
         {"id": "beta", "name": "Beta version"}
     ],
     "stable": {
+        "version": "1.4.0",
+        "sources": [{
+                "package": "Dependent",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.0/roundcubemail-1.4.0.tar.gz",
+                "size": "4.1 MB",
+                "checksum": "31a735a739cfe30fd3980248b0bce0e3722f1536bc19ec1caf78d416dfa5cadc"
+            },
+            {
+                "package": "Complete",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.0/roundcubemail-1.4.0-complete.tar.gz",
+                "size": "6.7 MB",
+                "checksum": "6bd2a2ac05d6575c290c784e1267090550c56c92f65b66f0b155832fc860ef2c"
+            },
+            {
+                "package": "Framework",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.0/roundcube-framework-1.4.0.tar.gz",
+                "size": "2 MB",
+                "checksum": "5bf8c0cfb2f3e791e9e9d095eecec562f43ad87c289610d3eeb94479a9356e78"
+            }
+        ]
+    },
+    "old-stable": {
         "version": "1.3.10",
         "sources": [{
                 "package": "Dependent",
@@ -27,50 +49,12 @@
             }
         ]
     },
-    "old-stable": {
-        "version": "1.2.9",
-        "sources": [{
-                "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.2.9/roundcubemail-1.2.9.tar.gz",
-                "size": "3.4 MB",
-                "checksum": "7b4967606e0c7e0b3b97aa49914f62aac50e6d778019eae503c332cea5829d4d"
-            },
-            {
-                "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.2.9/roundcubemail-1.2.9-complete.tar.gz",
-                "size": "3.7 MB",
-                "checksum": "0fed9def3b9441f93388c81ab47de58cd3b301f221c892d9c3fdcd3fd949797b"
-            }
-        ]
-    },
     "lts": {
         "sources": [{
-                "package": "1.1.12",
+                "package": "1.2.9",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.1.12/roundcubemail-1.1.12-complete.tar.gz",
                 "size": "4.5 MB",
                 "checksum": "f67c7809fa5d61b103d1630f85fe6648d936d8719129bae9366bc7036dbe7107"
-            }
-        ]
-    },
-    "beta": {
-        "version": "1.4-rc2",
-        "sources": [{
-                "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4-rc2/roundcubemail-1.4-rc2.tar.gz",
-                "size": "4.1 MB",
-                "checksum": "6bbf6abdb242f81b8fffb8ee986a9aff4b3336879597db3a99a39ce232a91461"
-            },
-            {
-                "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4-rc2/roundcubemail-1.4-rc2-complete.tar.gz",
-                "size": "6.7 MB",
-                "checksum": "285f7bae399ff85338de8293d863f94846ab3c03761ad82822259684835ec22e"
-            },
-            {
-                "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4-rc2/roundcube-framework-1.4-rc2.tar.gz",
-                "size": "1.2 MB",
-                "checksum": "d90acc7e2e17cd82e0d0544e1ae8fb7800416c553291de1c68af3365021cc6ce"
             }
         ]
     }
