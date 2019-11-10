@@ -8,28 +8,31 @@ navtitle: Screenshots
 <p>Roundcube comes with {{ site.data.screenshots.size }} different skins. These skins are maintained by the Roundcube developers. Below are some screenshots of them in use. You can also <a href="https://github.com/roundcube/roundcubemail/wiki/Skins#extending-skins" class="rc-icon external-link" target="_blank">create your own skin</a> or <a href="https://github.com/roundcube/roundcubemail/wiki/Skins#extending-skins" class="rc-icon external-link" target="_blank">extend an existing skin</a> to make Roundcube look just right for you.</p>
 
 {% for skin in site.data.screenshots %}
-    <h2 class="mb-0">
-        {{ skin.name }}
-    </h2>
-    <span class="text-muted mt-0">Author: {{ skin.author }}</span>
-    <p class="my-2">{{ skin.desc }}</p>
+    {% assign dir = skin | first %}
+    {% assign params = skin | last %}
 
-    {% if skin.devices.size > 1 %}
+    <h2 class="mb-0">
+        {{ params.name }}
+    </h2>
+    <span class="text-muted mt-0">Author: {{ params.author }}</span>
+    <p class="my-2">{{ params.desc }}</p>
+
+    {% if params.devices.size > 1 %}
         <ul class="nav nav-tabs" role="tablist">
-            {% for device in skin.devices %}
+            {% for device in params.devices %}
                 <li class="nav-item">
-                    <a class="nav-link text-capitalize {% if forloop.first %} active {% endif %}" id="{{ skin.dir }}-{{ device }}-tab" data-toggle="tab" href="#{{ skin.dir }}-{{ device }}" role="tab" aria-controls="{{ skin.dir }}-{{ device }}" aria-selected="true">{{ device }}</a>
+                    <a class="nav-link text-capitalize {% if forloop.first %} active {% endif %}" id="{{ dir }}-{{ device }}-tab" data-toggle="tab" href="#{{ dir }}-{{ device }}" role="tab" aria-controls="{{ dir }}-{{ device }}" aria-selected="true">{{ device }}</a>
                 </li>
             {% endfor %}
         </ul>
     {% endif %}
 
     <div class="tab-content">
-        {% for device in skin.devices %}
-            <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ skin.dir }}-{{ device }}" role="tabpanel" {% if skin.devices.size > 1 %}aria-labelledby="{{ skin.dir }}-{{ device }}-tab"{% endif %}>
-                <ul id="screenshots-{{ skin.dir }}-{{ device }}" class="screens text-center text-lg-left p-0 w-100 mt-3">
-                    {% for screenshot in skin.screenshots %}
-                        <li class="m-1 d-inline-block"><a id="screenshots-{{ skin.dir }}-{{ device }}-{{ forloop.index }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/screens/skins/{{ skin.dir }}/{{ device }}/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
+        {% for device in params.devices %}
+            <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ dir }}-{{ device }}" role="tabpanel" {% if params.devices.size > 1 %}aria-labelledby="{{ dir }}-{{ device }}-tab"{% endif %}>
+                <ul id="screenshots-{{ dir }}-{{ device }}" class="screens text-center text-lg-left p-0 w-100 mt-3">
+                    {% for screenshot in params.screenshots %}
+                        <li class="m-1 d-inline-block"><a id="screenshots-{{ dir }}-{{ device }}-{{ forloop.index }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/screens/skins/{{ dir }}/{{ device }}/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
                     {% endfor %}
                 </ul>
             </div>

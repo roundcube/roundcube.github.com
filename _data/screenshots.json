@@ -1,7 +1,6 @@
-[
-    {
+{
+    "elastic": {
         "name": "Elastic",
-        "dir": "elastic",
         "author": "Aleksander Machniak",
         "desc": "Released with Roundcube version 1.4.0, Elastic is Roundcube's the first official responsive skin. It has support for desktops, tablets and phones.",
         "devices": ['desktop', 'tablet', 'phone'],
@@ -19,9 +18,8 @@
             { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     },
-    {
+    "larry": {
         "name": "Larry",
-        "dir": "larry",
         "author": "FLINT / Büro für Gestaltung, Switzerland",
         "desc": "Released with Roundcube version 0.8.0, Larry provides visual impact thanks to its use of color and specially designed graphics.",
         "devices": ['desktop'],
@@ -39,9 +37,8 @@
             { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     },
-    {
+    "classic": {
         "name": "Classic",
-        "dir": "classic",
         "author": "The Roundcube Dev Team",
         "desc": "Formally known as Default, renamed to Classic as of Roundcube version 0.8.0, this is Roundcube's original skin.<br><i>Support depreciated as of Roundcube 1.4.0</i>",
         "devices": ['desktop'],
@@ -59,4 +56,4 @@
             { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     }
-]
+}
