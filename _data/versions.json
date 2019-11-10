@@ -2,8 +2,7 @@
     "distributions": [
         {"id": "stable", "name": "Stable version"},
         {"id": "old-stable", "name": "Old stable"},
-        {"id": "lts", "name": "LTS versions"},
-        {"id": "beta", "name": "Beta version"}
+        {"id": "lts", "name": "LTS versions"}
     ],
     "stable": {
         "version": "1.4.0",
