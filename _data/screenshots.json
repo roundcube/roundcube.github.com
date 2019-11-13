@@ -15,7 +15,7 @@
             { "file": "settings.png", "title": "Versatile user settings" },
             { "file": "folders.png", "title": "Easy IMAP folder management" },
             { "file": "identities.png", "title": "Sender identities with signature" },
-            { "file": "enigma.png", "title": "Plugins like Engima for signing and encrypting emails" },
+            { "file": "enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
             { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     },
@@ -35,7 +35,7 @@
             { "file": "settings.png", "title": "Versatile user settings" },
             { "file": "folders.png", "title": "Easy IMAP folder management" },
             { "file": "identities.png", "title": "Sender identities with signature" },
-            { "file": "enigma.png", "title": "Plugins like Engima for signing and encrypting emails" },
+            { "file": "enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
             { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     },
@@ -55,7 +55,7 @@
             { "file": "settings.png", "title": "Versatile user settings" },
             { "file": "folders.png", "title": "Easy IMAP folder management" },
             { "file": "identities.png", "title": "Sender identities with signature" },
-            { "file": "enigma.png", "title": "Plugins like Engima for signing and encrypting emails" },
+            { "file": "enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
             { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     }
