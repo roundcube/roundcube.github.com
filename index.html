@@ -6,15 +6,15 @@ date: 2018-08-25T13:20:00Z
 <div id="banner" class="py-2">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 text-center pt-2 pb-4 pt-lg-5 pt-md-3">
+            <div class="col-md-6 text-center pt-2 pb-4 pb-md-0 pt-lg-5 pt-md-3">
                 <img src="/images/logo.png" width="441" height="112" class="img-fluid" alt="Roundcube - open source webmail software">
 
-                <div class="d-none d-md-block col mt-lg-5 mt-md-4 banner-download">
+                <div class="d-none d-md-block col mt-sm-3 mt-md-4 mt-xl-5 banner-download">
                     {% include downloadbutton.html %}
                 </div>
             </div>
-            <div class="col-md-6 text-center text-md-right">
-                <a href="/screens"><img src="/screens/skins/{{ site.data.screenshots[0].dir }}/banner.png" width="647" height="390" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
+            <div class="col-md-6 text-center text-md-right mb-2 mb-md-0">
+                <a href="/screens"><img src="/screens/skins/{{ site.data.screenshots | first | first }}/banner.png" width="647" height="390" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
             </div>
         </div>
     </div>
@@ -24,8 +24,8 @@ date: 2018-08-25T13:20:00Z
     <div class="alert alert-success" role="alert">
         <i class="fas fa-bullhorn"></i>
         <b>Roundcube 1.4.0 with responsive skin is out!</b>
-        Read more about <a href="/news/2019/11/09/roundcube-1.4.0-released">what's new</a>
-        and <a href="/download">get a fresh copy</a> now.
+        Read more about <a href="{% post_url 2019-11-09-roundcube-1.4.0-released %}">what's new</a>
+        and <a href="/download#stable">get a fresh copy</a> now.
     </div>
 
     <h1>Roundcube webmail...</h1>
@@ -37,12 +37,12 @@ date: 2018-08-25T13:20:00Z
     </p>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 offset-md-8 d-block d-md-none p-2">
+            <div class="col d-block d-md-none mt-5">
                 {% include downloadbutton.html %}
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-7 px-0">
                 <h2>Features</h2>
                 <ul>
                     <li>Drag-&amp;-drop message management</li>
@@ -66,7 +66,7 @@ date: 2018-08-25T13:20:00Z
 
                 <a href="/about/#features" class="rc-icon read-link">Complete list of features</a>
             </div>
-            <div class="col-lg-5 mt-4">
+            <div class="col-lg-5 mt-4 px-0">
                 <div class="card">
                     <div class="card-header bg-dark">
                         <span class="text-white">Latest News</span>

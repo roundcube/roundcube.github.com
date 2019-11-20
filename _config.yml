@@ -6,6 +6,6 @@ hostname: "https://roundcube.net"
 permalink: news/:year/:month/:day/:title
 exclude: [vendor]
 plugins: [jekyll-paginate]
-paginate: 6
+paginate: 10
 paginate_path: "/news/page:num/"
 environment: "production"

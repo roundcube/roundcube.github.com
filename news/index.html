@@ -20,31 +20,37 @@ lastmod: 2017-10-31T20:26:00Z
         <p class="text-muted small d-none d-lg-block mt-4">Subscribe to the news <a href="/feeds/atom.xml" class="rc-icon rss-link" target="_blank">RSS Feed</a></p>
     </div>
 
-    <div class="col-lg-4 mt-4 mt-lg-0">
-        <div class="card mb-4">
-            <div class="card-header bg-dark">
-                <span class="text-white">Latest blog posts</span>
+    <div class="col-lg-4">
+        <div class="row">
+            <div class="col-12 d-none d-lg-block my-3 mt-lg-0">
+                <div class="card h-100">
+                    <div class="card-header bg-dark">
+                        <span class="text-white">Latest blog posts</span>
+                    </div>
+                    <ul class="list-group list-group-flush ul-striped">
+                        {% for blog in site.data.blogs limit:5 %}
+                            <li class="list-group-item">
+                                <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
+                                {{ blog.preview }}<br>
+                                <span class="postdate text-muted font-italic small">{{ blog.date | date: "%d %B %Y"  }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-            <ul class="list-group list-group-flush ul-striped">
-                {% for blog in site.data.blogs limit:5 %}
-                    <li class="list-group-item">
-                        <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
-                        {{ blog.preview }}<br>
-                        <span class="postdate text-muted font-italic small">{{ blog.date | date: "%d %B %Y"  }}</span>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
 
-        <div class="card">
-            <div class="card-header bg-dark">
-                <span class="text-white">Tags</span>
+            <div class="col-12 my-3">
+                <div class="card h-100">
+                    <div class="card-header bg-dark">
+                        <span class="text-white">Tags</span>
+                    </div>
+                    <ul class="tags pt-1 px-2">
+                        {% for tag in site.tags %}
+                            <li class="float-left m-1"><a href="/news/{{ tag | first }}" class="rc-icon tag-link text-info">{{ tag | first }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-            <ul class="tags pt-1 px-2">
-                {% for tag in site.tags %}
-                    <li class="float-left m-1"><a href="/news/{{ tag | first }}" class="rc-icon tag-link text-info">{{ tag | first }}</a></li>
-                {% endfor %}
-            </ul>
         </div>
     </div>
 </div>

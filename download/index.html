@@ -6,13 +6,22 @@ lastmod: 2019-08-28T12:32:00Z
 ---
 <h1>Download your version of Roundcube</h1>
 
-{% for dist in site.data.versions.distributions %}
-    <a class="anchor d-block invisible position-relative" id="{{ dist.id }}"></a>
-    <h2>{{ dist.name }}{% if site.data.versions[dist.id].version %} - {{ site.data.versions[dist.id].version }}{% endif %}</h2>
+{% for version in site.data.versions %}
+    {% assign id = version | first %}
+    {% assign params = version | last %}
 
-    {% if dist.id == "lts" %}
+    {% if params.sources.size == 0 %}
+        {% continue %}
+    {% endif %}
+
+    <a class="anchor d-block invisible position-relative" id="{{ id }}"></a>
+    <h2>{{ params.name }}{% if params.version %} - {{ params.version }}{% endif %}</h2>
+
+    {% if id == "lts" %}
         <p class="text-muted">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
             will go into these release branches.</p>
+    {% elsif id == "beta" %}
+        <p class="text-muted">We recommend to test beta versions on a separate environment, and don't forget to backup your data before installing.</p>
     {% endif %}
 
     <table class="table table-striped download-table">
@@ -25,7 +34,7 @@ lastmod: 2019-08-28T12:32:00Z
         </tr>
     </thead>
     <tbody>
-        {% for source in site.data.versions[dist.id].sources %}
+        {% for source in params.sources %}
             <tr>
                 <td class="package">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
                 <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a>
@@ -43,7 +52,7 @@ lastmod: 2019-08-28T12:32:00Z
 
 <h2>Other sources and downloads</h2>
 <div class="row">
-    <div class="col-12 col-lg-4 my-3">
+    <div class="col-12 col-md-6 col-lg-4 my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
                 <span class="text-white"><i class="fab fa-github fa-fw mr-1"></i> GitHub</span>
@@ -56,7 +65,7 @@ lastmod: 2019-08-28T12:32:00Z
         </div>
     </div>
 
-    <div class="col-12 col-lg-4 my-3">
+    <div class="col-12 col-md-6 col-lg-4 my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
                 <span class="text-white"><i class="fab fa-docker fa-fw mr-1"></i> Docker</span>
@@ -68,7 +77,7 @@ lastmod: 2019-08-28T12:32:00Z
         </div>
     </div>
 
-    <div class="col-12 col-lg-4 my-3">
+    <div class="col-12 col-md-6 col-lg-4 my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
                 <span class="text-white"><i class="fas fa-box-open fa-fw mr-1"></i> Other</span>
