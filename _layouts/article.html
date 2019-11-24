@@ -40,7 +40,7 @@
                 <span class="text-white">Related Posts</span>
             </div>
             <ul class="list-group list-group-flush ul-striped">
-                {% for rel in site.related_posts %}
+                {% for rel in site.related_posts limit:5 %}
                     <li class="list-group-item"><a href="{{ rel.url }}">{{ rel.title }}</a></li>
                 {% endfor %}
             </ul>
