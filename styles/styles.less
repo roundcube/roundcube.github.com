@@ -1,7 +1,14 @@
 @import (reference) "fontawesome";
 @nav-height: 66px;
 @nav-offset: 6rem;
+
 @color-primary: #37beff;
+@color-white: #fff;
+@color-heading: #444;
+@color-text-footer: #495057;
+@color-banner-background: #c6e6f4;
+@color-background-dark: #f5f5f5;
+
 @thumbnail-width: 140px;
 @thumbnail-background: #f8f8f8;
 
@@ -11,7 +18,7 @@ a.anchor {
 
 #banner {
   margin-top: @nav-height;
-  background-color: #c6e6f4;
+  background-color: @color-banner-background;
 }
 
 main {
@@ -35,7 +42,7 @@ main {
 
 .artical-list > .artical:nth-child(even),
 ul.ul-striped li:nth-child(even){
-  background-color: #f5f5f5;
+  background-color: @color-background-dark;
 }
 
 .artical-list + nav {
@@ -50,7 +57,7 @@ ul.screens,
 
 .artical {
   > div.title > h3 > a {
-    color: #444;
+    color: @color-heading;
   }
 
   > div.snippet > p {
@@ -59,15 +66,15 @@ ul.screens,
 }
 
 .footer {
-  background-color: #f5f5f5;
+  background-color: @color-background-dark;
 
   a {
     font-weight: 500;
-    color: #495057;
+    color: @color-text-footer;
 
     &:focus,
     &:hover {
-      color: #007bff;
+      color: darken(@color-text-footer, 15%);
     }
   }
 }
@@ -79,11 +86,11 @@ ul.screens,
 }
 
 .rc-icon::before {
-  margin-right: 5px;
+  margin-right: .25rem;
 }
 
 .rc-icon::after {
-  margin-left: 5px;
+  margin-left: .25rem;
 }
 
 a.back-link::before {
@@ -120,18 +127,18 @@ a.irc-link::after {
 }
 
 .btn-rc-download {
-  color: #fff;
+  color: @color-white;
   background-color: @color-primary;
   border-color: @color-primary;
 
   &:hover {
-    color: #fff;
+    color: @color-white;
     background-color: darken(@color-primary, 5%);
     border-color: darken(@color-primary, 7%);
   }
 
   &::before {
-    margin-right: 10px;
+    margin-right: .5rem;
     content: @fa-var-download;
   }
 
