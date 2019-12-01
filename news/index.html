@@ -31,8 +31,8 @@ lastmod: 2017-10-31T20:26:00Z
                         {% for blog in site.data.blogs limit:5 %}
                             <li class="list-group-item">
                                 <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
-                                {{ blog.preview }}<br>
-                                <span class="postdate text-muted font-italic small">{{ blog.date | date: "%d %B %Y"  }}</span>
+                                {{ blog.excerpt }}<br>
+                                <span class="postdate text-muted font-italic small">{{ blog.date | date_to_long_string }}</span>
                             </li>
                         {% endfor %}
                     </ul>

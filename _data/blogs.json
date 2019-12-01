@@ -3,210 +3,210 @@
         "title": "Calendar and Tasks for non-Kolab users",
         "date": "2019-10-23",
         "url": "https://kolabian.wordpress.com/2019/10/23/calendar-and-tasks-for-non-kolab-users/",
-        "preview": "The great Calendar and Tasklist plugins from Kolab always contained additional drivers..."
+        "excerpt": "The great Calendar and Tasklist plugins from Kolab always contained additional drivers..."
     },
     {
         "title": "TinyMCE 5",
         "date": "2019-05-23",
         "url": "https://kolabian.wordpress.com/2019/05/23/tinymce-5/",
-        "preview": "HTML editing functionality in Roundcube is provided by TinyMCE 4. Is the new TinyMCE 5 release ready for update?"
+        "excerpt": "HTML editing functionality in Roundcube is provided by TinyMCE 4. Is the new TinyMCE 5 release ready for update?"
     },
     {
         "title": "Instant updates aka Push",
         "date": "2019-01-23",
         "url": "https://kolabian.wordpress.com/2019/01/23/instant-updates-aka-push-in-roundcube/",
-        "preview": "Roundcube’s user interface refreshes every now and then in a configured time interval. Can we have instant updates instead?"
+        "excerpt": "Roundcube's user interface refreshes every now and then in a configured time interval. Can we have instant updates instead?"
     },
     {
         "title": "Markasjunk and Markasjunk2 plugins merged",
         "date": "2018-11-13",
         "url": "https://kolabian.wordpress.com/2018/11/13/markasjunk-and-markasjunk2-plugins-merged/",
-        "preview": "Very recently Roundcube’s built-in markasjunk plugin has been merged with the markasjunk2 plugin."
+        "excerpt": "Very recently Roundcube's built-in markasjunk plugin has been merged with the markasjunk2 plugin."
     },
     {
         "title": "Password plugin improvements",
         "date": "2018-11-09",
         "url": "https://kolabian.wordpress.com/2018/11/09/password-plugin-improvements/",
-        "preview": "Thanks to work of Philip Weir (johndoh) Roundcube’s password plugin received a few new features."
+        "excerpt": "Thanks to work of Philip Weir (johndoh) Roundcube's password plugin received a few new features."
     },
     {
         "title": "Elastic: Improved mail composer",
         "date": "2018-09-24",
         "url": "https://kolabian.wordpress.com/2018/09/24/elastic-improved-mail-composer/",
-        "preview": "It has been noticed in the early usability tests of the new Elastic skin that mail composing page is not very user friendly."
+        "excerpt": "It has been noticed in the early usability tests of the new Elastic skin that mail composing page is not very user friendly."
     },
     {
         "title": "Managesieve `editheader` extension",
         "date": "2018-09-08",
         "url": "https://kolabian.wordpress.com/2018/09/08/managesieve-editheader-extension/",
-        "preview": "There’s a lot of sieve extensions, recently I added support for another one: editheader."
+        "excerpt": "There's a lot of sieve extensions, recently I added support for another one: editheader."
     },
     {
         "title": "Elastic: HTML editor",
         "date": "2018-06-15",
         "url": "https://kolabian.wordpress.com/2018/06/15/elastic-html-editor/",
-        "preview": "The last big part of the Roundcube user interface not yet ported to Elastic was the HTML editor."
+        "excerpt": "The last big part of the Roundcube user interface not yet ported to Elastic was the HTML editor."
     },
     {
         "title": "Elastic: Calendar",
         "date": "2018-04-11",
         "url": "https://kolabian.wordpress.com/2018/04/11/elastic-calendar/",
-        "preview": "40KB of css code later I present to you the Calendar plugin."
+        "excerpt": "40KB of css code later I present to you the Calendar plugin."
     },
     {
         "title": "Elastic: Image tools and more",
         "date": "2018-01-28",
         "url": "https://kolabian.wordpress.com/2018/01/28/elastic-image-tools-and-more-bugfixes/",
-        "preview": "Here's a short review of recent changes in the Elastic skin."
+        "excerpt": "Here's a short review of recent changes in the Elastic skin."
     },
     {
         "title": "Elastic: Core functionality covered",
         "date": "2017-11-23",
         "url": "https://kolabian.wordpress.com/2017/11/23/elastic-core-functionality-covered/",
-        "preview": "Still in a need of a graphic designer! I'm finishing work on core functionality for the new Roundcube theme."
+        "excerpt": "Still in a need of a graphic designer! I'm finishing work on core functionality for the new Roundcube theme."
     },
     {
         "title": "Elastic",
         "date": "2017-09-23",
         "url": "https://kolabian.wordpress.com/2017/09/23/elastic/",
-        "preview": "It's not a secret that I'm working on a new Roundcube theme. It's supposed to provide a responsive interface for desktop, tables and phones."
+        "excerpt": "It's not a secret that I'm working on a new Roundcube theme. It's supposed to provide a responsive interface for desktop, tables and phones."
     },
     {
         "title": "Recipient input widget",
         "date": "2017-04-20",
         "url": "https://kolabian.wordpress.com/2017/04/20/email-recipient-input-widget/",
-        "preview": "It is more user friendly and usable especially on mobile to handle recipient addresses as boxes."
+        "excerpt": "It is more user friendly and usable especially on mobile to handle recipient addresses as boxes."
     },
     {
         "title": "Sieve raw editor",
         "date": "2016-12-27",
         "url": "https://kolabian.wordpress.com/2016/12/27/sieve-raw-editor/",
-        "preview": "Thanks to great CodeMirror editor and its built-in syntax highlighter we now have a nice editor widget for Sieve scripts."
+        "excerpt": "Thanks to great CodeMirror editor and its built-in syntax highlighter we now have a nice editor widget for Sieve scripts."
     },
     {
         "title": "Sending contacts as vCards",
         "date": "2016-12-16",
         "url": "https://kolabian.wordpress.com/2016/12/16/sending-contacts-as-vcards/",
-        "preview": "There’s a lot about vCards in Roundcube. No surprise, this is simple and established open standard."
+        "excerpt": "There's a lot about vCards in Roundcube. No surprise, this is simple and established open standard."
     },
     {
         "title": "vCard in QR code",
         "date": "2016-12-11",
         "url": "https://kolabian.wordpress.com/2016/12/11/vcard-in-qr-code/",
-        "preview": "Another small feature that will be available in Roundcube 1.3."
+        "excerpt": "Another small feature that will be available in Roundcube 1.3."
     },
     {
         "title": "&quot;Mark all as read&quot; option",
         "date": "2016-10-10",
         "url": "https://kolabian.wordpress.com/2016/10/10/mark-all-as-read-option/",
-        "preview": "It was already possible to mark selected messages as read, but it required a few clicks."
+        "excerpt": "It was already possible to mark selected messages as read, but it required a few clicks."
     },
     {
         "title": "Widescreen layout aka three column view",
         "date": "2016-09-17",
         "url": "https://kolabian.wordpress.com/2016/09/17/widescreen-layout-aka-three-column-view/",
-        "preview": "Most of modern mail clients already use three column layout and so does Roundcube now."
+        "excerpt": "Most of modern mail clients already use three column layout and so does Roundcube now."
     },
     {
         "title": "New options for compose attachments",
         "date": "2016-07-30",
         "url": "https://kolabian.wordpress.com/2016/07/30/new-options-for-compose-attachments/",
-        "preview": "Attachments list was extended with possibility to open and download uploaded files."
+        "excerpt": "Attachments list was extended with possibility to open and download uploaded files."
     },
     {
         "title": "WebP and MathML support",
         "date": "2016-07-24",
         "url": "https://kolabian.wordpress.com/2016/07/24/webp-and-mathml-support/",
-        "preview": "What you can do with these formats right now and what are the limitations."
+        "excerpt": "What you can do with these formats right now and what are the limitations."
     },
     {
         "title": "Roundcube for Mobile Devices",
         "date": "2016-04-26",
         "url": "https://roundcubeinbox.wordpress.com/2016/04/26/roundcube-for-mobile-devices/",
-        "preview": "How to install the Melanie2 Larry Mobile theme."
+        "excerpt": "How to install the Melanie2 Larry Mobile theme."
     },
     {
         "title": "Message/RFC822 attachment preview",
         "date": "2016-03-28",
         "url": "https://kolabian.wordpress.com/2016/03/28/messagerfc822-attachment-preview/",
-        "preview": "Open attached messages as regular ones."
+        "excerpt": "Open attached messages as regular ones."
     },
     {
         "title": "Enigma plugin (PGP encryption)",
         "date": "2015-10-13",
         "url": "https://kolabian.wordpress.com/2015/10/13/enigma-plugin-pgp-encryption/",
-        "preview": "Fully featured encryption using server-side GnuPG."
+        "excerpt": "Fully featured encryption using server-side GnuPG."
     },
     {
         "title": "Mailvelope integration (PGP encryption)",
         "date": "2015-10-10",
         "url": "https://kolabian.wordpress.com/2015/10/10/mailvelope-integration-pgp-encryption/",
-        "preview": "Client-side encryption in Roundcube using Mailvelope."
+        "excerpt": "Client-side encryption in Roundcube using Mailvelope."
     },
     {
-        "title": "Drag’n’drop in Roundcube",
+        "title": "Drag'n'drop in Roundcube",
         "date": "2015-10-09",
         "url": "https://kolabian.wordpress.com/2015/10/09/dragndrop-in-roundcube/",
-        "preview": "Overview of Roundcube's drag’n’drop capabilities."
+        "excerpt": "Overview of Roundcube's drag'n'drop capabilities."
     },
     {
         "title": "Mail searching with pre-defined date interval",
         "date": "2015-10-08",
         "url": "https://kolabian.wordpress.com/2015/10/08/mail-searching-with-pre-defined-date-interval/",
-        "preview": "How to search for messages &quot;older&quot; or &quot;younger&quot; than."
+        "excerpt": "How to search for messages &quot;older&quot; or &quot;younger&quot; than."
     },
     {
         "title": "The &quot;Next&quot; experience for Roundcube users",
         "date": "2015-05-27",
         "url": "https://roundcubeinbox.wordpress.com/2015/05/27/the-next-experience-for-roundcube-users/",
-        "preview": "What Roundcube users can expect Next."
+        "excerpt": "What Roundcube users can expect Next."
     },
     {
         "title": "Why Roundcube Next will save your day as a developer",
         "date": "2015-05-27",
         "url": "https://roundcubeinbox.wordpress.com/2015/05/20/why-roundcube-next-will-save-your-day-as-a-developer/",
-        "preview": "How we want to make Roundcube Next the WordPress of communication."
+        "excerpt": "How we want to make Roundcube Next the WordPress of communication."
     },
     {
         "title": "Roundcube Next is ready for take﻿-﻿off",
         "date": "2015-05-04",
         "url": "https://roundcubeinbox.wordpress.com/2015/05/04/roundcube-next-is-ready-for-take-off/",
-        "preview": "Support our crowd funding to create the next awesome webmail app."
+        "excerpt": "Support our crowd funding to create the next awesome webmail app."
     },
     {
         "title": "Our Wish List for Encryption Browser Extensions",
         "date": "2014-10-10",
         "url": "https://roundcubeinbox.wordpress.com/2014/10/10/our-wish-list-for-encryption-browser-extensions/",
-        "preview": "A webmail developer’s dream of an integrated solution for solid end-to-end encryption."
+        "excerpt": "A webmail developer's dream of an integrated solution for solid end-to-end encryption."
     },
     {
         "title": "Roundcube Next - If we would start over again",
         "date": "2014-09-12",
         "url": "https://roundcubeinbox.wordpress.com/2014/09/12/roundcube-next-if-we-would-start-over-again/",
-        "preview": "An essay of how one could build a brand new Roundcube successor with todays tools and a 9 years experience."
+        "excerpt": "An essay of how one could build a brand new Roundcube successor with todays tools and a 9 years experience."
     },
     {
         "title": "The Kolab story",
         "date": "2013-03-11",
         "url": "https://roundcubeinbox.wordpress.com/2013/03/11/the-kolab-story/",
-        "preview": "Today I’d like to share a success story of a picture perfect project collaboration as it only happens in the open source world without any commercial, political or geographical borders. It all started back in 2009...."
+        "excerpt": "Today I'd like to share a success story of a picture perfect project collaboration as it only happens in the open source world without any commercial, political or geographical borders. It all started back in 2009...."
     },
     {
         "title": "Migrating our subversion repository to github",
         "date": "2012-05-09",
         "url": "https://roundcubeinbox.wordpress.com/2012/05/09/migrating-our-subversion-repository-to-github/",
-        "preview": "We recently moved our svn repository to git hosted at github. Now I'd like to share my experience doing that migration and explain the steps we took to do so."
+        "excerpt": "We recently moved our svn repository to git hosted at github. Now I'd like to share my experience doing that migration and explain the steps we took to do so."
     },
     {
         "title": "Say hello to the new face of Roundcube",
         "date": "2011-09-28",
         "url": "https://roundcubeinbox.wordpress.com/2011/09/28/the-new-face-of-roundcube/",
-        "preview": "We're very happy to give you a first preview of the all new skin for Roundcube webmail. It was created by FLINT, the very talented graphic designer who already designed our website. He worked hundreds of hours for free..."
+        "excerpt": "We're very happy to give you a first preview of the all new skin for Roundcube webmail. It was created by FLINT, the very talented graphic designer who already designed our website. He worked hundreds of hours for free..."
     },
     {
-        "title": "&quot;Roundcube = Sensational&quot; – December 2010",
+        "title": "&quot;Roundcube = Sensational&quot; - December 2010",
         "date": "2010-12-17",
         "url": "https://roundcubeinbox.wordpress.com/2010/12/17/roundcube-sensational-dec-2010/",
-        "preview": "So nice... we really appreciate messages like that."
+        "excerpt": "So nice... we really appreciate messages like that."
     }
 ]
