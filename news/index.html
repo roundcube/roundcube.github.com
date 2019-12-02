@@ -21,8 +21,8 @@ lastmod: 2017-10-31T20:26:00Z
     </div>
 
     <div class="col-lg-4">
-        <div class="row">
-            <div class="col-12 d-none d-lg-block my-3 mt-lg-0">
+        <div class="row row-cols-1">
+            <div class="col d-none d-lg-block my-3 mt-lg-0">
                 <div class="card h-100">
                     <div class="card-header bg-dark">
                         <span class="text-white">Latest blog posts</span>
@@ -31,15 +31,15 @@ lastmod: 2017-10-31T20:26:00Z
                         {% for blog in site.data.blogs limit:5 %}
                             <li class="list-group-item">
                                 <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
-                                {{ blog.preview }}<br>
-                                <span class="postdate text-muted font-italic small">{{ blog.date | date: "%d %B %Y"  }}</span>
+                                {{ blog.excerpt }}<br>
+                                <span class="postdate text-muted font-italic small">{{ blog.date | date_to_long_string }}</span>
                             </li>
                         {% endfor %}
                     </ul>
                 </div>
             </div>
 
-            <div class="col-12 my-3">
+            <div class="col my-3">
                 <div class="card h-100">
                     <div class="card-header bg-dark">
                         <span class="text-white">Tags</span>

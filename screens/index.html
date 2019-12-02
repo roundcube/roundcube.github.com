@@ -30,9 +30,9 @@ navtitle: Screenshots
     <div class="tab-content">
         {% for device in params.devices %}
             <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ dir }}-{{ device }}" role="tabpanel" {% if params.devices.size > 1 %}aria-labelledby="{{ dir }}-{{ device }}-tab"{% endif %}>
-                <ul id="screenshots-{{ dir }}-{{ device }}" class="screens text-center text-lg-left p-0 w-100 mt-3">
+                <ul id="screenshots-{{ dir }}-{{ device }}" class="screens p-0 w-100 mt-3">
                     {% for screenshot in params.screenshots %}
-                        <li class="m-1 d-inline-block"><a id="screenshots-{{ dir }}-{{ device }}-{{ forloop.index }}" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img src="/screens/skins/{{ dir }}/{{ device }}/thumbs/{{ screenshot.file }}" width="140" height="97" class="img-thumbnail" alt="{{ screenshot.title }}"></a></li>
+                        <li class="m-1 d-inline-block img-thumbnail"><a id="screenshots-{{ dir }}-{{ device }}-{{ forloop.index }}" class="d-inline-block text-center" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img class="mx-auto" src="/screens/skins/{{ dir }}/{{ device }}/thumbs/{{ screenshot.file }}" height="97" alt="{{ screenshot.title }}"></a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -41,15 +41,20 @@ navtitle: Screenshots
 {% endfor %}
 
 <div id="viewer" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-xl mx-auto" role="document">
         <div class="modal-content bg-transparent">
-            <div class="modal-body text-center p-0">
-                <div id="modal-loading" class="text-center py-5"><i class="fas fa-circle-notch fa-spin"></i></div>
-                <img src="#" style="display: none;" class="img-fluid" onload="screen_loaded(this);" alt="">
-                <div class="modal-arrow p-2 d-flex align-items-center left-arrow"><a href="#" onclick="move_screen(true); return false;" class="fas fa-chevron-left text-secondary"></a></div>
-                <div class="modal-arrow p-2 d-flex align-items-center right-arrow"><a href="#" onclick="move_screen(); return false;" class="fas fa-chevron-right text-secondary"></a></div>
+            <div class="modal-body text-center p-0 loading">
+                <div class="modal-loading text-center py-5"><i class="fas fa-circle-notch fa-spin"></i></div>
+                <img src="data:," class="img-fluid mx-auto" onload="screen_loaded(this);" data-dismiss="modal" alt="">
+                <div class="modal-arrow left-arrow" onclick="move_screen(true);"></div>
+                <div class="modal-arrow right-arrow" onclick="move_screen();"></div>
             </div>
-            <div class="modal-footer bg-dark justify-content-start">
+            <div class="modal-footer bg-dark d-block">
+                <div class="nav_buttons float-right pl-2 mb-0">
+                    <a href="#" onclick="move_screen(true); return false;" class="fas fa-chevron-circle-left text-white nav-link p-0 pr-1"></a>
+                    <a href="#" onclick="move_screen(); return false;" class="fas fa-chevron-circle-right text-white nav-link p-0 px-1"></a>
+                    <a href="#" data-dismiss="modal" class="fas fa-times-circle text-white nav-link p-0 pl-1"></a>
+                </div>
                 <p class="text-white mb-0"></p>
             </div>
         </div>
@@ -71,19 +76,24 @@ navtitle: Screenshots
         })
         .on('hidden.bs.modal', function(e) {
             var screen = this.querySelector('.modal-body > img');
-            screen.style.display = 'none';
-            screen.src = '#';
+            screen.src = 'data:,';
             screen.alt = '';
+            screen.style.removeProperty('height');
 
-            document.getElementById("modal-loading").style.display = 'block';
+            if (viewer.getAttribute('data-no-resize') != 'true') {
+                this.querySelector('.modal-dialog').style.removeProperty('width');
+            }
+
             this.querySelector('.modal-footer > p').textContent = '';
             this.setAttribute('data-cur-index', '');
             this.setAttribute('data-cur-source', '');
+            this.querySelector('.modal-body').classList.add('loading');
         });
 
+    // keyboard navigation
     document.addEventListener('keyup', function(e) {
         // Is the modal viewer open?
-        if (document.getElementById('viewer').offsetParent) {
+        if (($(viewer).data('bs.modal') || {})._isShown) {
             if (e.which === 37) { // left
                 move_screen(true);
             }
@@ -93,9 +103,40 @@ navtitle: Screenshots
         }
     });
 
+    // swipe navigation
+    var touchstartX = 0;
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', function(event) {
+        var touchendX = event.changedTouches[0].screenX;
+
+        if (($(viewer).data('bs.modal') || {})._isShown) {
+            if (touchendX - touchstartX > 100) { // left
+                move_screen(true);
+            }
+            else if (touchendX - touchstartX < -100) { // right
+                move_screen();
+            }
+        }
+    });
+
     function screen_loaded(img) {
-        document.getElementById('modal-loading').style.display = 'none';
-        img.style.display = 'block';
+        viewer.querySelector('.modal-dialog').style.removeProperty('width');
+
+        var max_width = viewer.querySelector('.modal-body').offsetWidth,
+            max_height = window.innerHeight * 0.75, img_height;
+
+        img_height = Math.min((img.height / img.width) * max_width, img.height);
+        if (img_height > max_height) {
+            img_height = max_height;
+        }
+        img_width = (img.width / img.height) * img_height;
+
+        img.style.height = img_height + 'px';
+        viewer.querySelector('.modal-dialog').style.width = img_width + 'px';
+        viewer.querySelector('.modal-body').classList.remove('loading');
     }
 
     function move_screen(reverse) {
@@ -111,7 +152,9 @@ navtitle: Screenshots
             target = (current === total) ? 1 : (current + 1);
         }
 
+        viewer.setAttribute('data-no-resize', true);
         $(viewer).modal('hide');
         document.getElementById(source + '-' + target).click();
+        viewer.setAttribute('data-no-resize', false);
     }
 </script>

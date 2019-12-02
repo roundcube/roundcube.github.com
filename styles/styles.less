@@ -1,7 +1,16 @@
 @import (reference) "fontawesome";
 @nav-height: 66px;
 @nav-offset: 6rem;
+
 @color-primary: #37beff;
+@color-white: #fff;
+@color-heading: #444;
+@color-text-footer: #495057;
+@color-banner-background: #c6e6f4;
+@color-background-dark: #f5f5f5;
+
+@thumbnail-width: 140px;
+@thumbnail-background: #f8f8f8;
 
 a.anchor {
   top: @nav-offset * -1;
@@ -9,7 +18,7 @@ a.anchor {
 
 #banner {
   margin-top: @nav-height;
-  background-color: #c6e6f4;
+  background-color: @color-banner-background;
 }
 
 main {
@@ -33,7 +42,7 @@ main {
 
 .artical-list > .artical:nth-child(even),
 ul.ul-striped li:nth-child(even){
-  background-color: #f5f5f5;
+  background-color: @color-background-dark;
 }
 
 .artical-list + nav {
@@ -48,7 +57,7 @@ ul.screens,
 
 .artical {
   > div.title > h3 > a {
-    color: #444;
+    color: @color-heading;
   }
 
   > div.snippet > p {
@@ -57,15 +66,15 @@ ul.screens,
 }
 
 .footer {
-  background-color: #f5f5f5;
+  background-color: @color-background-dark;
 
   a {
     font-weight: 500;
-    color: #495057;
+    color: @color-text-footer;
 
     &:focus,
     &:hover {
-      color: #007bff;
+      color: darken(@color-text-footer, 15%);
     }
   }
 }
@@ -77,11 +86,11 @@ ul.screens,
 }
 
 .rc-icon::before {
-  margin-right: 5px;
+  margin-right: .25rem;
 }
 
 .rc-icon::after {
-  margin-left: 5px;
+  margin-left: .25rem;
 }
 
 a.back-link::before {
@@ -105,8 +114,6 @@ a.rss-link::after {
 }
 
 a.mail-list-link::before {
-  margin-left: 0;
-  margin-right: 5px;
   font-weight: 400;
   content: @fa-var-envelope;
 }
@@ -120,18 +127,18 @@ a.irc-link::after {
 }
 
 .btn-rc-download {
-  color: #fff;
+  color: @color-white;
   background-color: @color-primary;
   border-color: @color-primary;
 
   &:hover {
-    color: #fff;
+    color: @color-white;
     background-color: darken(@color-primary, 5%);
     border-color: darken(@color-primary, 7%);
   }
 
   &::before {
-    margin-right: 10px;
+    margin-right: .5rem;
     content: @fa-var-download;
   }
 
@@ -155,52 +162,46 @@ a.irc-link::after {
   }
 }
 
+.img-thumbnail > a {
+  width: @thumbnail-width;
+  background-color: @thumbnail-background;
+}
+
 #viewer .modal-body {
   min-height: 1px; /* IE11 fix for modal window height */
-}
+  user-select: none;
 
-#modal-loading i {
-  font-size: 10em;
-  opacity: 0.5;
-}
-
-.modal-arrow {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  font-size: 2rem;
-  opacity: 0.5;
-
-  &.right-arrow {
-    right: 0;
+  > img {
+    position: relative;
   }
 
-  a:active,
-  a:hover {
-    text-decoration: none;
+  .modal-loading i {
+    font-size: 10em;
+    opacity: 0.5;
   }
 
-  @media (min-width: 576px) {
-    font-size: 3rem;
+  .modal-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 30%;
+
+    &.right-arrow {
+      right: 0;
+    }
   }
 
-  @media (min-width: 768px) {
-    font-size: 4rem;
+  &.loading {
+    > img {
+      display: none;
+    }
   }
 
-  @media (min-width: 992px) {
-    font-size: 5rem;
-  }
-}
-
-#viewer > .modal-dialog {
-  @media (min-width: 900px) {
-    max-width: 60%;
-  }
-
-  @media (min-width: 3200px) {
-    max-width: 1920px;
+  &:not(.loading) {
+    > .modal-loading {
+      display: none;
+    }
   }
 }
 
