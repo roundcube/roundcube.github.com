@@ -52,9 +52,9 @@
         "sources": [
             {
                 "package": "1.2.9",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.1.12/roundcubemail-1.1.12-complete.tar.gz",
-                "size": "4.5 MB",
-                "checksum": "f67c7809fa5d61b103d1630f85fe6648d936d8719129bae9366bc7036dbe7107"
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.2.9/roundcubemail-1.2.9-complete.tar.gz",
+                "size": "3.8 MB",
+                "checksum": "0fed9def3b9441f93388c81ab47de58cd3b301f221c892d9c3fdcd3fd949797b"
             }
         ]
     },
