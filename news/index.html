@@ -28,7 +28,7 @@ lastmod: 2017-10-31T20:26:00Z
                         <span class="text-white">Latest blog posts</span>
                     </div>
                     <ul class="list-group list-group-flush ul-striped">
-                        {% for blog in site.data.blogs limit:5 %}
+                        {% for blog in site.data.blogs limit: site.num_related_items %}
                             <li class="list-group-item">
                                 <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
                                 {{ blog.excerpt }}<br>

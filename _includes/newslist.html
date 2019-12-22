@@ -1,7 +1,7 @@
 <h1>{{ page.title }}</h1>
 
 <div class="artical-list">
-    {% for post in posts limit:10 %}
+    {% for post in posts limit: site.paginate %}
     {% include newsitem.html %}
     {% endfor %}
 </div>

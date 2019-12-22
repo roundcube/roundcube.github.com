@@ -21,7 +21,7 @@ date: 2019-11-20T13:20:00Z
 </div>
 
 <main class="flex-shrink-0 container pt-4 pb-5">
-    <div class="alert alert-success" role="alert">
+    <div id="announcement" class="alert alert-success d-none" data-posted="2019-11-22" role="alert">
         <i class="fas fa-bullhorn"></i>
         <b>Roundcube 1.4.1 with responsive skin is out!</b>
         Read more about <a href="{% post_url 2019-11-09-roundcube-1.4.0-released %}">what's new</a>
@@ -72,7 +72,7 @@ date: 2019-11-20T13:20:00Z
                         <span class="text-white">Latest News</span>
                     </div>
                     <ul class="list-group list-group-flush ul-striped">
-                        {% for post in site.posts limit:5 %}
+                        {% for post in site.posts limit: site.num_related_items %}
                             <li class="list-group-item">
                                 <a href="{{ post.url }}" class="newslink">{{ post.title }}</a><br>
                                 <span class="postdate text-muted font-italic small">{{ post.date | date_to_long_string }}</span>
@@ -84,3 +84,20 @@ date: 2019-11-20T13:20:00Z
         </div>
     </div>
 </main>
+
+<script>
+    var announcement = document.getElementById('announcement');
+    if (posted = announcement.getAttribute('data-posted')) {
+        var announcemnt_date = new Date(posted);
+        var currnet_date = new Date();
+        var elapsed_seconds = currnet_date.getTime() - announcemnt_date.getTime();
+        var elapsed_days = elapsed_seconds / (1000 * 3600 * 24);
+
+        if (elapsed_days < {{ site.announcement_timeout }}) {
+            announcement.classList.remove('d-none');
+        }
+    }
+    else if (announcement) {
+        announcement.classList.remove('d-none');
+    }
+</script>
