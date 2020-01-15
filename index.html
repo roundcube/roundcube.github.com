@@ -21,12 +21,7 @@ date: 2020-01-01T19:20:00Z
 </div>
 
 <main class="flex-shrink-0 container pt-4 pb-5">
-    <div id="announcement" class="alert alert-success d-none" data-posted="2020-01-01" role="alert">
-        <i class="fas fa-bullhorn"></i>
-        <b>Roundcube 1.4.2 with responsive skin is out!</b>
-        Read more about <a href="{% post_url 2019-11-09-roundcube-1.4.0-released %}">what's new</a>
-        and <a href="/download#stable">get a fresh copy</a> now.
-    </div>
+    {% include announcement.html %}
 
     <h1>Roundcube webmail...</h1>
     <p class="mb-0">
@@ -87,13 +82,11 @@ date: 2020-01-01T19:20:00Z
 
 <script>
     var announcement = document.getElementById('announcement');
-    if (posted = announcement.getAttribute('data-posted')) {
-        var announcemnt_date = new Date(posted);
+    if (expiry = announcement.getAttribute('data-expiry')) {
+        var expiry_date = new Date(expiry);
         var currnet_date = new Date();
-        var elapsed_seconds = currnet_date.getTime() - announcemnt_date.getTime();
-        var elapsed_days = elapsed_seconds / (1000 * 3600 * 24);
 
-        if (elapsed_days < {{ site.announcement_timeout }}) {
+        if (currnet_date < expiry_date) {
             announcement.classList.remove('d-none');
         }
     }

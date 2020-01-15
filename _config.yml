@@ -10,4 +10,3 @@ paginate: 10
 paginate_path: "/news/page:num/"
 environment: "production"
 num_related_items: 5
-announcement_timeout: 30
