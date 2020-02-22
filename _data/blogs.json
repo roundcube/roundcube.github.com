@@ -1,5 +1,11 @@
 [
     {
+        "title": "How we update Docker images when base images change",
+        "date": "2020-01-04",
+        "url": "https://roundcubeinbox.wordpress.com/2020/01/04/update-docker-images-when-base-image-changes/",
+        "excerpt": "Using Google Cloud Functions to check for Docker image updates and trigger new builds"
+    },
+    {
         "title": "Calendar and Tasks for non-Kolab users",
         "date": "2019-10-23",
         "url": "https://kolabian.wordpress.com/2019/10/23/calendar-and-tasks-for-non-kolab-users/",
