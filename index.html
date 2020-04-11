@@ -21,14 +21,7 @@ date: 2020-02-19T21:10:00Z
 </div>
 
 <main class="flex-shrink-0 container pt-4 pb-5">
-    <!--
-    <div class="alert alert-success" role="alert">
-        <i class="fas fa-bullhorn"></i>
-        <b>Roundcube 1.4.2 with responsive skin is out!</b>
-        Read more about <a href="{% post_url 2019-11-09-roundcube-1.4.0-released %}">what's new</a>
-        and <a href="/download#stable">get a fresh copy</a> now.
-    </div>
-    -->
+    {% include announcement.html %}
 
     <h1>Roundcube webmail...</h1>
     <p class="mb-0">
@@ -53,7 +46,7 @@ date: 2020-02-19T21:10:00Z
                     <li>Full featured address book with groups and LDAP connectors</li>
                     <li>Find-as-you-type address book integration</li>
                     <li>Threaded message listing</li>
-                    <li>IDNA support</li>
+                    <li>IDNA and SMTPUTF8 support</li>
                     <li>Spell checking</li>
                     <li>Responsive skin (multi-device support)</li>
                     <li>Shared/global IMAP folders</li>
@@ -74,7 +67,7 @@ date: 2020-02-19T21:10:00Z
                         <span class="text-white">Latest News</span>
                     </div>
                     <ul class="list-group list-group-flush ul-striped">
-                        {% for post in site.posts limit:5 %}
+                        {% for post in site.posts limit: site.num_related_items %}
                             <li class="list-group-item">
                                 <a href="{{ post.url }}" class="newslink">{{ post.title }}</a><br>
                                 <span class="postdate text-muted font-italic small">{{ post.date | date_to_long_string }}</span>
@@ -86,3 +79,18 @@ date: 2020-02-19T21:10:00Z
         </div>
     </div>
 </main>
+
+<script>
+    var announcement = document.getElementById('announcement');
+    if (expiry = announcement.getAttribute('data-expiry')) {
+        var expiry_date = new Date(expiry);
+        var currnet_date = new Date();
+
+        if (currnet_date < expiry_date) {
+            announcement.classList.remove('d-none');
+        }
+    }
+    else if (announcement) {
+        announcement.classList.remove('d-none');
+    }
+</script>
