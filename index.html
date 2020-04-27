@@ -81,16 +81,22 @@ date: 2020-02-19T21:10:00Z
 </main>
 
 <script>
-    var announcement = document.getElementById('announcement');
-    if (expiry = announcement.getAttribute('data-expiry')) {
-        var expiry_date = new Date(expiry);
-        var currnet_date = new Date();
+    var announcements = document.getElementsByClassName('rc-announcement');
+    var currnet_date = new Date();
+    var expiry_date, announcement;
 
-        if (currnet_date < expiry_date) {
+    for (var i = 0; i < announcements.length; i++) {
+        announcement = announcements[i];
+
+        if (expiry = announcement.getAttribute('data-expiry')) {
+            expiry_date = new Date(expiry);
+
+            if (currnet_date < expiry_date) {
+                announcement.classList.remove('d-none');
+            }
+        }
+        else if (announcement) {
             announcement.classList.remove('d-none');
         }
-    }
-    else if (announcement) {
-        announcement.classList.remove('d-none');
     }
 </script>
