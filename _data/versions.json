@@ -1,49 +1,49 @@
 {
     "stable": {
         "name": "Stable version",
-        "version": "1.4.3",
+        "version": "1.4.4",
         "sources": [
             {
                 "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.3/roundcubemail-1.4.3.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.4/roundcubemail-1.4.4.tar.gz",
                 "size": "4.1 MB",
-                "checksum": "e04cc592025d90c4312deb0587c204a8aec13ac3f852ac8689d771655f78a1fe"
+                "checksum": "c2f16ed6d76313551858c78a7e3e6df27801415b72810239f2bbd24a1a75908f"
             },
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.3/roundcubemail-1.4.3-complete.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.4/roundcubemail-1.4.4-complete.tar.gz",
                 "size": "6.7 MB",
-                "checksum": "24f250289f961813a222d0cb8e1449dc95b0605334b2fd4d4468ecd96e4e54bf"
+                "checksum": "2b8923836a0f83f9806fffc6dfa245705968a0005deab66c1056570eae11c7d7"
             },
             {
                 "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.3/roundcube-framework-1.4.3.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.4/roundcube-framework-1.4.4.tar.gz",
                 "size": "2 MB",
-                "checksum": "7b0f143c981b0dc3da780754fbf9bb5cb95875eb781d2dae2c434d2c917e687c"
+                "checksum": "c6d131901eddc1167686c80a1909789e543ddc7d898a0a5708727e5b2e457afa"
             }
         ]
     },
     "old-stable": {
         "name": "Old stable",
-        "version": "1.3.10",
+        "version": "1.3.11",
         "sources": [
             {
                 "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.10/roundcubemail-1.3.10.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.11/roundcubemail-1.3.11.tar.gz",
                 "size": "3.1 MB",
-                "checksum": "7edf8abf072d5199bd67d118a26372123f3b6f699f57cf6f57368c15ae0085d2"
+                "checksum": "b8dc986f4c6fd2fd9064b7205a4e6d237054c729624e6f12689113100c22a809"
             },
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.10/roundcubemail-1.3.10-complete.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.11/roundcubemail-1.3.11-complete.tar.gz",
                 "size": "5.3 MB",
-                "checksum": "69fe11550a0f5711020ecd55c6ad36394580800a68d43bb69ecedc91f36ba8bf"
+                "checksum": "a5ff6e8a4b28425ff8da3a85bdd486dd73163aec754113884437887a0e5618af"
             },
             {
                 "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.10/roundcube-framework-1.3.10.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.11/roundcube-framework-1.3.11.tar.gz",
                 "size": "1.2 MB",
-                "checksum": "20eebe43b8104b237c7842ead8995c8a550037a65434ab8465067c3b2bbfec9e"
+                "checksum": "3942059f26e446c1d29c21ad1302eae31c6b72263f198423da5faf799a8733c9"
             }
         ]
     },
@@ -51,10 +51,10 @@
         "name": "LTS versions",
         "sources": [
             {
-                "package": "1.2.9",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.2.9/roundcubemail-1.2.9-complete.tar.gz",
+                "package": "1.2.10",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.2.10/roundcubemail-1.2.10-complete.tar.gz",
                 "size": "3.8 MB",
-                "checksum": "0fed9def3b9441f93388c81ab47de58cd3b301f221c892d9c3fdcd3fd949797b"
+                "checksum": "006db202c30f1448fa82a0a68cf6c01aafb17d02cdf4cead730ccf9551784a67"
             }
         ]
     },
