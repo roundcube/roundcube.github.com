@@ -10,10 +10,10 @@ security vulnerabilities as well a number of general improvements from our issue
 
 ## Security fixes
 
-- Cross-Site Scripting (XSS) via malicious HTML content
 - CSRF attack can cause an authenticated user to be logged out
-- Remote code execution via crafted config options
-- Path traversal vulnerability allowing local file inclusion via crafted 'plugins' option
+- Cross-Site Scripting (XSS) via malicious HTML content (`CVE-2020-12625`) <sup>**</sup>
+- Remote code execution via crafted config options (`CVE-2020-12641`) <sup>**</sup>
+- Path traversal vulnerability allowing local file inclusion via crafted 'plugins' option (`CVE-2020-12640`) <sup>**</sup>
 
 The latter two vulnerabilities are classified minor because they only affect Roundcube installations
 with public access to the Roundcube installer. That's generally a high-risk situation and is expected
@@ -25,3 +25,5 @@ See the full changelogs in the release notes on the Github download pages for th
 
 We strongly recommend to update all productive installations of Roundcube
 with this new versions.
+
+<sup>**</sup> Credits to the security researchers: Matei "Mal" Badanoiu and <Other_Guy/Girl>
