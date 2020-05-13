@@ -10,3 +10,25 @@ paginate: 10
 paginate_path: "/news/page:num/"
 environment: "production"
 num_related_items: 5
+libs: {
+    fonts: {
+        roboto: 'https://fonts.googleapis.com/css?family=Roboto&amp;display=swap',
+        fontawesome: 'https://kit.fontawesome.com/4cdeb7a6e0.js'
+    },
+    jquery: {
+        url: 'https://code.jquery.com/jquery-3.5.1.slim.min.js',
+        sri: 'sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs='
+    },
+    less: 'https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js',
+    css: '/styles/styles.min.css?v=2019112600',
+    bootstrap: {
+        css: {
+            url: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',
+            sri: 'sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk'
+        },
+        js: {
+            url: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js',
+            sri: 'sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI'
+        }
+    }
+}
