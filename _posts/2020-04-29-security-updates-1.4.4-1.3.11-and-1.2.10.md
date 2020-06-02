@@ -26,4 +26,4 @@ See the full changelogs in the release notes on the Github download pages for th
 We strongly recommend to update all productive installations of Roundcube
 with this new versions.
 
-<sup>**</sup> Credits to the security researchers: Matei "Mal" Badanoiu and <Other_Guy/Girl>
+<sup>**</sup> Credits to the security researchers: Matei "Mal" Badanoiu
