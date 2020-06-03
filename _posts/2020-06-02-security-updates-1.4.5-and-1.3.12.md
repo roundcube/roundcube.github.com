@@ -11,7 +11,7 @@ security vulnerabilities as well a number of general improvements from our issue
 ## Security fixes
 
 - Fix XSS issue in template object `username` <sup>**</sup>
-- Fix cross-site scripting (XSS) via malicious XML attachment
+- Fix cross-site scripting (XSS) via malicious XML attachment <sup>*</sup>
 - Fix a couple of XSS issues in Installer <sup>**</sup>
 - Better fix for `CVE-2020-12641`
 
@@ -24,4 +24,5 @@ See the full changelogs in the release notes on the Github download pages for th
 We strongly recommend to update all productive installations of Roundcube
 with this new versions.
 
+<sup>*</sup> Credits to the security researcher Matei "Mal" Badanoiu
 <sup>**</sup> Credits to the security researcher LoRexxar@knownsec 404Team
