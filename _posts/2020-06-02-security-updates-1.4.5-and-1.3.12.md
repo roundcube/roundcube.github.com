@@ -19,7 +19,7 @@ The latter two vulnerabilities again are related to public access to the Roundcu
 and are therefore classified minor.
 
 See the full changelogs in the release notes on the Github download pages for the updated versions
-[1.4.5](https://github.com/roundcube/roundcubemail/releases/tag/1.4.4) and [1.3.12](https://github.com/roundcube/roundcubemail/releases/tag/1.3.12).
+[1.4.5](https://github.com/roundcube/roundcubemail/releases/tag/1.4.5) and [1.3.12](https://github.com/roundcube/roundcubemail/releases/tag/1.3.12).
 
 We strongly recommend to update all productive installations of Roundcube
 with this new versions.
