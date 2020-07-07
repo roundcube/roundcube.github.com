@@ -1,5 +1,11 @@
 [
     {
+        "title": "Elastic: Dark mode",
+        "date": "2020-07-07",
+        "url": "https://kolabian.wordpress.com/2020/07/07/elastic-dark-mode/",
+        "excerpt": "Nowadays, when every major web browser supports dark mode and most people use mobile devices..."
+    },
+    {
         "title": "How we update Docker images when base images change",
         "date": "2020-01-04",
         "url": "https://roundcubeinbox.wordpress.com/2020/01/04/update-docker-images-when-base-image-changes/",
