@@ -10,7 +10,7 @@ vulnerability. The 1.4.7 release also contains a number of general improvements 
 
 ## Security fix
 
-Prevent cross-site scripting (XSS) via HTML messages with malicious svg/namespace.
+Prevent cross-site scripting (XSS) via HTML messages with malicious svg/namespace (`CVE-2020-15562`).
 Credits for this finding go to [SSD Secure Disclosure](https://ssd-disclosure.com/).
 
 See the full changelogs in the release notes on the Github download pages for the updated versions
