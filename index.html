@@ -88,7 +88,7 @@ date: 2020-04-29T21:10:00Z
     for (var i = 0; i < announcements.length; i++) {
         announcement = announcements[i];
 
-        if (expiry = announcement.getAttribute('data-expiry')) {
+        if (expiry = announcement.getAttribute('data-rc-expiry')) {
             expiry_date = new Date(expiry);
 
             if (currnet_date < expiry_date) {

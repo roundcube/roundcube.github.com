@@ -20,7 +20,7 @@ libs: {
         sri: 'sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs='
     },
     less: 'https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js',
-    css: '/styles/styles.min.css?v=2019112600',
+    css: '/styles/styles.min.css?v=2020071800',
     bootstrap: {
         css: {
             url: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',

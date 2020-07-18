@@ -6,7 +6,7 @@ lastmod: 2019-08-28T12:32:00Z
 ---
 <h1>Download your version of Roundcube</h1>
 
-{% for version in site.data.versions %}
+{% for version in site.data.releases %}
     {% assign id = version | first %}
     {% assign params = version | last %}
 
@@ -27,16 +27,16 @@ lastmod: 2019-08-28T12:32:00Z
     <table class="table table-striped download-table">
     <thead>
         <tr>
-            <th class="package">Package</th>
-            <th class="link"></th>
-            <th class="size text-nowrap">Size</th>
-            <th class="checksum d-none d-lg-table-cell">SHA-256 checksum</th>
+            <th class="package" scope="col">Package</th>
+            <td class="link"></td>
+            <th class="size text-nowrap" scope="col">Size</th>
+            <th class="checksum d-none d-lg-table-cell" scope="col">SHA-256 checksum</th>
         </tr>
     </thead>
     <tbody>
         {% for source in params.sources %}
             <tr>
-                <td class="package">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
+                <th class="package font-weight-normal" scope="row">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
                 <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a>
                 <td class="size text-nowrap">{{ source.size }}</td>
                 <td class="checksum d-none d-lg-table-cell text-monospace">{{ source.checksum }}</td>
@@ -55,7 +55,7 @@ lastmod: 2019-08-28T12:32:00Z
     <div class="col my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
-                <span class="text-white"><i class="fab fa-github fa-fw mr-1"></i> GitHub</span>
+                <span class="text-white"><span class="fab fa-github fa-fw mr-1"></span> GitHub</span>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">All recent versions are listed on our <a href="https://github.com/roundcube/roundcubemail/releases" class="rc-icon external-link" target="_blank">Github releases</a> page - complete with release notes and signatures.</li>
@@ -68,7 +68,7 @@ lastmod: 2019-08-28T12:32:00Z
     <div class="col my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
-                <span class="text-white"><i class="fab fa-docker fa-fw mr-1"></i> Docker</span>
+                <span class="text-white"><span class="fab fa-docker fa-fw mr-1"></span> Docker</span>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">The Roundcube Docker image is available on <a href="https://hub.docker.com/r/roundcube/roundcubemail/" class="rc-icon external-link" target="_blank">Docker Hub</a>.</li>
@@ -80,7 +80,7 @@ lastmod: 2019-08-28T12:32:00Z
     <div class="col my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
-                <span class="text-white"><i class="fas fa-box-open fa-fw mr-1"></i> Other</span>
+                <span class="text-white"><span class="fas fa-box-open fa-fw mr-1"></span> Other</span>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Roundcube can also be installed through auto installers like <a href="https://www.softaculous.com/" class="rc-icon external-link" target="_blank">softaculous.com</a>
@@ -105,11 +105,12 @@ lastmod: 2019-08-28T12:32:00Z
 <p>After downloading the <a href="/download/pubkey.asc" class="rc-icon asc-link">pubkey</a> and the signature file, verify packages with</p>
 <p class="bg-light p-3 text-monospace">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</p>
 
-<h2>Installation</h2>
+<h2>Installation and upgrading</h2>
 
 <ul>
-    <li>Instructions on how to download and <a href="https://github.com/roundcube/roundcubemail/wiki/Installation" class="rc-icon external-link" target="_blank">install Roundcube</a> can be found in our Wiki.</li>
+    <li>Instructions on how to download and <a href="https://github.com/roundcube/roundcubemail/wiki/Installation" class="rc-icon external-link" target="_blank">install Roundcube</a> for the first time can be found in our Wiki.</li>
     <li>Continue reading how to <a href="https://github.com/roundcube/roundcubemail/wiki/Configuration" class="rc-icon external-link" target="_blank">configure</a> Roundcube and your webserver.</li>
+    <li>See our <a href="https://github.com/roundcube/roundcubemail/wiki/Upgrade" class="rc-icon external-link" target="_blank">upgrading guide</a> for information about updating an existing Roudncube installation.</li>
 </ul>
 
 <h2>Plugins</h2>
