@@ -18,5 +18,5 @@ See the full changelogs in the release notes on the Github download pages for th
 [1.4.10](https://github.com/roundcube/roundcubemail/releases/tag/1.4.10), [1.3.16](https://github.com/roundcube/roundcubemail/releases/tag/1.3.16) and [1.2.13](https://github.com/roundcube/roundcubemail/releases/tag/1.2.13).
 
 We strongly recommend to update all productive installations of Roundcube
-with this new versions.
+with these new versions.
 
