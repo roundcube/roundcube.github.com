@@ -1,24 +1,26 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="/"><img src="/images/roundcube_logo_icon.svg" width="40" height="40" alt="Roundcube - open source webmail software"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top flex-wrap flex-md-nowrap">
+    <div class="container-xxl">
+        <a class="navbar-brand" href="/"><img src="/images/roundcube_logo_icon.svg" width="40" height="40" alt="Roundcube - open source webmail software"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item {% if page.url contains 'about/' %}active{% endif %}"><a href="/about/" class="nav-link">About{% if page.url contains 'about/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
-        <li class="nav-item {% if page.url contains 'news/' %}active{% endif %}"><a href="/news/" class="nav-link">News{% if page.url contains 'news/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
-        <li class="nav-item {% if page.url contains 'screens/' %}active{% endif %}"><a href="/screens/" class="nav-link">Screenshots{% if page.url contains 'screens/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
-        <li class="nav-item {% if page.url contains 'download/' %}active{% endif %}"><a href="/download/" class="nav-link">Download{% if page.url contains 'download/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
-        <li class="nav-item"><a href="https://plugins.roundcube.net" class="nav-link" target="_blank">Plugins</a></li>
-        <li class="nav-item {% if page.url contains 'support/' %}active{% endif %}"><a href="/support/" class="nav-link">Support{% if page.url contains 'support/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
-        <li class="nav-item {% if page.url contains 'contribute/' %}active{% endif %}"><a href="/contribute/" class="nav-link">Contribute{% if page.url contains 'contribute/' %} <span class="sr-only">(current)</span>{% endif %}</a></li>
-    </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto flex-row flex-wrap">
+                <li class="nav-item col-6 col-md-auto"><a href="/about/" class="nav-link {% if page.url contains 'about/' %}active{% endif %}">About{% if page.url contains 'about/' %} <span class="visually-hidden">(current)</span>{% endif %}</a></li>
+                <li class="nav-item col-6 col-md-auto"><a href="/news/" class="nav-link {% if page.url contains 'news/' %}active{% endif %}">News{% if page.url contains 'news/' %} <span class="visually-hidden">(current)</span>{% endif %}</a></li>
+                <li class="nav-item col-6 col-md-auto"><a href="/screens/" class="nav-link {% if page.url contains 'screens/' %}active{% endif %}">Screenshots{% if page.url contains 'screens/' %} <span class="visually-hidden">(current)</span>{% endif %}</a></li>
+                <li class="nav-item col-6 col-md-auto"><a href="/download/" class="nav-link {% if page.url contains 'download/' %}active{% endif %}">Download{% if page.url contains 'download/' %} <span class="visually-hidden">(current)</span>{% endif %}</a></li>
+                <li class="nav-item col-6 col-md-auto"><a href="https://plugins.roundcube.net" class="nav-link" target="_blank">Plugins</a></li>
+                <li class="nav-item col-6 col-md-auto"><a href="/support/" class="nav-link {% if page.url contains 'support/' %}active{% endif %}">Support{% if page.url contains 'support/' %} <span class="visually-hidden">(current)</span>{% endif %}</a></li>
+                <li class="nav-item col-6 col-md-auto"><a href="/contribute/" class="nav-link {% if page.url contains 'contribute/' %}active{% endif %}">Contribute{% if page.url contains 'contribute/' %} <span class="visually-hidden">(current)</span>{% endif %}</a></li>
+            </ul>
 
-    <ul class="navbar-nav flex-row ml-lg-auto float-right">
-        <li class="nav-item"><a class="nav-link p-2" aria-label="GitHub" href="https://github.com/roundcube/roundcubemail" target="_blank" rel="noopener"><span class="fab fa-github"></span></a></li>
-        <li class="nav-item"><a class="nav-link p-2" aria-label="DockerHub" href="https://hub.docker.com/r/roundcube/roundcubemail/" target="_blank" rel="noopener"><span class="fab fa-docker"></span></a></li>
-        <li class="nav-item"><a class="nav-link p-2" aria-label="Twitter" href="https://twitter.com/roundcube" target="_blank" rel="noopener"><span class="fab fa-twitter"></span></a></li>
-    </ul>
-  </div>
+            <ul class="navbar-nav flex-row ms-lg-auto float-end">
+                <li class="nav-item"><a class="nav-link p-2" aria-label="GitHub" href="https://github.com/roundcube/roundcubemail" target="_blank" rel="noopener"><span class="fab fa-github"></span></a></li>
+                <li class="nav-item"><a class="nav-link p-2" aria-label="DockerHub" href="https://hub.docker.com/r/roundcube/roundcubemail/" target="_blank" rel="noopener"><span class="fab fa-docker"></span></a></li>
+                <li class="nav-item"><a class="nav-link p-2" aria-label="Twitter" href="https://twitter.com/roundcube" target="_blank" rel="noopener"><span class="fab fa-twitter"></span></a></li>
+            </ul>
+        </div>
+    </div>
 </nav>

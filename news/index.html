@@ -14,8 +14,8 @@ lastmod: 2017-10-31T20:26:00Z
             {% endfor %}
         </div>
 
-        <a class="btn btn-link {% if paginator.previous_page_path == nil %}disabled{% endif %} my-3 ml-lg-5" href="{{ paginator.previous_page_path }}" tabindex="-1"><span class="fas fa-angle-left"></span> Newer posts</a>
-        <a class="btn btn-link {% if paginator.next_page_path == nil %}disabled{% endif %} float-right my-3 mr-lg-5" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts <span class="fas fa-angle-right"></span></a>
+        <a class="btn btn-link {% if paginator.previous_page_path == nil %}disabled{% endif %} my-3 ms-lg-5" href="{{ paginator.previous_page_path }}" tabindex="-1"><span class="fas fa-angle-left"></span> Newer posts</a>
+        <a class="btn btn-link {% if paginator.next_page_path == nil %}disabled{% endif %} float-end my-3 me-lg-5" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts <span class="fas fa-angle-right"></span></a>
 
         <p class="text-muted small d-none d-lg-block mt-4">Subscribe to the news <a href="/feeds/atom.xml" class="rc-icon rss-link" target="_blank">RSS Feed</a></p>
     </div>
@@ -32,7 +32,7 @@ lastmod: 2017-10-31T20:26:00Z
                             <li class="list-group-item">
                                 <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
                                 {{ blog.excerpt }}<br>
-                                <span class="postdate text-muted font-italic small">{{ blog.date | date_to_long_string }}</span>
+                                <span class="postdate text-muted fst-italic small">{{ blog.date | date_to_long_string }}</span>
                             </li>
                         {% endfor %}
                     </ul>
@@ -44,9 +44,9 @@ lastmod: 2017-10-31T20:26:00Z
                     <div class="card-header bg-dark">
                         <span class="text-white">Tags</span>
                     </div>
-                    <ul class="tags pt-1 px-2">
+                    <ul class="list-inline pt-3 px-3">
                         {% for tag in site.tags %}
-                            <li class="float-left m-1"><a href="/news/{{ tag | first }}" class="rc-icon tag-link text-info">{{ tag | first }}</a></li>
+                            <li class="list-inline-item"><a href="/news/{{ tag | first }}"><span class="badge rounded-pill bg-light text-secondary">{{ tag | first }}</span></a></li>
                         {% endfor %}
                     </ul>
                 </div>

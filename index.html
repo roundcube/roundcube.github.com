@@ -7,14 +7,19 @@ date: 2020-04-29T21:10:00Z
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center pt-2 pb-4 pb-md-0 pt-lg-5 pt-md-3">
-                <img src="/images/logo.png" width="441" height="112" class="img-fluid" alt="Roundcube - open source webmail software">
+                <img src="/images/logo.png" data-rc-dark="/images/logo-dark.png" width="432" height="112" id="logo" class="img-fluid" alt="Roundcube - open source webmail software">
 
                 <div class="d-none d-md-block col mt-sm-3 mt-md-4 mt-xl-5 banner-download">
                     {% include downloadbutton.html %}
                 </div>
             </div>
-            <div class="col-md-6 text-center text-md-right mb-2 mb-md-0">
-                <a href="/screens"><img src="/screens/skins/{{ site.data.screenshots | first | first }}/banner.png" width="647" height="390" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
+            <div class="col-md-6 text-center text-md-end mb-2 mb-md-0">
+                {% assign skin = site.data.screenshots | first | first %}
+                {% if site.data.screenshots[skin]['banner-dark'] %}
+                    <a href="/screens"><img src="/screens/skins/{{ skin }}/banner.png" data-rc-dark="/screens/skins/{{ site.data.screenshots | first | first }}/banner_dark.png" width="647" height="390" id="bannerimg" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
+                {% else %}
+                    <a href="/screens"><img src="/screens/skins/{{ skin }}/banner.png" width="647" height="390" id="bannerimg" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -70,7 +75,7 @@ date: 2020-04-29T21:10:00Z
                         {% for post in site.posts limit: site.num_related_items %}
                             <li class="list-group-item">
                                 <a href="{{ post.url }}" class="newslink">{{ post.title }}</a><br>
-                                <span class="postdate text-muted font-italic small">{{ post.date | date_to_long_string }}</span>
+                                <span class="postdate text-muted fst-italic small">{{ post.date | date_to_long_string }}</span>
                             </li>
                         {% endfor %}
                     </ul>
@@ -99,4 +104,35 @@ date: 2020-04-29T21:10:00Z
             announcement.classList.remove('d-none');
         }
     }
+
+    var switch_logo = function() {
+        var logo = document.getElementById('logo');
+        var banner = document.getElementById('bannerimg');
+
+        if (!logo.hasAttribute('data-rc-light')) {
+            logo.setAttribute('data-rc-light', logo.src);
+
+            if (banner.hasAttribute('data-rc-dark')) {
+                banner.setAttribute('data-rc-light', banner.src);
+            }
+        }
+
+        if (document.getElementsByTagName('html')[0].classList.contains('dark-mode')) {
+            logo.src = logo.getAttribute('data-rc-dark');
+
+            if (banner.hasAttribute('data-rc-dark')) {
+                banner.src = banner.getAttribute('data-rc-dark');
+            }
+        }
+        else {
+            logo.src = logo.getAttribute('data-rc-light');
+
+            if (banner.hasAttribute('data-rc-dark')) {
+                banner.src = banner.getAttribute('data-rc-light');
+            }
+        }
+    };
+
+    switch_logo();
+    document.addEventListener('switch-color-mode', switch_logo, false);
 </script>

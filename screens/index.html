@@ -21,7 +21,7 @@ navtitle: Screenshots
         <ul class="nav nav-tabs" role="tablist">
             {% for device in params.devices %}
                 <li class="nav-item">
-                    <a class="nav-link text-capitalize {% if forloop.first %} active {% endif %}" id="{{ dir }}-{{ device }}-tab" data-toggle="tab" href="#{{ dir }}-{{ device }}" role="tab" aria-controls="{{ dir }}-{{ device }}" aria-selected="true">{{ device }}</a>
+                    <a class="nav-link text-capitalize {% if forloop.first %} active {% endif %}" id="{{ dir }}-{{ device }}-tab" data-bs-toggle="tab" href="#{{ dir }}-{{ device }}" role="tab" aria-controls="{{ dir }}-{{ device }}" aria-selected="true">{{ device }}</a>
                 </li>
             {% endfor %}
         </ul>
@@ -32,7 +32,7 @@ navtitle: Screenshots
             <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ dir }}-{{ device }}" role="tabpanel" {% if params.devices.size > 1 %}aria-labelledby="{{ dir }}-{{ device }}-tab"{% endif %}>
                 <ul id="screenshots-{{ dir }}-{{ device }}" class="screens p-0 w-100 mt-3">
                     {% for screenshot in params.screenshots %}
-                        <li class="m-1 d-inline-block img-thumbnail"><a id="screenshots-{{ dir }}-{{ device }}-{{ forloop.index }}" class="d-inline-block text-center" href="#" title="{{ screenshot.title }}" data-toggle="modal" data-target="#viewer"><img class="mx-auto" src="/screens/skins/{{ dir }}/{{ device }}/thumbs/{{ screenshot.file }}" height="97" alt="{{ screenshot.title }}"></a></li>
+                        <li class="m-1 d-inline-block img-thumbnail"><a id="screenshots-{{ dir }}-{{ device }}-{{ forloop.index }}" class="d-inline-block text-center" href="#" title="{{ screenshot.title }}" data-bs-toggle="modal" data-bs-target="#viewer"><img class="mx-auto" src="/screens/skins/{{ dir }}/{{ device }}/thumbs/{{ screenshot.file }}" height="97" alt="{{ screenshot.title }}"></a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -45,15 +45,15 @@ navtitle: Screenshots
         <div class="modal-content bg-transparent">
             <div class="modal-body text-center p-0 loading">
                 <div class="modal-loading text-center py-5"><span class="fas fa-circle-notch fa-spin"></span></div>
-                <img src="data:," class="img-fluid mx-auto" onload="screen_loaded(this);" data-dismiss="modal" alt="">
+                <img src="data:," class="img-fluid mx-auto" onload="screen_loaded(this);" data-bs-dismiss="modal" alt="">
                 <div class="modal-arrow left-arrow" onclick="move_screen(true);"></div>
                 <div class="modal-arrow right-arrow" onclick="move_screen();"></div>
             </div>
-            <div class="modal-footer bg-dark d-block">
-                <div class="nav_buttons float-right pl-2 mb-0">
-                    <a href="#" onclick="move_screen(true); return false;" class="fas fa-chevron-circle-left nav-link previous p-0 pr-1"></a>
+            <div class="modal-footer bg-dark d-block border-top-0">
+                <div class="nav_buttons float-end ps-2 mb-0">
+                    <a href="#" onclick="move_screen(true); return false;" class="fas fa-chevron-circle-left nav-link previous p-0 pe-1"></a>
                     <a href="#" onclick="move_screen(); return false;" class="fas fa-chevron-circle-right nav-link next p-0 px-1"></a>
-                    <a href="#" data-dismiss="modal" class="fas fa-times-circle nav-link p-0 pl-1"></a>
+                    <a href="#" data-bs-dismiss="modal" class="fas fa-times-circle nav-link p-0 ps-1"></a>
                 </div>
                 <p class="m-0"></p>
             </div>
@@ -63,41 +63,42 @@ navtitle: Screenshots
 
 <script>
     var viewer = document.getElementById('viewer');
-    $(viewer).on('show.bs.modal', function(e) {
-            var source = e.relatedTarget;
-            var img = source.querySelector('img');
-            var screen = this.querySelector('.modal-body > img');
 
-            screen.src = img.getAttribute('src').replace('/thumbs/', '/screens/');
-            screen.alt = img.getAttribute('alt');
-            this.querySelector('.modal-footer > p').textContent = img.getAttribute('alt');
+    viewer.addEventListener('show.bs.modal', function(e) {
+        var source = e.relatedTarget;
+        var img = source.querySelector('img');
+        var screen = this.querySelector('.modal-body > img');
 
-            this.setAttribute('data-rc-cur-index', source.id.replace(/^screenshots-[a-z]+-[a-z]+-/, ''));
-            this.setAttribute('data-rc-cur-source', source.id.replace(/-[0-9]+$/, ''));
+        screen.src = img.getAttribute('src').replace('/thumbs/', '/screens/');
+        screen.alt = img.getAttribute('alt');
+        this.querySelector('.modal-footer > p').textContent = img.getAttribute('alt');
+        this.setAttribute('data-rc-cur-index', source.id.replace(/^screenshots-[a-z]+-[a-z]+-/, ''));
+        this.setAttribute('data-rc-cur-source', source.id.replace(/-[0-9]+$/, ''));
 
-            // update button status
-            var prev_button = this.querySelector('.modal-footer > .nav_buttons > .nav-link.previous').classList;
-            var next_button = this.querySelector('.modal-footer > .nav_buttons > .nav-link.next').classList;
-            prev_button.remove('disabled');
-            next_button.remove('disabled');
-            prev_button.add(get_next_screen_id(true) == 0 ? 'disabled' : null);
-            next_button.add(get_next_screen_id() == 0 ? 'disabled' : null);
-        })
-        .on('hidden.bs.modal', function(e) {
-            var screen = this.querySelector('.modal-body > img');
-            screen.src = 'data:,';
-            screen.alt = '';
-            screen.style.removeProperty('height');
+        // update button status
+        var prev_button = this.querySelector('.modal-footer > .nav_buttons > .nav-link.previous').classList;
+        var next_button = this.querySelector('.modal-footer > .nav_buttons > .nav-link.next').classList;
+        prev_button.remove('disabled');
+        next_button.remove('disabled');
+        prev_button.add(get_next_screen_id(true) == 0 ? 'disabled' : null);
+        next_button.add(get_next_screen_id() == 0 ? 'disabled' : null);
+    });
 
-            if (viewer.getAttribute('data-rc-no-resize') != 'true') {
-                this.querySelector('.modal-dialog').style.removeProperty('width');
-            }
+    viewer.addEventListener('hidden.bs.modal', function() {
+        var screen = this.querySelector('.modal-body > img');
+        screen.src = 'data:,';
+        screen.alt = '';
+        screen.style.removeProperty('height');
 
-            this.querySelector('.modal-footer > p').textContent = '';
-            this.setAttribute('data-rc-cur-index', '');
-            this.setAttribute('data-rc-cur-source', '');
-            this.querySelector('.modal-body').classList.add('loading');
-        });
+        if (viewer.getAttribute('data-rc-no-resize') != 'true') {
+            this.querySelector('.modal-dialog').style.removeProperty('width');
+        }
+
+        this.querySelector('.modal-footer > p').textContent = '';
+        this.setAttribute('data-rc-cur-index', '');
+        this.setAttribute('data-rc-cur-source', '');
+        this.querySelector('.modal-body').classList.add('loading');
+    });
 
     // keyboard navigation
     document.addEventListener('keyup', function(e) {
@@ -114,18 +115,24 @@ navtitle: Screenshots
 
     // swipe navigation
     var touchstartX = 0;
-    document.addEventListener('touchstart', function(event) {
+    var touchstartY = 0;
+    viewer.querySelector('.modal-body').addEventListener('touchstart', function(event) {
         touchstartX = event.changedTouches[0].screenX;
+        touchstartY = event.changedTouches[0].screenY;
     });
 
-    document.addEventListener('touchend', function(event) {
+    viewer.querySelector('.modal-body').addEventListener('touchend', function(event) {
         var touchendX = event.changedTouches[0].screenX;
+        var touchendY = event.changedTouches[0].screenY;
 
-        if (viewer.classList.contains('show')) {
-            if (touchendX - touchstartX > 100) { // left
+        if ((touchendY - touchstartY) > 100 || (touchendY - touchstartY) < -100) {
+            return;
+        }
+        else if (viewer.classList.contains('show')) {
+            if (touchendX - touchstartX > 200) { // left
                 move_screen(true);
             }
-            else if (touchendX - touchstartX < -100) { // right
+            else if (touchendX - touchstartX < -200) { // right
                 move_screen();
             }
         }
@@ -154,7 +161,7 @@ navtitle: Screenshots
 
         if (target > 0) {
             viewer.setAttribute('data-rc-no-resize', true);
-            $(viewer).modal('hide');
+            bootstrap.Modal.getInstance(viewer).hide();
             document.getElementById(source + '-' + target).click();
             viewer.setAttribute('data-rc-no-resize', false);
         }
