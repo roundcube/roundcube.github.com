@@ -2,20 +2,22 @@
     "elastic": {
         "name": "Elastic",
         "author": "Aleksander Machniak",
-        "desc": "Released with Roundcube version 1.4.0, Elastic is Roundcube's the first official responsive skin. It has support for desktops, tablets and phones.",
+        "desc": "Released with Roundcube version 1.4.0, Elastic is Roundcube's first official responsive skin. It has support for desktops, tablets and phones.",
         "devices": ['desktop', 'tablet', 'phone'],
+        "banner-dark": true,
         "screenshots": [
             { "file": "mailbox_widescreen.png", "title": "Mailbox view" },
             { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
             { "file": "mailbox_cn.png", "title": "Multilingual display" },
+            { "file": "mailbox_dark.png", "title": "Dark mode support" },
             { "file": "compose.png", "title": "Compose HTML mails with attachments" },
-            { "file": "addressbook.png", "title": "Address book with LDAP integration" },
-            { "file": "editcontact.png", "title": "Extensible contact management form" },
-            { "file": "settings.png", "title": "Versatile user settings" },
-            { "file": "folders.png", "title": "Easy IMAP folder management" },
-            { "file": "identities.png", "title": "Sender identities with signature" },
-            { "file": "enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
-            { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
+            { "file": "contacts.png", "title": "Address book with LDAP integration" },
+            { "file": "contacts_edit.png", "title": "Extensible contact management form" },
+            { "file": "settings_preferences.png", "title": "Versatile user settings" },
+            { "file": "settings_folders.png", "title": "Easy IMAP folder management" },
+            { "file": "settings_identities.png", "title": "Sender identities with signature" },
+            { "file": "settings_enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
+            { "file": "settings_managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     },
     "larry": {
@@ -28,13 +30,13 @@
             { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
             { "file": "mailbox_cn.png", "title": "Multilingual display" },
             { "file": "compose.png", "title": "Compose HTML mails with attachments" },
-            { "file": "addressbook.png", "title": "Address book with LDAP integration" },
-            { "file": "editcontact.png", "title": "Extensible contact management form" },
-            { "file": "settings.png", "title": "Versatile user settings" },
-            { "file": "folders.png", "title": "Easy IMAP folder management" },
-            { "file": "identities.png", "title": "Sender identities with signature" },
-            { "file": "enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
-            { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
+            { "file": "contacts.png", "title": "Address book with LDAP integration" },
+            { "file": "contacts_edit.png", "title": "Extensible contact management form" },
+            { "file": "settings_preferences.png", "title": "Versatile user settings" },
+            { "file": "settings_folders.png", "title": "Easy IMAP folder management" },
+            { "file": "settings_identities.png", "title": "Sender identities with signature" },
+            { "file": "settings_enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
+            { "file": "settings_managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     },
     "classic": {
@@ -47,13 +49,13 @@
             { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
             { "file": "mailbox_cn.png", "title": "Multilingual display" },
             { "file": "compose.png", "title": "Compose HTML mails with attachments" },
-            { "file": "addressbook.png", "title": "Address book with LDAP integration" },
-            { "file": "editcontact.png", "title": "Extensible contact management form" },
-            { "file": "settings.png", "title": "Versatile user settings" },
-            { "file": "folders.png", "title": "Easy IMAP folder management" },
-            { "file": "identities.png", "title": "Sender identities with signature" },
-            { "file": "enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
-            { "file": "managesieve.png", "title": "...or Managesieve filter configuration" }
+            { "file": "contacts.png", "title": "Address book with LDAP integration" },
+            { "file": "contacts_edit.png", "title": "Extensible contact management form" },
+            { "file": "settings_preferences.png", "title": "Versatile user settings" },
+            { "file": "settings_folders.png", "title": "Easy IMAP folder management" },
+            { "file": "settings_identities.png", "title": "Sender identities with signature" },
+            { "file": "settings_enigma.png", "title": "Plugins like Enigma for signing and encrypting emails" },
+            { "file": "settings_managesieve.png", "title": "...or Managesieve filter configuration" }
         ]
     }
 }

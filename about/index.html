@@ -53,6 +53,7 @@ lastmod: 2020-12-29T19:40:00Z
             <li>Brute-force login attack prevention</li>
             <li>XSS attack protection</li>
             <li>Support for PGP encryption</li>
+            <li>OAuth/XOauth login support</li>
         </ul>
     </div>
     <div class="col-md-6">
@@ -61,18 +62,20 @@ lastmod: 2020-12-29T19:40:00Z
             <li>Available in over 80 languages</li>
             <li>Three column view</li>
             <li>Responsive skin (multi-device support)</li>
+            <li>Light and dark interface modes</li>
             <li>Attachment previews</li>
             <li>Find-as-you-type address book integration</li>
             <li>Searching messages and contacts</li>
         </ul>
-        <h3>3rd Party Additions</h3>
+        <h3>3<sup>rd</sup> Party Additions</h3>
         <ul>
-            <li><a href="https://packagist.org/?query=search&type=roundcube-plugin">Advanced search</a></li>
-            <li><a href="https://packagist.org/?query=keyboard&type=roundcube-plugin">Keyboard shortcuts</a></li>
-            <li><a href="https://packagist.org/?query=calendar&type=roundcube-plugin">Calendar module</a></li>
-            <li><a href="https://packagist.org/?query=2fa&type=roundcube-plugin">2-factor authentication</a></li>
-            <li><a href="https://packagist.org/packages/boressoft/ident_switch">Multiple accounts</a></li>
+            <li><a href="https://packagist.org/?query=search&type=roundcube-plugin" class="rc-icon external-link" target="_blank">Advanced search</a></li>
+            <li><a href="https://packagist.org/?query=keyboard&type=roundcube-plugin" class="rc-icon external-link" target="_blank">Keyboard shortcuts</a></li>
+            <li><a href="https://packagist.org/?query=calendar&type=roundcube-plugin" class="rc-icon external-link" target="_blank">Calendar module</a></li>
+            <li><a href="https://packagist.org/?query=2fa&type=roundcube-plugin" class="rc-icon external-link" target="_blank">Two-factor authentication</a></li>
+            <li><a href="https://packagist.org/packages/boressoft/ident_switch" class="rc-icon external-link" target="_blank">Multiple accounts</a></li>
         </ul>
+        <p>Browse <a href="https://packagist.org/?type=roundcube-plugin" class="rc-icon external-link" target="_blank">all 3<sup>rd</sup> party plugins</a> available on Packagist.</p>
     </div>
 </div>
 
@@ -86,13 +89,16 @@ lastmod: 2020-12-29T19:40:00Z
     <div class="col">
         <h2>Server Requirements</h2>
         <ul>
-            <li>Apache, Lighttpd, Nginx, Cherokee or Hiawatha web server</li>
-            <li>PHP Version 5.4.1 or greater and < 8.0</li>
-            <li>MySQL, PostgreSQL, SQLite, MSSQL or Oracle database</li>
+            <li>Apache, Lighttpd, Nginx, IIS, Cherokee or Hiawatha web server</li>
+            <li>PHP Version 5.5 or greater<sup><a href="#fn1" class="text-muted">1</a></sup></li>
+            <li>MySQL/MariaDB, PostgreSQL, SQLite, MSSQL or Oracle database</li>
             <li>SMTP server and IMAP server with IMAP4 rev1 support</li>
         </ul>
 
         <p><a href="https://github.com/roundcube/roundcubemail/wiki/Install-Requirements" class="rc-icon external-link" target="_blank">More detailed list of requirements</a></p>
+
+        <a class="anchor d-block invisible position-relative" id="fn1"></a>
+        <p class="text-muted">1. Roundcube supports versions of PHP available at the time of each major release. See the <a href="https://github.com/roundcube/roundcubemail/wiki/Version-History" class="rc-icon external-link" target="_blank">version history</a> for more information.</p>
     </div>
 </div>
 
