@@ -18,10 +18,10 @@ lastmod: 2019-08-28T12:32:00Z
     <h2>{{ params.name }}{% if params.version %} - {{ params.version }}{% endif %}</h2>
 
     {% if id == "lts" %}
-        <p class="text-muted">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
+        <p class="text-muted mb-1">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
             will go into these release branches.</p>
     {% elsif id == "beta" %}
-        <p class="text-muted">We recommend to test beta versions on a separate environment, and don't forget to backup your data before installing.</p>
+        <p class="text-muted mb-1">We recommend to test beta versions on a separate environment, and don't forget to backup your data before installing.</p>
     {% endif %}
 
     <table class="table table-striped download-table">
@@ -36,10 +36,10 @@ lastmod: 2019-08-28T12:32:00Z
     <tbody>
         {% for source in params.sources %}
             <tr>
-                <th class="package font-weight-normal" scope="row">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
+                <th class="package fw-normal" scope="row">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
                 <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a>
                 <td class="size text-nowrap">{{ source.size }}</td>
-                <td class="checksum d-none d-lg-table-cell text-monospace">{{ source.checksum }}</td>
+                <td class="checksum d-none d-lg-table-cell font-monospace">{{ source.checksum }}</td>
             </tr>
         {% endfor %}
     </tbody>
@@ -55,7 +55,7 @@ lastmod: 2019-08-28T12:32:00Z
     <div class="col my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
-                <span class="text-white"><span class="fab fa-github fa-fw mr-1"></span> GitHub</span>
+                <span class="text-white"><span class="fab fa-github fa-fw me-1"></span> GitHub</span>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">All recent versions are listed on our <a href="https://github.com/roundcube/roundcubemail/releases" class="rc-icon external-link" target="_blank">Github releases</a> page - complete with release notes and signatures.</li>
@@ -68,7 +68,7 @@ lastmod: 2019-08-28T12:32:00Z
     <div class="col my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
-                <span class="text-white"><span class="fab fa-docker fa-fw mr-1"></span> Docker</span>
+                <span class="text-white"><span class="fab fa-docker fa-fw me-1"></span> Docker</span>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">The Roundcube Docker image is available on <a href="https://hub.docker.com/r/roundcube/roundcubemail/" class="rc-icon external-link" target="_blank">Docker Hub</a>.</li>
@@ -80,7 +80,7 @@ lastmod: 2019-08-28T12:32:00Z
     <div class="col my-3">
         <div class="card h-100">
             <div class="card-header bg-dark">
-                <span class="text-white"><span class="fas fa-box-open fa-fw mr-1"></span> Other</span>
+                <span class="text-white"><span class="fas fa-box-open fa-fw me-1"></span> Other</span>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Roundcube can also be installed through auto installers like <a href="https://www.softaculous.com/" class="rc-icon external-link" target="_blank">softaculous.com</a>
@@ -103,7 +103,7 @@ lastmod: 2019-08-28T12:32:00Z
 </p>
 
 <p>After downloading the <a href="/download/pubkey.asc" class="rc-icon asc-link">pubkey</a> and the signature file, verify packages with</p>
-<p class="bg-light p-3 text-monospace">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</p>
+<p class="bg-light p-3 font-monospace">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</p>
 
 <h2>Installation and upgrading</h2>
 
@@ -128,7 +128,7 @@ lastmod: 2019-08-28T12:32:00Z
                 <span class="text-white">Kolab Groupware</span>
             </div>
             <div class="card-body">
-                <p>The <a href="https://kolab.org" class="font-weight-bold" target="_blank">Kolab Groupware</a> Solution provides a complete email and groupware server pre-packaged for various linux distributions
+                <p>The <a href="https://kolab.org" class="fw-bold" target="_blank">Kolab Groupware</a> Solution provides a complete email and groupware server pre-packaged for various linux distributions
                   with Roundcube sitting on top as its web client. It offers easy configurable LDAP address books, calendars, tasks, mobile synchronization and more.
                   An enterprise version with professional support is available from <a href="https://kolabsystems.com" class="rc-icon external-link" target="_blank">Kolab Systems</a>.</p>
             </div>
@@ -141,7 +141,7 @@ lastmod: 2019-08-28T12:32:00Z
                 <span class="text-white">iRedMail</span>
             </div>
             <div class="card-body">
-                <p><a href="https://www.iredmail.org" class="font-weight-bold" target="_blank">iRedMail</a> is another fully open source email server solution
+                <p><a href="https://www.iredmail.org" class="fw-bold" target="_blank">iRedMail</a> is another fully open source email server solution
                     that lets you install a full-featured email server in a few minutes. It installs and configures the popular open source email
                     components like Postfix, Dovecot, Amavisd and - of course Roundcube - on major Linux and BSD distrubutions.</p>
             </div>
@@ -154,7 +154,7 @@ lastmod: 2019-08-28T12:32:00Z
                 <span class="text-white">Mail-in-a-Box</span>
             </div>
             <div class="card-body">
-                <p><a href="https://mailinabox.email" class="font-weight-bold" target="_blank">Mail-in-a-Box</a> turns a fresh cloud computer into a
+                <p><a href="https://mailinabox.email" class="fw-bold" target="_blank">Mail-in-a-Box</a> turns a fresh cloud computer into a
                     fully equipped, working mail server. The setup provides Roundcube webmail and an IMAP/SMTP server for use with
                     mobile devices and desktop mail software. It also includes contacts and calendar synchronization.</p>
             </div>
@@ -167,7 +167,7 @@ lastmod: 2019-08-28T12:32:00Z
                 <span class="text-white">mailcow</span>
             </div>
             <div class="card-body">
-                <p><a href="https://mailcow.email" class="font-weight-bold" target="_blank">mailcow</a> is an open source mail server suite for groupware/email purposes that can be installed
+                <p><a href="https://mailcow.email" class="fw-bold" target="_blank">mailcow</a> is an open source mail server suite for groupware/email purposes that can be installed
                 in a fresh Debian/Ubuntu instance. It is powered by various open source mail server components (Dovecot, Postfix, ...) that can be administered
                 in its modern web UI. It also comes with IMAP, POP3 and SMTP support as an alternative to Roundcube webmail.</p>
             </div>

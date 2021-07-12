@@ -21,13 +21,18 @@
     <div class="col-lg-8">
         <h1>{{ page.title }}</h1>
 
-        <ul class="tags m-0 px-0 clearfix">
-            {% for tag in page.tags %}
-                <li class="float-left m-1"><a href="/news/{{ tag }}" class="rc-icon tag-link text-info">{{ tag }}</a></li>
-            {% endfor %}
-        </ul>
+        <div class="mb-3 text-muted fst-italic small">
+            <p class="mb-0">Published: {{ page.date | date_to_long_string }}</p>
 
-        <p class="text-muted font-italic">{{ page.date | date_to_long_string }}</p>
+            {% if page.tags.size > 0 %}
+                <ul class="mb-0 list-inline">
+                    <li class="me-1 list-inline-item">Tags:</li>
+                    {% for tag in page.tags %}
+                        <li class="me-1 list-inline-item"><a href="/news/{{ tag }}"><span class="badge rounded-pill bg-light text-secondary">{{ tag }}</span></a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
 
         {{ content }}
 
