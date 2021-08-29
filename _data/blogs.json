@@ -1,5 +1,11 @@
 [
     {
+        "title": "Canned responses in HTML format",
+        "date": "2021-08-29",
+        "url": "https://kolabian.wordpress.com/2021/08/29/canned-responses-in-html-format/",
+        "excerpt": "A new feature just landed in Roundcube 1.6-git. It is a support for HTML formatting..."
+    },
+    {
         "title": "Collected Recipients and Trusted Senders",
         "date": "2020-09-26",
         "url": "https://kolabian.wordpress.com/2020/09/26/collected-recipients-and-trusted-senders/",
