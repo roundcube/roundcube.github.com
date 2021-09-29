@@ -17,3 +17,6 @@ and to [configure Roundcube accordingly](https://github.com/roundcube/roundcubem
 We'll add this feature to future releases of our Docker images but for now, you need to re-configure your Roundcube installations.
 
 **Apologies for the inconvenience and for the bad news!**
+
+> **UPDATE** - 09/28/2021  
+> We're happy to announce that we found a new sponsor and that the [spell ckecking service is back online](/news/2021/09/28/spell-checking-service-back-online).
