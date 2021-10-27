@@ -63,6 +63,15 @@ main {
   }
 }
 
+blockquote {
+  padding: 0.6rem 1rem;
+  background-color: @color-background-striped;
+
+  > p {
+    margin: 0;
+  }
+}
+
 .artical-list > .artical:nth-child(even),
 ul.ul-striped li:nth-child(even){
   background-color: @color-background-striped;
@@ -276,11 +285,6 @@ table.download-table {
       text-align: center;
     }
   }
-}
-
-blockquote {
-  padding: 0.6rem 1rem;
-  background-color: @color-footer-background;
 }
 
 @import "dark";

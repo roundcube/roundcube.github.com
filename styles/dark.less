@@ -49,6 +49,10 @@ html.dark-mode {
     }
   }
 
+  blockquote {
+    background-color: @color-dark-background-alt;
+  }
+
   .text-dark,
   a.text-dark:hover {
     color: @color-dark-font !important;
@@ -104,7 +108,7 @@ html.dark-mode {
     background-color: @color-dark-banner-background;
 
     .text-muted {
-      color: shade(@color-dark-banner-background, 75%) !important;
+      color: tint(@color-dark-banner-background, 50%) !important;
     }
   }
 
