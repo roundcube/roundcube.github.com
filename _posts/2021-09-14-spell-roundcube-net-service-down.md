@@ -3,6 +3,9 @@ layout: article
 title: spell.roundcube.net service down
 tags: announcement
 ---
+> **UPDATE** - *28 September 2021*  
+> We're happy to announce that we found a new sponsor and that the [spell checking service is back online]({% post_url 2021-09-28-spell-checking-service-back-online %}).
+
 For years the Roundcube project has run a public spell checking service spell.roundcube.net
 as a privacy-safe alternative to the former Spell Check service by Google. This has been
 the default backend for Roundcube's spell checking function and **has now gone offline forever**.
@@ -17,6 +20,3 @@ and to [configure Roundcube accordingly](https://github.com/roundcube/roundcubem
 We'll add this feature to future releases of our Docker images but for now, you need to re-configure your Roundcube installations.
 
 **Apologies for the inconvenience and for the bad news!**
-
-> **UPDATE** - 09/28/2021  
-> We're happy to announce that we found a new sponsor and that the [spell checking service is back online](/news/2021/09/28/spell-checking-service-back-online).
