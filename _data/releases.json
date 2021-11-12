@@ -25,7 +25,7 @@
     },
     "old-stable": {
         "name": "Old stable",
-        "version": "1.4.11",
+        "version": "1.4.12",
         "sources": [
         ]
     },
@@ -33,16 +33,16 @@
         "name": "LTS versions",
         "sources": [
             {
-                "package": "1.4.11 - Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.11/roundcubemail-1.4.11-complete.tar.gz",
+                "package": "1.4.12 - Complete",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.12/roundcubemail-1.4.12-complete.tar.gz",
                 "size": "6.7 MB",
-                "checksum": "ac7319070c305fc2c88c7723605562d8607030732beee931cdb4091cf05e69b7"
+                "checksum": "15b0411aec9577506729e4fe2a9106bdf7c51f0ddcdea79945a4968795abd2ba"
             },
             {
-                "package": "1.3.16 - Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.16/roundcubemail-1.3.16-complete.tar.gz",
+                "package": "1.3.17 - Complete",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.17/roundcubemail-1.3.17-complete.tar.gz",
                 "size": "5.3 MB",
-                "checksum": "7d6e2853f3db2a35b1cb36412177299f4323400e73c3ec704077520dcba1bcb8"
+                "checksum": "45fdd2ebfa0024f8a4c6750fd95e113b73802a2344b9af956ce68a1ea31e8abe"
             }
         ]
     },
