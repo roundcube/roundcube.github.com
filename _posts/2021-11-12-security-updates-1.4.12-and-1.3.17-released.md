@@ -19,3 +19,8 @@ See the full changelogs in the release notes on the Github download pages for th
 We strongly recommend to update all productive installations of Roundcube
 with these new versions.
 
+> **PLEASE NOTE**  
+> The above mentioned security fixes are already included in the recently released version 1.5.0
+> of Roundcube Webmail. See the [1.5.0 release notes](https://github.com/roundcube/roundcubemail/releases/tag/1.5.0)
+> (CANGELOG) for reference.
+
