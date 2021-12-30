@@ -26,19 +26,17 @@ html.dark-mode {
   }
 
   table {
-    color: @color-dark-font !important;
-
     > thead > tr > * {
       border-bottom-color: @color-dark-border !important;
+      color: @color-dark-font !important;
     }
 
     > tbody > tr > * {
       border-bottom-color: darken(@color-dark-background, 5%) !important;
+      color: @color-dark-font !important;
     }
 
     &.table-striped > tbody > tr {
-      color: @color-dark-font !important;
-
       &:nth-child(even) {
         background-color: @color-dark-background;
       }
