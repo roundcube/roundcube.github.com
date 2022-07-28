@@ -1,31 +1,31 @@
 {
     "stable": {
         "name": "Stable version",
-        "version": "1.5.3",
+        "version": "1.6.0",
         "sources": [
             {
                 "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.3/roundcubemail-1.5.3.tar.gz",
-                "size": "4.3 MB",
-                "checksum": "22fdfa0f868fc478dfbb1dfa9bcd5fc91be981182334ca6079ad1ae03ac4c96e"
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.0/roundcubemail-1.6.0.tar.gz",
+                "size": "3.7 MB",
+                "checksum": "1224eaf628888e503c49d0e8a69aa4997e566c3605738d0303d9c7a09722f363"
             },
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.3/roundcubemail-1.5.3-complete.tar.gz",
-                "size": "7.5 MB",
-                "checksum": "4bcfac219f2e0005c912dac3227743cc1ed0ded69c822f74c81a70d041e5a3bd"
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.0/roundcubemail-1.6.0-complete.tar.gz",
+                "size": "5.7 MB",
+                "checksum": "2409ccdfe2e465f086cb9fc18c88dfe0aaf6ccc23924564975061209921694ba"
             },
             {
                 "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.3/roundcube-framework-1.5.3.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.0/roundcube-framework-1.6.0.tar.gz",
                 "size": "1.8 MB",
-                "checksum": "b988450164c6f52c156aad60881a3c4f0ac6c806de6d3cc1491a61acbd5b2747"
+                "checksum": "1573cd6b7b7f77d36de9bcc57055c1ade79f60ef5e01851f14f6a998a075fb89"
             }
         ]
     },
     "old-stable": {
         "name": "Old stable",
-        "version": "1.4.13",
+        "version": "1.5.3",
         "sources": [
         ]
     },
@@ -33,16 +33,16 @@
         "name": "LTS versions",
         "sources": [
             {
+                "package": "1.5.3 - Complete",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.3/roundcubemail-1.5.3-complete.tar.gz",
+                "size": "7.5 MB",
+                "checksum": "4bcfac219f2e0005c912dac3227743cc1ed0ded69c822f74c81a70d041e5a3bd"
+            },
+            {
                 "package": "1.4.13 - Complete",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.13/roundcubemail-1.4.13-complete.tar.gz",
                 "size": "6.7 MB",
                 "checksum": "e22800be6a2635dad806259edeee2b9878567477d77a74f17ecadbc3e51f2d68"
-            },
-            {
-                "package": "1.3.17 - Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.3.17/roundcubemail-1.3.17-complete.tar.gz",
-                "size": "5.3 MB",
-                "checksum": "45fdd2ebfa0024f8a4c6750fd95e113b73802a2344b9af956ce68a1ea31e8abe"
             }
         ]
     },
@@ -50,24 +50,6 @@
         "name": "Release candidate",
         "version": "1.6-rc",
         "sources": [
-            {
-                "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6-rc/roundcubemail-1.6-rc.tar.gz",
-                "size": "3.7 MB",
-                "checksum": "a5704be443ee4a55b721f90afc15654d787cf89cd655ba7d54df4d7ee644dced"
-            },
-            {
-                "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6-rc/roundcubemail-1.6-rc-complete.tar.gz",
-                "size": "5.7 MB",
-                "checksum": "88b54e547d23870467feb455488e3cd12981d4a7600c2ae3e46ade6dac8da914"
-            },
-            {
-                "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6-rc/roundcube-framework-1.6-rc.tar.gz",
-                "size": "1.8 MB",
-                "checksum": "0d70eb06f79f73c37f531aa5d533300d69c1f2f34a6f94faf26a4c7b6f2e50a6"
-            }
         ]
     }
 }
