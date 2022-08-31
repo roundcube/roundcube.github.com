@@ -42,7 +42,7 @@
     "classic": {
         "name": "Classic",
         "author": "The Roundcube Dev Team",
-        "desc": "Formally known as Default, renamed to Classic as of Roundcube version 0.8.0, this is Roundcube's original skin.<br><i>Support depreciated as of Roundcube 1.4.0</i>",
+        "desc": "Formally known as Default, renamed to Classic as of Roundcube version 0.8.0, this is Roundcube's original skin.<br><i>Support deprecated as of Roundcube 1.4.0</i>",
         "devices": ['desktop'],
         "screenshots": [
             { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view" },
