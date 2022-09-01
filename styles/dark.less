@@ -14,37 +14,35 @@
 @color-dark-danger: darken(#dc3545, 20%);
 
 html.dark-mode {
-  body,
-  .card,
-  .list-group-item {
-    color: @color-dark-font;
-    background-color: @color-dark-background;
+  --bs-link-color: @color-dark-link;
+  --bs-link-hover-color: @color-dark-link;
+  --bs-body-color: @color-dark-font;
+  --bs-body-bg: @color-dark-background;
+
+  .nav-tabs {
+    --bs-nav-tabs-border-color: @color-dark-border;
   }
 
-  a {
-    color: @color-dark-link;
+  .list-group {
+    --bs-list-group-color: @color-dark-font;
+    --bs-list-group-bg: @color-dark-background;
+    --bs-list-border-color: @color-dark-border;
   }
 
-  table {
-    > thead > tr > * {
-      border-bottom-color: @color-dark-border !important;
-      color: @color-dark-font !important;
-    }
+  .card {
+    --bs-card-color: @color-dark-font;
+    --bs-card-bg: @color-dark-background;
+    --bs-card-border-color: @color-dark-border;
+  }
 
-    > tbody > tr > * {
-      border-bottom-color: darken(@color-dark-background, 5%) !important;
-      color: @color-dark-font !important;
-    }
+  .card-header {
+    border-bottom: 0;
+  }
 
-    &.table-striped > tbody > tr {
-      &:nth-child(even) {
-        background-color: @color-dark-background;
-      }
-
-      &:nth-child(odd) {
-        background-color: @color-dark-background-alt;
-      }
-    }
+  .table {
+    --bs-table-color: @color-dark-font;
+    --bs-table-striped-bg: @color-dark-background-alt;
+    --bs-table-border-color: darken(@color-dark-background, 5%);
   }
 
   blockquote {
@@ -67,12 +65,6 @@ html.dark-mode {
 
   .bg-dark {
     background-color: @color-dark-header-background !important;
-  }
-
-  .card,
-  .list-group-item,
-  .nav-tabs {
-    border-color: @color-dark-border;
   }
 
   .nav-tabs .nav-link {
