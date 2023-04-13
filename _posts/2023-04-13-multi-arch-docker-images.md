@@ -21,3 +21,6 @@ the power of Github actions and the much appreciated contribution by
 
 Starting with version 1.6.0 all Docker images will now be released multi-arch enabling Roundcube to
 run on Raspberry Pi, M1 Macs, AWS EC2 Graviton and many other environments without custom builds.
+
+The list of architectures we support is limited to the archs available for [php](https://hub.docker.com/_/php)
+and [composer](https://hub.docker.com/_/composer).
