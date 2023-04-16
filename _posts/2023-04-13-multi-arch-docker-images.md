@@ -4,7 +4,7 @@ title: Multi-arch Docker Images for Roundcube
 tags: releases docker
 ---
 With the latest release of Roundcube webmail we proudly announce that the Docker images
-published under [rouncube/roundcubemail](https://hub.docker.com/r/roundcube/roundcubemail/)
+published under [roundcube/roundcubemail](https://hub.docker.com/r/roundcube/roundcubemail/)
 are now multi-platform and can be run on the following architectures:
 
 * linux/386
