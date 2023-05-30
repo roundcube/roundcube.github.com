@@ -23,7 +23,7 @@
     "larry": {
         "name": "Larry",
         "author": "FLINT / Büro für Gestaltung, Switzerland",
-        "desc": "Released with Roundcube version 0.8.0, Larry provides visual impact thanks to its use of color and specially designed graphics.<br><i>Support depreciated as of Roundcube 1.6.0. Available via Composer.</i>",
+        "desc": "Released with Roundcube version 0.8.0, Larry provides visual impact thanks to its use of color and specially designed graphics.<br><i>Support deprecated as of Roundcube 1.6.0. Available via Composer.</i>",
         "devices": ["desktop"],
         "screenshots": [
             { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view" },
