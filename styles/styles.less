@@ -136,8 +136,7 @@ a.anchor {
   }
 
   &:after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font: var(--fa-font-solid);
     content: @fa-var-link;
   }
 
@@ -182,8 +181,7 @@ footer {
 
 .rc-icon::before,
 .rc-icon::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font: var(--fa-font-solid);
 }
 
 .rc-icon::before {
@@ -195,15 +193,15 @@ footer {
 }
 
 a.back-link::before {
-  content: @fa-var-angle-double-left;
+  content: @fa-var-angles-left;
 }
 
 a.read-link::after {
-  content: @fa-var-angle-double-right;
+  content: @fa-var-angles-right;
 }
 
 a.external-link::after {
-  content: @fa-var-external-link-alt;
+  content: @fa-var-up-right-from-square;
 }
 
 a.rss-link::after {
@@ -211,7 +209,7 @@ a.rss-link::after {
 }
 
 a.mail-list-link::before {
-  font-weight: 400;
+  font: var(--fa-font-regular);
   content: @fa-var-envelope;
 }
 /*
@@ -232,7 +230,7 @@ a.light-mode::before {
 }
 
 a.auto-mode::before {
-  content: @fa-var-magic;
+  content: @fa-var-wand-sparkles;
 }
 
 a.current-theme::after {

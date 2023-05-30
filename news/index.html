@@ -14,8 +14,8 @@ lastmod: 2017-10-31T20:26:00Z
             {% endfor %}
         </div>
 
-        <a class="btn btn-link {% if paginator.previous_page_path == nil %}disabled{% endif %} my-3 ms-lg-5" href="{{ paginator.previous_page_path }}" tabindex="-1"><span class="fas fa-angle-left"></span> Newer posts</a>
-        <a class="btn btn-link {% if paginator.next_page_path == nil %}disabled{% endif %} float-end my-3 me-lg-5" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts <span class="fas fa-angle-right"></span></a>
+        <a class="btn btn-link {% if paginator.previous_page_path == nil %}disabled{% endif %} my-3 ms-lg-5" href="{{ paginator.previous_page_path }}" tabindex="-1"><span class="fa-solid fa-angle-left"></span> Newer posts</a>
+        <a class="btn btn-link {% if paginator.next_page_path == nil %}disabled{% endif %} float-end my-3 me-lg-5" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts <span class="fa-solid fa-angle-right"></span></a>
 
         <p class="text-body-secondary small d-none d-lg-block mt-4">Subscribe to the news <a href="/feeds/atom.xml" class="rc-icon rss-link" target="_blank">RSS Feed</a></p>
     </div>

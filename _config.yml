@@ -13,7 +13,6 @@ num_related_items: 5
 libs: {
     fonts: {
         roboto: 'https://fonts.googleapis.com/css?family=Roboto&amp;display=swap',
-        fontawesome: 'https://kit.fontawesome.com/4cdeb7a6e0.js'
     },
     less: {
         url: 'https://cdn.jsdelivr.net/npm/less@4.1.3/dist/less.min.js',
@@ -33,5 +32,11 @@ libs: {
             url: 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js',
             sri: 'sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r'
         }
+    },
+    fontawesome: {
+        css: {
+            url: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css',
+            sri: 'sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0'
+        },
     }
 }
