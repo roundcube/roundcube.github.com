@@ -21,32 +21,4 @@
     if ((host == window.location.host) && (window.location.protocol != 'https:')) {
         window.location.protocol = 'https';
     }
-
-    var color_mode = null;
-    if (typeof(Storage) !== "undefined" && window.localStorage.getItem("color-mode") !== null) {
-        color_mode = window.localStorage.getItem("color-mode");
-    }
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        color_mode = 'dark';
-    }
-
-    if (color_mode) {
-        switch_color_mode(color_mode, true);
-    }
-
-    function switch_color_mode(mode, onload) {
-        if (mode == 'dark') {
-            document.getElementsByTagName('html')[0].classList.add('dark-mode');
-        }
-        else {
-            document.getElementsByTagName('html')[0].classList.remove('dark-mode');
-        }
-
-        if (!onload && typeof(Storage) !== "undefined") {
-             window.localStorage.setItem('color-mode', mode);
-        }
-
-        var event = new Event('switch-color-mode');
-        document.dispatchEvent(event);
-    }
 </script>

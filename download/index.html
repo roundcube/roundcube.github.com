@@ -18,10 +18,10 @@ lastmod: 2019-08-28T12:32:00Z
     <h2>{{ params.name }}{% if params.version %} - {{ params.version }}{% endif %}</h2>
 
     {% if id == "lts" %}
-        <p class="text-muted mb-1">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
+        <p class="text-body-secondary mb-1">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
             will go into these release branches.</p>
     {% elsif id == "beta" %}
-        <p class="text-muted mb-1">We recommend to test beta versions on a separate environment, and don't forget to backup your data before installing.</p>
+        <p class="text-body-secondary mb-1">We recommend to test beta versions on a separate environment, and don't forget to backup your data before installing.</p>
     {% endif %}
 
     <table class="table table-striped download-table">
@@ -36,8 +36,8 @@ lastmod: 2019-08-28T12:32:00Z
     <tbody>
         {% for source in params.sources %}
             <tr>
-                <th class="package fw-normal" scope="row">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-muted">1</a></sup>{% endif %}</td>
-                <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a>
+                <th class="package fw-normal" scope="row">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-body-secondary">1</a></sup>{% endif %}</th>
+                <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a></td>
                 <td class="size text-nowrap">{{ source.size }}</td>
                 <td class="checksum d-none d-lg-table-cell font-monospace">{{ source.checksum }}</td>
             </tr>
@@ -46,15 +46,14 @@ lastmod: 2019-08-28T12:32:00Z
     </table>
 {% endfor %}
 
-<a class="anchor d-block invisible position-relative" id="fn1"></a>
-<p class="text-muted">1. Dependent packages only contain sources which are licensed under the GPL but they require some third-party
+<p id="fn1" class="text-body-secondary">1. Dependent packages only contain sources which are licensed under the GPL but they require some third-party
     packages to be installed along with Roundcube. All requirements are listed in the INSTALL instructions within the package file.</p>
 
 <h2>Other sources and downloads</h2>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
     <div class="col my-3">
         <div class="card h-100">
-            <div class="card-header bg-dark">
+            <div class="card-header bg-header">
                 <span class="text-white"><span class="fab fa-github fa-fw me-1"></span> GitHub</span>
             </div>
             <ul class="list-group list-group-flush">
@@ -67,7 +66,7 @@ lastmod: 2019-08-28T12:32:00Z
 
     <div class="col my-3">
         <div class="card h-100">
-            <div class="card-header bg-dark">
+            <div class="card-header bg-header">
                 <span class="text-white"><span class="fab fa-docker fa-fw me-1"></span> Docker</span>
             </div>
             <ul class="list-group list-group-flush">
@@ -81,7 +80,7 @@ lastmod: 2019-08-28T12:32:00Z
 
     <div class="col my-3">
         <div class="card h-100">
-            <div class="card-header bg-dark">
+            <div class="card-header bg-header">
                 <span class="text-white"><span class="fas fa-box-open fa-fw me-1"></span> Other</span>
             </div>
             <ul class="list-group list-group-flush">
@@ -105,7 +104,7 @@ lastmod: 2019-08-28T12:32:00Z
 </p>
 
 <p>After downloading the <a href="/download/pubkey.asc" class="rc-icon asc-link">pubkey</a> and the signature file, verify packages with</p>
-<p class="bg-light p-3 font-monospace">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</p>
+<p class="bg-quote p-3 font-monospace">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</p>
 
 <h2>Installation and upgrading</h2>
 
@@ -125,7 +124,7 @@ lastmod: 2019-08-28T12:32:00Z
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
     <div class="col my-3">
         <div class="card h-100">
-            <div class="card-header bg-dark">
+            <div class="card-header bg-header">
                 <span class="text-white">Kolab Groupware</span>
             </div>
             <div class="card-body">
@@ -138,7 +137,7 @@ lastmod: 2019-08-28T12:32:00Z
 
     <div class="col my-3">
         <div class="card h-100">
-            <div class="card-header bg-dark">
+            <div class="card-header bg-header">
                 <span class="text-white">iRedMail</span>
             </div>
             <div class="card-body">
@@ -151,7 +150,7 @@ lastmod: 2019-08-28T12:32:00Z
 
     <div class="col my-3">
         <div class="card h-100">
-            <div class="card-header bg-dark">
+            <div class="card-header bg-header">
                 <span class="text-white">Mail-in-a-Box</span>
             </div>
             <div class="card-body">
@@ -164,7 +163,7 @@ lastmod: 2019-08-28T12:32:00Z
 
     <div class="col my-3">
         <div class="card h-100">
-            <div class="card-header bg-dark">
+            <div class="card-header bg-header">
                 <span class="text-white">mailcow</span>
             </div>
             <div class="card-body">

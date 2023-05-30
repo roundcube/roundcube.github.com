@@ -40,7 +40,7 @@ navtitle: Screenshots
     </div>
 {% endfor %}
 
-<p class="text-muted mt-5">Note: The following plugins, distributed with Roundcube, were active when the screenshots where taken: acl, archive, enigma, help, managesieve, markasjunk, password, and vcard_attachments.</p>
+<p class="text-body-secondary mt-5">Note: The following plugins, distributed with Roundcube, were active when the screenshots where taken: acl, archive, enigma, help, managesieve, markasjunk, password, and vcard_attachments.</p>
 
 <div id="viewer" class="modal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-xl mx-auto">
@@ -51,8 +51,8 @@ navtitle: Screenshots
                 <div class="modal-arrow left-arrow" onclick="move_screen(true);"></div>
                 <div class="modal-arrow right-arrow" onclick="move_screen();"></div>
             </div>
-            <div class="modal-footer bg-dark d-block border-top-0">
-                <div class="nav_buttons float-end ps-2 mb-0">
+            <div class="modal-footer bg-footer d-block border-top-0">
+                <div class="nav float-end ps-2 mb-0" data-bs-theme="dark">
                     <a href="#" onclick="move_screen(true); return false;" class="fas fa-chevron-circle-left nav-link previous p-0 pe-1"></a>
                     <a href="#" onclick="move_screen(); return false;" class="fas fa-chevron-circle-right nav-link next p-0 px-1"></a>
                     <a href="#" data-bs-dismiss="modal" class="fas fa-times-circle nav-link p-0 ps-1"></a>
@@ -78,8 +78,8 @@ navtitle: Screenshots
         this.setAttribute('data-rc-cur-source', source.id.replace(/-[0-9]+$/, ''));
 
         // update button status
-        var prev_button = this.querySelector('.modal-footer > .nav_buttons > .nav-link.previous').classList;
-        var next_button = this.querySelector('.modal-footer > .nav_buttons > .nav-link.next').classList;
+        var prev_button = this.querySelector('.modal-footer > .nav > .nav-link.previous').classList;
+        var next_button = this.querySelector('.modal-footer > .nav > .nav-link.next').classList;
         prev_button.remove('disabled');
         next_button.remove('disabled');
         prev_button.add(get_next_screen_id(true) == 0 ? 'disabled' : null);

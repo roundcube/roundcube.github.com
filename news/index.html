@@ -17,14 +17,14 @@ lastmod: 2017-10-31T20:26:00Z
         <a class="btn btn-link {% if paginator.previous_page_path == nil %}disabled{% endif %} my-3 ms-lg-5" href="{{ paginator.previous_page_path }}" tabindex="-1"><span class="fas fa-angle-left"></span> Newer posts</a>
         <a class="btn btn-link {% if paginator.next_page_path == nil %}disabled{% endif %} float-end my-3 me-lg-5" href="{{ paginator.next_page_path }}" tabindex="-1">Older posts <span class="fas fa-angle-right"></span></a>
 
-        <p class="text-muted small d-none d-lg-block mt-4">Subscribe to the news <a href="/feeds/atom.xml" class="rc-icon rss-link" target="_blank">RSS Feed</a></p>
+        <p class="text-body-secondary small d-none d-lg-block mt-4">Subscribe to the news <a href="/feeds/atom.xml" class="rc-icon rss-link" target="_blank">RSS Feed</a></p>
     </div>
 
     <div class="col-lg-4">
         <div class="row row-cols-1">
             <div class="col d-none d-lg-block my-3 mt-lg-0">
                 <div class="card h-100">
-                    <div class="card-header bg-dark">
+                    <div class="card-header bg-header">
                         <span class="text-white">Latest blog posts</span>
                     </div>
                     <ul class="list-group list-group-flush ul-striped">
@@ -32,7 +32,7 @@ lastmod: 2017-10-31T20:26:00Z
                             <li class="list-group-item">
                                 <a href="{{ blog.url }}" class="rc-icon external-link" target="_blank">{{ blog.title }}</a><br>
                                 {{ blog.excerpt }}<br>
-                                <span class="postdate text-muted fst-italic small">{{ blog.date | date_to_long_string }}</span>
+                                <span class="postdate text-body-secondary fst-italic small">{{ blog.date | date_to_long_string }}</span>
                             </li>
                         {% endfor %}
                     </ul>
@@ -41,12 +41,12 @@ lastmod: 2017-10-31T20:26:00Z
 
             <div class="col my-3">
                 <div class="card h-100">
-                    <div class="card-header bg-dark">
+                    <div class="card-header bg-header">
                         <span class="text-white">Tags</span>
                     </div>
                     <ul class="list-inline pt-3 px-3">
                         {% for tag in site.tags %}
-                            <li class="list-inline-item"><a href="/news/{{ tag | first }}"><span class="badge rounded-pill bg-light text-secondary">{{ tag | first }}</span></a></li>
+                            <li class="list-inline-item"><a href="/news/{{ tag | first }}"><span class="badge rounded-pill bg-badge text-secondary">{{ tag | first }}</span></a></li>
                         {% endfor %}
                     </ul>
                 </div>
