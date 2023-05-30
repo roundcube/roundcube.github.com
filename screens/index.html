@@ -11,10 +11,8 @@ navtitle: Screenshots
     {% assign dir = skin | first %}
     {% assign params = skin | last %}
 
-    <h2 class="mb-0">
-        {{ params.name }}
-    </h2>
-    <span class="text-muted mt-0">Author: {{ params.author }}</span>
+    <h2 id="{{ dir }}" class="mb-0">{{ params.name }} <a class="anchor" href="#{{ dir }}" aria-label="Link to this section: {{ params.name }}"></a></h2>
+    <span class="text-body-secondary mt-0">Author: {{ params.author }}</span>
     <p class="my-2">{{ params.desc }}</p>
 
     {% if params.devices.size > 1 %}

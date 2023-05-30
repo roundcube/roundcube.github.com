@@ -14,8 +14,7 @@ lastmod: 2019-08-28T12:32:00Z
         {% continue %}
     {% endif %}
 
-    <a class="anchor d-block invisible position-relative" id="{{ id }}"></a>
-    <h2>{{ params.name }}{% if params.version %} - {{ params.version }}{% endif %}</h2>
+    <h2 id="{{ id }}">{{ params.name }}{% if params.version %} - {{ params.version }}{% endif %} <a class="anchor" href="#{{ id }}" aria-label="Link to this section: {{ id }}"></a></h2>
 
     {% if id == "lts" %}
         <p class="text-body-secondary mb-1">Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues
@@ -49,7 +48,7 @@ lastmod: 2019-08-28T12:32:00Z
 <p id="fn1" class="text-body-secondary">1. Dependent packages only contain sources which are licensed under the GPL but they require some third-party
     packages to be installed along with Roundcube. All requirements are listed in the INSTALL instructions within the package file.</p>
 
-<h2>Other sources and downloads</h2>
+<h2 id="sources">Other sources and downloads <a class="anchor" href="#sources" aria-label="Link to this section: Other sources and downloads"></a></h2>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
     <div class="col my-3">
         <div class="card h-100">
@@ -95,7 +94,8 @@ lastmod: 2019-08-28T12:32:00Z
     </div>
 </div>
 
-<h2>PGP signatures for package verification</h2>
+<h2 id="pgp">PGP signatures for package verification <a class="anchor" href="#pgp" aria-label="Link to this section: PGP signatures for package verification"></a></h2>
+
 <p>Release tarballs listed above are signed with PGP to allow you to verify the authencity. We sign them with
     the identity <b>Roundcube Developers &lt;devs@roundcube.net&gt;</b> alias <b>41C4F7D5</b>
     and the public key can be downloaded from the <a href="https://pgp.mit.edu/pks/lookup?op=vindex&search=0x5AB2BAA141C4F7D5" class="rc-icon external-link" target="_blank">pgp.mit.edu</a>
@@ -106,7 +106,7 @@ lastmod: 2019-08-28T12:32:00Z
 <p>After downloading the <a href="/download/pubkey.asc" class="rc-icon asc-link">pubkey</a> and the signature file, verify packages with</p>
 <p class="bg-quote p-3 font-monospace">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</p>
 
-<h2>Installation and upgrading</h2>
+<h2 id="installation">Installation and upgrading <a class="anchor" href="#installation" aria-label="Link to this section: Installation and upgrading"></a></h2>
 
 <ul>
     <li>Instructions on how to download and <a href="https://github.com/roundcube/roundcubemail/wiki/Installation" class="rc-icon external-link" target="_blank">install Roundcube</a> for the first time can be found in our Wiki.</li>
@@ -114,12 +114,12 @@ lastmod: 2019-08-28T12:32:00Z
     <li>See our <a href="https://github.com/roundcube/roundcubemail/wiki/Upgrade" class="rc-icon external-link" target="_blank">upgrading guide</a> for information about updating an existing Roundcube installation.</li>
 </ul>
 
-<h2>Plugins and skins</h2>
+<h2 id="plugins">Plugins and skins <a class="anchor" href="#plugins" aria-label="Link to this section: Plugins and skins"></a></h2>
 
 <p>Roundcube uses <a href="https://getcomposer.org" class="rc-icon external-link" target="_blank">Composer</a> to manage add-ons and dependencies. Our <a href="https://plugins.roundcube.net/" class="rc-icon external-link" target="_blank">Plugins Repository</a>
     contains a list of plugins and instructions on how to install them and keep them up-to-date. As well as plugins you'll also find <a href="https://packagist.org/?type=roundcube-skin" class="rc-icon external-link" target="_blank">additional skins</a> available on Packagist.</p>
 
-<h2>Complete email server packages with Roundcube</h2>
+<h2 id="packages">Complete email server packages with Roundcube <a class="anchor" href="#packages" aria-label="Link to this section: Complete email server packages with Roundcube"></a></h2>
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
     <div class="col my-3">
