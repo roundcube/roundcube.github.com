@@ -37,6 +37,9 @@
     </div>
 </footer>
 
+<script src="{{ site.libs.bootstrap.popper.url }}" integrity="{{ site.libs.bootstrap.popper.sri }}" crossorigin="anonymous"></script>
+<script src="{{ site.libs.bootstrap.js.url }}" integrity="{{ site.libs.bootstrap.js.sri }}" crossorigin="anonymous"></script>
+
 <script>
     var color_mode = 'auto';
     if (typeof(Storage) !== "undefined" && window.localStorage.getItem("color-mode") !== null) {
@@ -67,7 +70,34 @@
         var event = new Event('switch-color-mode');
         document.dispatchEvent(event);
     }
-</script>
 
-<script src="{{ site.libs.bootstrap.popper.url }}" integrity="{{ site.libs.bootstrap.popper.sri }}" crossorigin="anonymous"></script>
-<script src="{{ site.libs.bootstrap.js.url }}" integrity="{{ site.libs.bootstrap.js.sri }}" crossorigin="anonymous"></script>
+    var copytext = "Copy to clipboard";
+    var copycomplete = "Copied";
+    var copyerror = "Copy failed";
+    document.querySelectorAll('a.copy-text').forEach((copybtn) => {
+        var tooltipInstance = new bootstrap.Tooltip(copybtn, {'title': copytext});
+        copybtn.addEventListener("click", function(e) { clipboard(this, tooltipInstance, e); }, false);
+    });
+
+    async function clipboard(copybtn, tooltipInstance, e) {
+        e.preventDefault();
+        var payload = copybtn.closest('p,td').querySelector('.copy-target').textContent.trimEnd();
+
+        try {
+            await navigator.clipboard.writeText(payload);
+            copybuttonupdate(copybtn, tooltipInstance, 'complete', copycomplete);
+        }
+        catch (err) {
+            copybuttonupdate(copybtn, tooltipInstance, 'error', copyerror);
+        }
+    }
+
+    function copybuttonupdate(copybtn, tooltipInstance, css, text) {
+        tooltipInstance.setContent({'.tooltip-inner': text});
+        copybtn.classList.add(css);
+        window.setTimeout(function() {
+            tooltipInstance.setContent({'.tooltip-inner': copytext});
+            copybtn.classList.remove(css);
+        }, 2500);
+    }
+</script>

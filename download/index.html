@@ -38,7 +38,7 @@ lastmod: 2019-08-28T12:32:00Z
                 <th class="package fw-normal" scope="row">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-body-secondary">1</a></sup>{% endif %}</th>
                 <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a></td>
                 <td class="size text-nowrap">{{ source.size }}</td>
-                <td class="checksum d-none d-lg-table-cell font-monospace">{{ source.checksum }}</td>
+                <td class="checksum d-none d-lg-table-cell font-monospace text-nowrap"><span class="copy-target">{{ source.checksum }}</span> <span><a class="copy-text" href="#" aria-label="Copy text"></a></span></td>
             </tr>
         {% endfor %}
     </tbody>
@@ -104,7 +104,10 @@ lastmod: 2019-08-28T12:32:00Z
 </p>
 
 <p>After downloading the <a href="/download/pubkey.asc" class="rc-icon asc-link">pubkey</a> and the signature file, verify packages with</p>
-<p class="bg-quote p-3 font-monospace">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</p>
+<p class="bg-quote p-3 font-monospace">
+    <span class="d-block text-end m-0 p-0"><a class="copy-text" href="#" aria-label="Copy text"></a></span>
+    <span class="copy-target">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</span>
+</p>
 
 <h2 id="installation">Installation and upgrading <a class="anchor" href="#installation" aria-label="Link to this section: Installation and upgrading"></a></h2>
 

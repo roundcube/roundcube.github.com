@@ -145,6 +145,31 @@ a.anchor {
   }
 }
 
+a.copy-text {
+  color: var(--bs-secondary-color);
+  font-size: .75rem;
+  vertical-align: middle;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  &:after {
+    font: var(--fa-font-regular);
+    content: @fa-var-clipboard;
+  }
+
+  &.complete:after {
+    font: var(--fa-font-solid);
+    content: @fa-var-check;
+  }
+
+  &.error:after {
+    font: var(--fa-font-solid);
+    content: @fa-var-triangle-exclamation;
+  }
+}
+
 h1, h2, h3, p {
   scroll-margin-top: 80px;
 }
