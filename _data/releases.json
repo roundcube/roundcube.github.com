@@ -33,16 +33,16 @@
         "name": "LTS versions",
         "sources": [
             {
-                "package": "1.5.3 - Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.3/roundcubemail-1.5.3-complete.tar.gz",
+                "package": "1.5.4 - Complete",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.4/roundcubemail-1.5.4-complete.tar.gz",
                 "size": "7.5 MB",
-                "checksum": "4bcfac219f2e0005c912dac3227743cc1ed0ded69c822f74c81a70d041e5a3bd"
+                "checksum": "ea8825baec0a21950d28bc96d117a3752a0a25097e7ab6e5b5abaee80680fe8e"
             },
             {
-                "package": "1.4.13 - Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.13/roundcubemail-1.4.13-complete.tar.gz",
+                "package": "1.4.14 - Complete",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.14/roundcubemail-1.4.14-complete.tar.gz",
                 "size": "6.7 MB",
-                "checksum": "e22800be6a2635dad806259edeee2b9878567477d77a74f17ecadbc3e51f2d68"
+                "checksum": "f4cf92fba04e34f9f18e25e75ba5d09a935e0e0ed07b5d4de8edc3a2aa51c50d"
             }
         ]
     },
