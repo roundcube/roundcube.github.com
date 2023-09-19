@@ -68,14 +68,14 @@ date: 2020-04-29T21:10:00Z
             </div>
             <div class="col-lg-5 mt-4 px-0">
                 <div class="card">
-                    <div class="card-header bg-dark">
+                    <div class="card-header bg-header">
                         <span class="text-white">Latest News</span>
                     </div>
                     <ul class="list-group list-group-flush ul-striped">
                         {% for post in site.posts limit: site.num_related_items %}
                             <li class="list-group-item">
                                 <a href="{{ post.url }}" class="newslink">{{ post.title }}</a><br>
-                                <span class="postdate text-muted fst-italic small">{{ post.date | date_to_long_string }}</span>
+                                <span class="postdate text-body-secondary fst-italic small">{{ post.date | date_to_long_string }}</span>
                             </li>
                         {% endfor %}
                     </ul>
@@ -117,7 +117,7 @@ date: 2020-04-29T21:10:00Z
             }
         }
 
-        if (document.getElementsByTagName('html')[0].classList.contains('dark-mode')) {
+        if (document.getElementsByTagName('html')[0].getAttribute('data-bs-theme') == 'dark') {
             logo.src = logo.getAttribute('data-rc-dark');
 
             if (banner.hasAttribute('data-rc-dark')) {

@@ -13,21 +13,26 @@ num_related_items: 5
 libs: {
     fonts: {
         roboto: 'https://fonts.googleapis.com/css?family=Roboto&amp;display=swap',
-        fontawesome: 'https://kit.fontawesome.com/4cdeb7a6e0.js'
     },
     less: {
-        url: 'https://cdn.jsdelivr.net/npm/less@4.1.1/dist/less.min.js',
-        sri: 'sha256-CYttzE5ypefNk7d3bCMASKNanIMq21aAUBEtlUfJ7C8='
+        url: 'https://cdn.jsdelivr.net/npm/less@4.1.3/dist/less.min.js',
+        sri: 'sha384-UwROHXunrteKCyJlIvnRvBOUKKiIak4DhBgDPpRYrUhAf6n4xz0Krni19UX9uCcP'
     },
-    css: '/styles/styles.min.css?v=2022072000',
+    css: '/styles/styles.min.css?v=2023053100',
     bootstrap: {
         css: {
-            url: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css',
-            sri: 'sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx'
+            url: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css',
+            sri: 'sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN'
         },
         js: {
-            url: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js',
-            sri: 'sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK'
+            url: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js',
+            sri: 'sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL'
         }
+    },
+    fontawesome: {
+        css: {
+            url: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css',
+            sri: 'sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0'
+        },
     }
 }
