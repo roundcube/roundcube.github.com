@@ -37,12 +37,6 @@
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.5/roundcubemail-1.5.5-complete.tar.gz",
                 "size": "7.5 MB",
                 "checksum": "8f75cf700ba8bd202c943b3fc231d7878f809751cda41102b7f5c44ad2fca33d"
-            },
-            {
-                "package": "1.4.15 - Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.4.15/roundcubemail-1.4.15-complete.tar.gz",
-                "size": "6.7 MB",
-                "checksum": "d024551a63c28cc3943c410ba5693ddd389f7215d46f3854bd2e7920e81a021f"
             }
         ]
     },

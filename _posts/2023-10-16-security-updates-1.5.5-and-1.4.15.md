@@ -16,3 +16,5 @@ See the full changelogs in the release notes on the Github download pages for th
 [1.5.5](https://github.com/roundcube/roundcubemail/releases/tag/1.5.5) and [1.4.15](https://github.com/roundcube/roundcubemail/releases/tag/1.4.15).
 
 We strongly recommend to update all productive installations of Roundcube 1.4.x and 1.5.x with this new versions.
+
+Please note that we do not plan any more releases in 1.4 line.
