@@ -29,16 +29,21 @@ lastmod: 2019-08-28T12:32:00Z
             <th class="package" scope="col">Package</th>
             <td class="link"></td>
             <th class="size text-nowrap" scope="col">Size</th>
-            <th class="checksum d-none d-lg-table-cell" scope="col">SHA-256 checksum</th>
+            <th class="checksum" scope="col"><span class="d-none d-lg-inline">SHA-256 checksum</span></th>
         </tr>
     </thead>
     <tbody>
         {% for source in params.sources %}
             <tr>
                 <th class="package fw-normal" scope="row">{{ source.package }}{% if source.package == "Dependent" %}<sup><a href="#fn1" class="text-body-secondary">1</a></sup>{% endif %}</th>
-                <td class="link"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a></td>
+                <td class="link text-center text-lg-start"><a href="{{ source.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a></td>
                 <td class="size text-nowrap">{{ source.size }}</td>
-                <td class="checksum d-none d-lg-table-cell font-monospace text-nowrap"><span class="copy-target">{{ source.checksum }}</span> <span><a class="copy-text" href="#" aria-label="Copy text"></a></span></td>
+                <td class="checksum font-monospace text-nowrap text-center text-lg-start pe-3">
+                    <span class="d-none d-lg-inline copy-popover-target">
+                        <span class="copy-target d-block d-lg-inline text-nowrap overflow-auto py-3 py-lg-0">{{ source.checksum }}</span><span class="py-3 py-lg-0"><a class="copy-link" href="#" aria-label="Copy text"></a></span>
+                    </span>
+                    <a class="d-inline d-lg-none copy-popover-link checksum" href="#" aria-label="SHA-256 checksum" onclick="return false;" data-bs-title="SHA-256 checksum" data-bs-placement="left"></a>
+                </td>
             </tr>
         {% endfor %}
     </tbody>
@@ -104,9 +109,8 @@ lastmod: 2019-08-28T12:32:00Z
 </p>
 
 <p>After downloading the <a href="/download/pubkey.asc" class="rc-icon asc-link">pubkey</a> and the signature file, verify packages with</p>
-<p class="bg-quote p-3 font-monospace">
-    <span class="d-block text-end m-0 p-0"><a class="copy-text" href="#" aria-label="Copy text"></a></span>
-    <span class="copy-target">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</span>
+<p class="bg-quote px-3 pe-2 font-monospace d-flex">
+    <span class="copy-target d-block text-nowrap overflow-auto py-3 flex-grow-1">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</span><span class="py-3"><a class="copy-link" href="#" aria-label="Copy text"></a></span>
 </p>
 
 <h2 id="installation">Installation and upgrading <a class="anchor" href="#installation" aria-label="Link to this section: Installation and upgrading"></a></h2>

@@ -3,23 +3,23 @@ layout: home
 title: Roundcube - Free and Open Source Webmail Software
 date: 2020-04-29T21:10:00Z
 ---
-<div id="banner" class="py-2">
+<div id="banner" class="py-3 py-lg-2">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center pt-2 pb-4 pb-md-0 pt-lg-5 pt-md-3">
+        <div class="grid gap-4">
+            <div class="logo text-center pt-lg-4 pt-xl-5">
                 <img src="/images/logo.png" data-rc-dark="/images/logo-dark.png" width="432" height="112" id="logo" class="img-fluid" alt="Roundcube - open source webmail software">
-
-                <div class="d-none d-md-block col mt-sm-3 mt-md-4 mt-xl-5 banner-download">
-                    {% include downloadbutton.html %}
-                </div>
             </div>
-            <div class="col-md-6 text-center text-md-end mb-2 mb-md-0">
+            <div class="image">
                 {% assign skin = site.data.screenshots | first | first %}
                 {% if site.data.screenshots[skin]['banner-dark'] %}
                     <a href="/screens"><img src="/screens/skins/{{ skin }}/banner.png" data-rc-dark="/screens/skins/{{ site.data.screenshots | first | first }}/banner_dark.png" width="647" height="390" id="bannerimg" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
                 {% else %}
                     <a href="/screens"><img src="/screens/skins/{{ skin }}/banner.png" width="647" height="390" id="bannerimg" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
                 {% endif %}
+            </div>
+            <div class="download text-center d-flex flex-column justify-content-center justify-content-lg-start align-items-center pt-xl-4">
+                <a href="/download" class="btn rc-icon btn-rc-download btn-lg" title="Download now!">Download</a>
+                <span class="version text-body-secondary">Version {{ site.data.releases.stable.version }}</span>
             </div>
         </div>
     </div>
@@ -36,11 +36,6 @@ date: 2020-04-29T21:10:00Z
         <a href="/about" class="rc-icon read-link">More information</a>
     </p>
     <div class="container">
-        <div class="row">
-            <div class="col d-block d-md-none mt-5">
-                {% include downloadbutton.html %}
-            </div>
-        </div>
         <div class="row">
             <div class="col-lg-7 px-0">
                 <h2>Features</h2>

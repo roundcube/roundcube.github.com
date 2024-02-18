@@ -9,7 +9,7 @@
                     <li><a href="/license">License</a></li>
                     <li class="mt-3">
                         <div class="color-modes dropend">
-                            <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="fa-solid fa-palette me-1"></span> Switch theme
                             </a>
                             <ul class="dropdown-menu py-1">
@@ -23,9 +23,9 @@
             </div>
             <div class="col-12 col-sm-6 mt-4 mt-sm-0 text-sm-end">
                 <ul class="m-0 p-0">
-                    <li><a aria-label="GitHub" href="https://github.com/roundcube/roundcubemail" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/roundcube/roundcubemail?color=%23066da5&label=stars&logo=github&logoColor=%23fff&style=flat-square" alt="GitHub Stars"></li>
-                    <li><a aria-label="GitHub Contributors" href="https://github.com/roundcube/roundcubemail/graphs/contributors" target="_blank" rel="noopener"><img src="https://img.shields.io/github/contributors/roundcube/roundcubemail?color=%23066da5&label=contributors&logo=github&logoColor=%23fff&style=flat-square" alt="GitHub Contributors"></li>
-                    <li><a aria-label="DockerHub" href="https://hub.docker.com/r/roundcube/roundcubemail/" target="_blank" rel="noopener"><img src="https://img.shields.io/docker/pulls/roundcube/roundcubemail?color=%23066da5&label=pulls&logo=docker&logoColor=%23fff&style=flat-square" alt="Docker Downloads"></li>
+                    <li><a aria-label="GitHub" href="https://github.com/roundcube/roundcubemail" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/roundcube/roundcubemail?color=%23066da5&label=stars&logo=github&logoColor=%23fff&style=flat-square" alt="GitHub Stars"></a></li>
+                    <li><a aria-label="GitHub Contributors" href="https://github.com/roundcube/roundcubemail/graphs/contributors" target="_blank" rel="noopener"><img src="https://img.shields.io/github/contributors/roundcube/roundcubemail?color=%23066da5&label=contributors&logo=github&logoColor=%23fff&style=flat-square" alt="GitHub Contributors"></a></li>
+                    <li><a aria-label="DockerHub" href="https://hub.docker.com/r/roundcube/roundcubemail/" target="_blank" rel="noopener"><img src="https://img.shields.io/docker/pulls/roundcube/roundcubemail?color=%23066da5&label=pulls&logo=docker&logoColor=%23fff&style=flat-square" alt="Docker Downloads"></a></li>
                 </ul>
             </div>
         </div>
@@ -75,14 +75,41 @@
     var copytext = "Copy to clipboard";
     var copycomplete = "Copied";
     var copyerror = "Copy failed";
-    document.querySelectorAll('a.copy-text').forEach((copybtn) => {
+
+    document.querySelectorAll('a.copy-popover-link').forEach((sumbtn) => {
+        var popover = new bootstrap.Popover(sumbtn, {
+            content: sumbtn.closest('td').querySelector('.copy-popover-target').innerHTML,
+            html: true,
+            customClass: 'copy-popover'
+        });
+
+        sumbtn.addEventListener('shown.bs.popover', () => {
+            document.querySelectorAll('div.popover a.copy-link').forEach((copybtn) => {
+                var tooltipInstance = new bootstrap.Tooltip(copybtn, {'title': copytext});
+                copybtn.addEventListener("click", function(e) { clipboard(this, tooltipInstance, e); }, false);
+            });
+        });
+    });
+
+    if (document.querySelectorAll('a.copy-popover-link').length > 0) {
+        document.addEventListener("click", function(e) {
+            document.querySelectorAll('a.copy-popover-link').forEach((sumbtn) => {
+                var popover = bootstrap.Popover.getInstance(sumbtn);
+                if (popover.tip && event.target.closest('.popover.show') == null && popover.tip.classList.contains('show')) {
+                    popover.hide();
+                }
+            });
+        }, false);
+    }
+
+    document.querySelectorAll('a.copy-link').forEach((copybtn) => {
         var tooltipInstance = new bootstrap.Tooltip(copybtn, {'title': copytext});
         copybtn.addEventListener("click", function(e) { clipboard(this, tooltipInstance, e); }, false);
     });
 
     async function clipboard(copybtn, tooltipInstance, e) {
         e.preventDefault();
-        var payload = copybtn.closest('p,td').querySelector('.copy-target').textContent.trimEnd();
+        var payload = copybtn.closest('p,td,div').querySelector('.copy-target').textContent.trimEnd();
 
         try {
             await navigator.clipboard.writeText(payload);
