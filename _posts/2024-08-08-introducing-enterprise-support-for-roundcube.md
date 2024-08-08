@@ -4,7 +4,7 @@ title: Official enterprise support now available
 tags: announcement
 ---
 
-today, we are excited to introduce the first official [offering of enterprise
+Today, we are excited to introduce the first official [offering of enterprise
 support for Roundcube!](https://nextcloud.com/roundcube) It is tailored
 specifically for mail providers running large instances with thousands to
 millions of end users. We also offer our services to help businesses,
