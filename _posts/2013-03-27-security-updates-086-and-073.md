@@ -22,5 +22,5 @@ SELECT * FROM users WHERE preferences LIKE '%generic_message_footer%'
 
 If this returns any results, you should block that user because he or she most likely tried to exploit your system.
 
-And here's some background about the vulnerability: [lists.roundcube.net/pipermail/dev/2013-March/022328.html](http://lists.roundcube.net/pipermail/dev/2013-March/022328.html)
+And here's some background about the vulnerability from the [mailing list archive](https://lists.roundcube.net/hyperkitty/list/dev@lists.roundcube.net/thread/D4TYGDBJXMRXEEMTWE32A7NZDHINOTFL/).
 
