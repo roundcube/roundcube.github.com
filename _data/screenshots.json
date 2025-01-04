@@ -6,6 +6,7 @@
         "devices": ["desktop", "tablet", "phone"],
         "banner-dark": true,
         "screenshots": [
+            { "file": "login.png", "title": "Login screen" },
             { "file": "mailbox_widescreen.png", "title": "Mailbox view" },
             { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
             { "file": "mailbox_cn.png", "title": "Multilingual display" },
@@ -26,7 +27,10 @@
         "desc": "Released with Roundcube version 0.8.0, Larry provides visual impact thanks to its use of color and specially designed graphics.<br><i>Support deprecated as of Roundcube 1.6.0. Available via Composer.</i>",
         "devices": ["desktop"],
         "screenshots": [
-            { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view" },
+            { "file": "login.png", "title": "Login screen" },
+            { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view (vertical)" },
+            { "file": "mailbox_desktop.png", "title": "Three-paned mailbox view (horizontal)" },
+            { "file": "mailbox_list.png", "title": "List only mailbox view" },
             { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
             { "file": "mailbox_cn.png", "title": "Multilingual display" },
             { "file": "compose.png", "title": "Compose HTML mails with attachments" },
@@ -45,7 +49,10 @@
         "desc": "Formally known as Default, renamed to Classic as of Roundcube version 0.8.0, this is Roundcube's original skin.<br><i>Support deprecated as of Roundcube 1.4.0. Available via Composer.</i>",
         "devices": ["desktop"],
         "screenshots": [
-            { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view" },
+            { "file": "login.png", "title": "Login screen" },
+            { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view (vertical)" },
+            { "file": "mailbox_desktop.png", "title": "Three-paned mailbox view (horizontal)" },
+            { "file": "mailbox_list.png", "title": "List only mailbox view" },
             { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
             { "file": "mailbox_cn.png", "title": "Multilingual display" },
             { "file": "compose.png", "title": "Compose HTML mails with attachments" },
