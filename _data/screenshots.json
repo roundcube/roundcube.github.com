@@ -7,7 +7,6 @@
         "generated": 20240129,
         "banner-dark": true,
         "screenshots": [
-            { "file": "login.png", "title": "Login screen" },
             { "file": "mailbox_widescreen.png", "title": "Mailbox view" },
             { "file": "viewmail.png", "title": "Message viewer with privacy protection" },
             { "file": "mailbox_cn.png", "title": "Multilingual display" },
@@ -29,7 +28,6 @@
         "devices": ["desktop"],
         "generated": 20240129,
         "screenshots": [
-            { "file": "login.png", "title": "Login screen" },
             { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view (vertical)" },
             { "file": "mailbox_desktop.png", "title": "Three-paned mailbox view (horizontal)" },
             { "file": "mailbox_list.png", "title": "List only mailbox view" },
@@ -52,7 +50,6 @@
         "devices": ["desktop"],
         "generated": 20240129,
         "screenshots": [
-            { "file": "login.png", "title": "Login screen" },
             { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view (vertical)" },
             { "file": "mailbox_desktop.png", "title": "Three-paned mailbox view (horizontal)" },
             { "file": "mailbox_list.png", "title": "List only mailbox view" },
