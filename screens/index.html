@@ -30,7 +30,7 @@ navtitle: Screenshots
             <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ dir }}-{{ device }}" role="tabpanel" {% if params.devices.size > 1 %}aria-labelledby="{{ dir }}-{{ device }}-tab"{% endif %}>
                 <ul id="screenshots-{{ dir }}-{{ device }}" class="screens p-0 w-100 mt-3">
                     {% for screenshot in params.screenshots %}
-                        <li class="m-1 d-inline-block img-thumbnail"><a id="screenshots-{{ dir }}-{{ device }}-{{ forloop.index }}" class="d-inline-block text-center" href="#" title="{{ screenshot.title }}" data-bs-toggle="modal" data-bs-target="#viewer"><img class="mx-auto" src="/screens/skins/{{ dir }}/{{ device }}/thumbs/{{ screenshot.file }}" height="97" alt="{{ screenshot.title }}"></a></li>
+                        <li class="m-1 d-inline-block img-thumbnail"><a id="screenshots-{{ dir }}-{{ device }}-{{ forloop.index }}" class="d-inline-block text-center" href="#" title="{{ screenshot.title }}" data-bs-toggle="modal" data-bs-target="#viewer"><img class="mx-auto" src="/screens/skins/{{ dir }}/{{ device }}/thumbs/{{ screenshot.file }}?g={{ params.generated }}" height="97" alt="{{ screenshot.title }}"></a></li>
                     {% endfor %}
                 </ul>
             </div>

@@ -11,11 +11,8 @@ date: 2020-04-29T21:10:00Z
             </div>
             <div class="image">
                 {% assign skin = site.data.screenshots | first | first %}
-                {% if site.data.screenshots[skin]['banner-dark'] %}
-                    <a href="/screens"><img src="/screens/skins/{{ skin }}/banner.png" data-rc-dark="/screens/skins/{{ site.data.screenshots | first | first }}/banner_dark.png" width="647" height="390" id="bannerimg" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
-                {% else %}
-                    <a href="/screens"><img src="/screens/skins/{{ skin }}/banner.png" width="647" height="390" id="bannerimg" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
-                {% endif %}
+                {% assign generated = site.data.screenshots[skin]['generated'] %}
+                <a href="/screens"><img src="/screens/skins/{{ skin }}/banner.png?g={{ generated }}" {% if site.data.screenshots[skin]['banner-dark'] %}data-rc-dark="/screens/skins/{{ skin }}/banner_dark.png?g={{ generated }}"{% endif %} width="647" height="390" id="bannerimg" class="img-fluid" alt="Welcome Roundcube Webmail"></a>
             </div>
             <div class="download text-center d-flex flex-column justify-content-center justify-content-lg-start align-items-center pt-xl-4">
                 <a href="/download" class="btn rc-icon btn-rc-download btn-lg" title="Download now!">Download</a>
