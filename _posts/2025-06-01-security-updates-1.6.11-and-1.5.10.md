@@ -9,7 +9,7 @@ They both contain a fix for recently reported security vulnerability.
 
 ## Security fixes
 
-- Fix Post-Auth RCE via PHP Object Deserialization reported by firs0v.
+- Fix Post-Auth RCE via PHP Object Deserialization reported by [Kirill Firsov](https://x.com/k_firsov).
 
 See the full changelogs in the release notes on the Github download pages for the updated versions
 [1.6.11](https://github.com/roundcube/roundcubemail/releases/tag/1.6.11) and [1.5.10](https://github.com/roundcube/roundcubemail/releases/tag/1.5.10).
