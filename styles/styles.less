@@ -13,6 +13,7 @@
 @color-banner-background: fadeout(mix(@color-primary, #fff, 33%), 50%);
 @color-thumbnail-background: @color-background-alt;
 @color-footer: #495057;
+@color-background-blue: rgb(219, 236, 246); //hex: #dbecf6 // rgba(0, 123, 189, 0.14)
 
 @color-dark-primary: darken(@color-primary, 30%);
 @color-dark-background-alt: rgba(255, 255, 255, 0.05);
@@ -157,6 +158,14 @@ a:not(.btn):not(.nav-link):not(.dropdown-item),
   }
 }
 
+.promo_section {
+  background: @color-background-blue;
+  .row {
+    display: flex;
+    align-items: center;
+  }
+}
+
 main {
   padding-top: @nav-offset;
 
@@ -168,6 +177,7 @@ main {
   h2, .h2 {
     font-size: 1.8rem;
     margin-top: 1.5rem;
+    font-weight: bold;
   }
 
   h3, .h3 {
