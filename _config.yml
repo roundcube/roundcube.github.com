@@ -18,7 +18,7 @@ libs: {
         url: 'https://cdn.jsdelivr.net/npm/less@4.3.0/dist/less.min.js',
         sri: 'sha256-FwopMPPiSqzQgbpRQD9U/zvWjU/iSwoBXoH3WNmdH5Q='
     },
-    css: '/styles/styles.min.css?v=2024021800',
+    css: '/styles/styles.min.css?v=2025072600',
     bootstrap: {
         css: {
             url: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css',
@@ -31,8 +31,8 @@ libs: {
     },
     fontawesome: {
         css: {
-            url: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css',
-            sri: 'sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a'
+            url: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css',
+            sri: 'sha384-tGBVFh2h9Zcme3k9gJLbGqDpD+jRd419j/6N32rharcTZa1X6xgxug6pFMGonjxU'
         },
     }
 }
