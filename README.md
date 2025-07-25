@@ -10,6 +10,5 @@ The pages are rendered with Jekyll and kindly hosted by github.
 ... with Docker:
 
 ```
-docker run -it -p 4000:4000 -v $(pwd):/site itzg/jekyll-github-pages
+docker run -it -p 4000:4000 -v $(pwd):/site -w /site library/ruby bash -c 'bundle install && bundle exec jekyll serve -H 0.0.0.0'
 ```
-
