@@ -7,9 +7,8 @@ The pages are rendered with Jekyll and kindly hosted by github.
 
 ## Run it locally
 
-... with Docker:
+... with Docker: `make serve-dev`
 
-```
-docker run -it -p 4000:4000 -v $(pwd):/site itzg/jekyll-github-pages
-```
+## Build CSS
 
+To build the stylesheets run `make css`.
