@@ -9,4 +9,4 @@ css:
 	npx less --clean-css="--s1 --advanced"  styles/styles.less > styles/styles.min.css
 
 serve-dev:
-	docker run -it -p 4000:4000 -v $(pwd):/site -w /site library/ruby bash -c 'bundle install && bundle exec jekyll serve -H 0.0.0.0'
+	docker run -it -p 4000:4000 -v $(PWD):/site -w /site library/ruby bash -c 'bundle install && bundle exec jekyll serve -H 0.0.0.0'
