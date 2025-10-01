@@ -23,10 +23,11 @@ function human_file_size($byte)
     return sprintf('%.1f', $byte / 1024 ** $factor) . ' ' . @$sz[$factor - 1] . 'B';
 }
 
-function generate_data($version, $package_name, $filename)
+function generate_data($version, $package_name, $basedir, $filename)
 {
-    $sum = hash_file('sha256', $filename);
-    $size = human_file_size(filesize($filename));
+    $filepath = join(DIRECTORY_SEPARATOR, [$basedir, $filename]);
+    $sum = hash_file('sha256', $filepath);
+    $size = human_file_size(filesize($filepath));
     return [
         'package' => $package_name,
         'url' => "https://github.com/roundcube/roundcubemail/releases/download/{$version}/{$filename}",
@@ -36,7 +37,7 @@ function generate_data($version, $package_name, $filename)
 }
 
 echo json_encode([
-    generate_data($version, 'Dependent', join(DIRECTORY_SEPARATOR, [$basedir, "roundcubemail-{$version}.tar.gz"])),
-    generate_data($version, 'Complete', join(DIRECTORY_SEPARATOR, [$basedir, "roundcubemail-{$version}-complete.tar.gz"])),
-    generate_data($version, 'Framework', join(DIRECTORY_SEPARATOR, [$basedir, "roundcube-framework-{$version}.tar.gz"])),
+    generate_data($version, 'Dependent', $basedir, "roundcubemail-{$version}.tar.gz"),
+    generate_data($version, 'Complete', $basedir, "roundcubemail-{$version}-complete.tar.gz"),
+    generate_data($version, 'Framework', $basedir, "roundcube-framework-{$version}.tar.gz"),
 ], \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES) . "\n";
