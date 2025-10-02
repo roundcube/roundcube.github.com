@@ -42,7 +42,7 @@
     },
     "beta": {
         "name": "Beta version",
-        "version": "1.7-beta",
+        "version": "1.7-beta2",
         "sources": [
             {
                 "package": "Dependent",
