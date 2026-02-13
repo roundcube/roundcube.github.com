@@ -46,21 +46,21 @@
         "sources": [
             {
                 "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc3/roundcubemail-1.7-rc3.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcubemail-1.7-rc4.tar.gz",
                 "size": "4.0 MB",
-                "checksum": "9efb8e02e04a4182d69911e155ed952c87d87adfcd7d17b49463466df5658435"
+                "checksum": "bf148cfd31195fec70e3f285221128a14ace619c61155c6c6f88d0d75edaf776"
             },
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc3/roundcubemail-1.7-rc3-complete.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcubemail-1.7-rc4-complete.tar.gz",
                 "size": "6.1 MB",
-                "checksum": "bcbe6a7419ed15be8b6a38638b33b45fe2255cb4038d64158b7c3f3f021d0282"
+                "checksum": "a2a5aa6e0be3a7ab2290f193f233560dd3ef183bd3cd52de415a7b7ac9b6cb1e"
             },
             {
                 "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc3/roundcube-framework-1.7-rc3.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcube-framework-1.7-rc4.tar.gz",
                 "size": "1.1 MB",
-                "checksum": "e7738b3d80816ccc9e2c8831cf82b9969a8dba3360d8e9cd11d8fa3a8a019eb0"
+                "checksum": "9ee4f4d3ce39a72de9dc23aee57fe4579b9c20e37b1b8899df73340f49335697"
             }
         ]
     }
