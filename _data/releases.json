@@ -42,7 +42,7 @@
     },
     "beta": {
         "name": "Release candidate",
-        "version": "1.7-rc3",
+        "version": "1.7-rc4",
         "sources": [
             {
                 "package": "Dependent",
