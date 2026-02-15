@@ -1,64 +1,76 @@
 {
     "stable": {
-        "name": "Stable version",
-        "version": "1.6.13",
-        "sources": [
+        "title": "Stable",
+        "packages": [
             {
                 "package": "Dependent",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.13/roundcubemail-1.6.13.tar.gz",
+                "version": "1.6.13",
                 "size": "3.7 MB",
                 "checksum": "1ee6a0877024b6ee73bda5050686487af7bc88301b2af3355a46c4ce8e327180"
             },
             {
                 "package": "Complete",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.13/roundcubemail-1.6.13-complete.tar.gz",
+                "version": "1.6.13",
                 "size": "5.6 MB",
                 "checksum": "bdd1bafe79149a6b63f699fa94e7626189ec60e2c37954de7e84ee685dbbf5bb"
             },
             {
                 "package": "Framework",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.13/roundcube-framework-1.6.13.tar.gz",
+                "version": "1.6.13",
                 "size": "1.1 MB",
                 "checksum": "61a92c3152293f0e8401406e855a57ad8bea5b3f4b647565babe42658bbcddf8"
             }
         ]
     },
     "old-stable": {
-        "name": "Old stable",
-        "version": "1.5.3",
-        "sources": [
+        "title": "Old Stable",
+        "packages": [
         ]
     },
     "lts": {
-        "name": "LTS versions",
-        "sources": [
+        "title": "LTS",
+        "description": "Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues will go into these release branches.",
+        "packages": [
             {
-                "package": "1.5.13 - Complete",
+                "package": "Complete",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.13/roundcubemail-1.5.13-complete.tar.gz",
+                "version": "1.5.13",
                 "size": "7.2 MB",
                 "checksum": "37a8309882d782fa0b39d0f6e1efaa443b96e720e9e2c51106fb230926cca2f9"
             }
         ]
     },
     "beta": {
-        "name": "Release candidate",
-        "version": "1.7-rc4",
-        "sources": [
+        "title": "Beta",
+        "description": "We recommend to test pre-release versions on a separate environment, and don't forget to backup your data before installing.",
+        "packages": [
+        ]
+    },
+    "rc": {
+        "title": "Release Candidate",
+        "description": "We recommend to test pre-release versions on a separate environment, and don't forget to backup your data before installing.",
+        "packages": [
             {
                 "package": "Dependent",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcubemail-1.7-rc4.tar.gz",
+                "version": "1.7-rc4",
                 "size": "4.0 MB",
                 "checksum": "bf148cfd31195fec70e3f285221128a14ace619c61155c6c6f88d0d75edaf776"
             },
             {
                 "package": "Complete",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcubemail-1.7-rc4-complete.tar.gz",
+                "version": "1.7-rc4",
                 "size": "6.1 MB",
                 "checksum": "a2a5aa6e0be3a7ab2290f193f233560dd3ef183bd3cd52de415a7b7ac9b6cb1e"
             },
             {
                 "package": "Framework",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcube-framework-1.7-rc4.tar.gz",
+                "version": "1.7-rc4",
                 "size": "1.1 MB",
                 "checksum": "9ee4f4d3ce39a72de9dc23aee57fe4579b9c20e37b1b8899df73340f49335697"
             }

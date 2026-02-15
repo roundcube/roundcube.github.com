@@ -31,6 +31,7 @@ function generate_data($version, $package_name, $basedir, $filename)
     return [
         'package' => $package_name,
         'url' => "https://github.com/roundcube/roundcubemail/releases/download/{$version}/{$filename}",
+        'version' => $version,
         'size' => $size,
         'checksum' => $sum,
     ];
