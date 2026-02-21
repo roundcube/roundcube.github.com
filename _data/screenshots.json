@@ -4,7 +4,7 @@
         "author": "Aleksander Machniak",
         "desc": "Released with Roundcube version 1.4.0, Elastic is Roundcube's first official responsive skin. It has support for desktops, tablets and phones.",
         "devices": ["desktop", "tablet", "phone"],
-        "generated": 20240129,
+        "generated": 20250717,
         "banner-dark": true,
         "screenshots": [
             { "file": "mailbox_widescreen.png", "title": "Mailbox view" },
@@ -26,7 +26,7 @@
         "author": "FLINT / Büro für Gestaltung, Switzerland",
         "desc": "Released with Roundcube version 0.8.0, Larry provides visual impact thanks to its use of color and specially designed graphics.<br><i>Support deprecated as of Roundcube 1.6.0. Available via Composer.</i>",
         "devices": ["desktop"],
-        "generated": 20240129,
+        "generated": 20250717,
         "screenshots": [
             { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view (vertical)" },
             { "file": "mailbox_desktop.png", "title": "Three-paned mailbox view (horizontal)" },
@@ -48,7 +48,7 @@
         "author": "The Roundcube Dev Team",
         "desc": "Formally known as Default, renamed to Classic as of Roundcube version 0.8.0, this is Roundcube's original skin.<br><i>Support deprecated as of Roundcube 1.4.0. Available via Composer.</i>",
         "devices": ["desktop"],
-        "generated": 20240129,
+        "generated": 20250717,
         "screenshots": [
             { "file": "mailbox_widescreen.png", "title": "Three-paned mailbox view (vertical)" },
             { "file": "mailbox_desktop.png", "title": "Three-paned mailbox view (horizontal)" },
