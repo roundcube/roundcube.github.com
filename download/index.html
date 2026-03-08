@@ -28,7 +28,7 @@ lastmod: 2019-08-28T12:32:00Z
         {% for package in params.packages %}
             <div class="item-content" role="row">
                 <div class="col-package" role="rowheader">{{ package.version }} - {{ package.package }}{% if package.package == "Dependent" %}<sup><a href="#fn1" class="text-body-secondary">1</a></sup>{% endif %}</div>
-                <div class="col-link" role="cell"><a href="{{ package.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a></div>
+                <div class="col-link" role="cell"><a href="{{ package.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span class="d-none d-sm-inline ms-0 ms-sm-1">Download</span></a></div>
                 <div class="col-size" role="cell">{{ package.size }}</div>
                 <div class="col-checksum" role="cell">
                     <span class="d-none d-lg-inline copy-popover-target">
