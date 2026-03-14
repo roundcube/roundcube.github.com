@@ -15,8 +15,8 @@ libs: {
         roboto: 'https://fonts.googleapis.com/css?family=Roboto&amp;display=swap',
     },
     less: {
-        url: 'https://cdn.jsdelivr.net/npm/less@4.5.1/dist/less.min.js',
-        sri: 'sha384-MVgq3s6ICyRbsYSZ6lLQ8RQUIilNbZgTET5rBMnydd/ApxM/fvA41t+Z6i82Lcjn'
+        url: 'https://cdn.jsdelivr.net/npm/less@4.6.4/dist/less.min.js',
+        sri: 'sha384-WR+iiQT+XSq8wDUutASKAXx1pZTJCLRyHfpwqBiL1ji4qd2BsJIPhn8k/s72NkPj'
     },
     css: '/styles/styles.min.css?v=2024021800',
     bootstrap: {
