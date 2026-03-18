@@ -1,25 +1,25 @@
 {
     "stable": {
         "name": "Stable version",
-        "version": "1.6.13",
+        "version": "1.6.14",
         "sources": [
             {
                 "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.13/roundcubemail-1.6.13.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.14/roundcubemail-1.6.14.tar.gz",
                 "size": "3.7 MB",
-                "checksum": "1ee6a0877024b6ee73bda5050686487af7bc88301b2af3355a46c4ce8e327180"
+                "checksum": "70816db28bd7d5c16ba94e518a68368109542bf78bf3696e568385283c46027a"
             },
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.13/roundcubemail-1.6.13-complete.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.14/roundcubemail-1.6.14-complete.tar.gz",
                 "size": "5.6 MB",
-                "checksum": "bdd1bafe79149a6b63f699fa94e7626189ec60e2c37954de7e84ee685dbbf5bb"
+                "checksum": "4c67510729c10bd30bd064e87ebaf3f9a2d26230804862430580260b86a01609"
             },
             {
                 "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.13/roundcube-framework-1.6.13.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.14/roundcube-framework-1.6.14.tar.gz",
                 "size": "1.1 MB",
-                "checksum": "61a92c3152293f0e8401406e855a57ad8bea5b3f4b647565babe42658bbcddf8"
+                "checksum": "e35134263899c36ea9e981a9f9a5b6561dbcf59450f487dbca5196ffecb229b5"
             }
         ]
     },
@@ -33,34 +33,34 @@
         "name": "LTS versions",
         "sources": [
             {
-                "package": "1.5.13 - Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.13/roundcubemail-1.5.13-complete.tar.gz",
+                "package": "1.5.14 - Complete",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.14/roundcubemail-1.5.14-complete.tar.gz",
                 "size": "7.2 MB",
-                "checksum": "37a8309882d782fa0b39d0f6e1efaa443b96e720e9e2c51106fb230926cca2f9"
+                "checksum": "c12dc9179c3ad6d3b3c4e7af080aef887cf9e4e6fb13b628343d135fcc8263a1"
             }
         ]
     },
     "beta": {
         "name": "Release candidate",
-        "version": "1.7-rc4",
+        "version": "1.7-rc5",
         "sources": [
             {
                 "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcubemail-1.7-rc4.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc5/roundcubemail-1.7-rc5.tar.gz",
                 "size": "4.0 MB",
-                "checksum": "bf148cfd31195fec70e3f285221128a14ace619c61155c6c6f88d0d75edaf776"
+                "checksum": "33139a02828982b3359b73668ddcfb9b81e99a03b1864c94a14373770fe086c9"
             },
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcubemail-1.7-rc4-complete.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc5/roundcubemail-1.7-rc5-complete.tar.gz",
                 "size": "6.1 MB",
-                "checksum": "a2a5aa6e0be3a7ab2290f193f233560dd3ef183bd3cd52de415a7b7ac9b6cb1e"
+                "checksum": "2062e74731568f44e026d532794a53633ea85bd6b45a78e341fed9b33cda3590"
             },
             {
                 "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc4/roundcube-framework-1.7-rc4.tar.gz",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc5/roundcube-framework-1.7-rc5.tar.gz",
                 "size": "1.1 MB",
-                "checksum": "9ee4f4d3ce39a72de9dc23aee57fe4579b9c20e37b1b8899df73340f49335697"
+                "checksum": "1192b7618fa9b63f340103a50c9828676f8ccc32ff72eefdc5328123fdf37512"
             }
         ]
     }
