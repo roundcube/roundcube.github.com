@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Security updates 1.7-rc5, 1.6.14 and 1.5.13 released
+title: Security updates 1.7-rc5, 1.6.14 and 1.5.14 released
 tags: releases updates security
 ---
 
