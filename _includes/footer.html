@@ -78,7 +78,7 @@
 
     document.querySelectorAll('a.copy-popover-link').forEach((sumbtn) => {
         var popover = new bootstrap.Popover(sumbtn, {
-            content: sumbtn.closest('div').querySelector('.copy-popover-target').innerHTML,
+            content: sumbtn.closest('td').querySelector('.copy-popover-target').innerHTML,
             html: true,
             customClass: 'copy-popover'
         });

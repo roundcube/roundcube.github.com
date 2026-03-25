@@ -12,33 +12,37 @@ lastmod: 2019-08-28T12:32:00Z
     {% if params.packages.size == 0 %}
         {% continue %}
     {% endif %}
-    <h2 id="{{ id }}">{{ params.title }} <a class="anchor" href="#{{ id }}" aria-label="Link to this section: {{ params.title }}"></a></h2>
+    <h2 id="{{ id }}">{{ params.title }}{% if params.titleVersion %} - {{ params.packages[0].version }}{% endif %} <a class="anchor" href="#{{ id }}" aria-label="Link to this section: {{ params.title }}"></a></h2>
 
     {% if params.description %}
         <p class="text-body-secondary mb-1">{{ params.description }}</p>
     {% endif %}
 
-    <div class="download-grid grid-striped" role="table">
-        <div class="item-header fw-bold"role="row">
-            <div class="col-package" role="columnheader">Package</div>
-            <div class="col-link" role="columnheader"></div>
-            <div class="col-size" role="columnheader">Size</div>
-            <div class="col-checksum" role="columnheader"><span class="d-none d-lg-inline">SHA-256 checksum</span></div>
-        </div>
+    <table class="table table-striped download-table">
+    <thead>
+        <tr>
+            <th class="package" scope="col">Package</th>
+            <td class="link"></td>
+            <th class="size text-nowrap" scope="col">Size</th>
+            <th class="checksum" scope="col"><span class="d-none d-lg-inline">SHA-256 checksum</span></th>
+        </tr>
+    </thead>
+    <tbody>
         {% for package in params.packages %}
-            <div class="item-content" role="row">
-                <div class="col-package" role="rowheader">{{ package.version }} - {{ package.package }}{% if package.package == "Dependent" %}<sup><a href="#fn1" class="text-body-secondary">1</a></sup>{% endif %}</div>
-                <div class="col-link" role="cell"><a href="{{ package.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span class="d-none d-sm-inline ms-0 ms-sm-1">Download</span></a></div>
-                <div class="col-size" role="cell">{{ package.size }}</div>
-                <div class="col-checksum" role="cell">
+            <tr>
+                <th class="package fw-normal" scope="row">{% unless params.titleVersion %}{{ package.version }} - {% endunless %}{{ package.package }}{% if package.package == "Dependent" %}<sup><a href="#fn1" class="text-body-secondary">1</a></sup>{% endif %}</th>
+                <td class="link text-center text-lg-start"><a href="{{ package.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a></td>
+                <td class="size text-nowrap">{{ package.size }}</td>
+                <td class="checksum font-monospace text-nowrap text-center text-lg-start pe-3">
                     <span class="d-none d-lg-inline copy-popover-target">
-                        <span class="copy-target d-block d-md-inline-block overflow-hidden text-nowrap text-truncate py-3 py-lg-0">{{ package.checksum }}</span><span class="py-3 py-lg-0 ps-1"><a class="copy-link align-top" href="#" aria-label="Copy text"></a></span>
+                        <span class="copy-target d-block d-lg-inline text-nowrap overflow-auto py-3 py-lg-0">{{ package.checksum }}</span><span class="py-3 py-lg-0"><a class="copy-link" href="#" aria-label="Copy text"></a></span>
                     </span>
                     <a class="d-inline d-lg-none copy-popover-link checksum" href="#" aria-label="SHA-256 checksum" onclick="return false;" data-bs-title="SHA-256 checksum" data-bs-placement="left"></a>
-                </div>
-            </div>
+                </td>
+            </tr>
         {% endfor %}
-    </div>
+    </tbody>
+    </table>
 {% endfor %}
 
 <p id="fn1" class="text-body-secondary mt-4">1. Dependent packages only contain sources which are licensed under the GPL but they require some third-party

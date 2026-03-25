@@ -1,6 +1,7 @@
 {
     "stable": {
-        "title": "Stable",
+        "title": "Stable version",
+        "titleVersion": true,
         "packages": [
             {
                 "package": "Dependent",
@@ -26,12 +27,14 @@
         ]
     },
     "old-stable": {
-        "title": "Old Stable",
+        "title": "Old stable",
+        "titleVersion": true,
         "packages": [
         ]
     },
     "lts": {
-        "title": "LTS",
+        "title": "LTS versions",
+        "titleVersion": false,
         "description": "Long Term Support with low maintenance mode. This means only security updates and rare fixes of serious issues will go into these release branches.",
         "packages": [
             {
@@ -44,13 +47,15 @@
         ]
     },
     "beta": {
-        "title": "Beta",
+        "title": "Beta version",
+        "titleVersion": true,
         "description": "We recommend to test pre-release versions on a separate environment, and don't forget to backup your data before installing.",
         "packages": [
         ]
     },
     "rc": {
-        "title": "Release Candidate",
+        "title": "Release candidate",
+        "titleVersion": true,
         "description": "We recommend to test pre-release versions on a separate environment, and don't forget to backup your data before installing.",
         "packages": [
             {

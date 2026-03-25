@@ -2,6 +2,7 @@
 @nav-height: 66px;
 @nav-offset: 6rem;
 @thumbnail-width: 140px;
+@btn-icon-margin: .25rem;
 
 @min-width-sm: 576px;
 @min-width-md: 768px;
@@ -52,6 +53,10 @@ html[data-bs-theme="dark"] {
   --bs-navbar-toggler-focus-width: 0;
   --bs-navbar-toggler-border-color: transparent;
   --bs-navbar-toggler-padding-x: 0;
+}
+
+.table {
+  --bs-table-striped-bg: var(--rc-color-background-alt);
 }
 
 .bg-quote,
@@ -291,11 +296,11 @@ footer {
 }
 
 .rc-icon::before {
-  margin-right: .25rem;
+  margin-right: @btn-icon-margin;
 }
 
 .rc-icon::after {
-  margin-left: .25rem;
+  margin-left: @btn-icon-margin;
 }
 
 a.back-link::before {
@@ -356,6 +361,23 @@ a.current-theme::after {
 
   &::before {
     content: @fa-var-download;
+    margin-right: 0;
+  }
+
+  > span {
+    margin-left: @btn-icon-margin * 2;
+  }
+
+  &.btn-sm {
+    > span {
+      display: none;
+    }
+
+    @media (min-width: @min-width-sm) {
+      > span {
+        display: inline;
+      }
+    }
   }
 }
 
@@ -434,41 +456,47 @@ div.color-modes > ul.dropdown-menu {
   }
 }
 
-div.download-grid {
-  display: grid;
-  grid-template-columns: 57% 13% 21% 9%;
-
-  div.item-header,
-  div.item-content {
-    display: contents;
-
-    > div {
-      padding: .5rem;
-      border-bottom: var(--bs-border-width) solid var(--bs-border-color);
-    }
+table.download-table {
+  th.package {
+    width: 55%;
   }
 
-  &.grid-striped > div:nth-of-type(even) > div {
-    background-color: var(--rc-color-background-alt);
+  td.link,
+  td.size {
+    width: 20%;
+  }
+
+  td.checksum {
+    font-size: 0.9em;
+  }
+
+  tbody th,
+  tbody td {
+    vertical-align: middle;
   }
 
   @media (min-width: @min-width-sm) {
-    grid-template-columns: 50% 25% 15% 10%;
-  }
+    th.package {
+      width: 40%;
+    }
 
-  @media (min-width: @min-width-lg) {
-    grid-template-columns: 30% 15% 10% 43%;
+    td.link {
+      width: 35%;
+    }
 
-    div.col-checksum span.copy-target {
-      max-width: 90%;
+    td.size {
+      width: 20%;
     }
   }
 
-  @media (min-width: @min-width-xxl) {
-    grid-template-columns: 30% 12% 10% 48%;
+  @media (min-width: @min-width-lg) {
+    th.package {
+      width: 20%;
+    }
 
-    div.col-checksum span.copy-target {
-      max-width: none;
+    td.link,
+    td.size {
+      width: 15%;
     }
   }
 }
