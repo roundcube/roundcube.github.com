@@ -16,6 +16,8 @@
 @color-banner-background: fadeout(mix(@color-primary, #fff, 33%), 50%);
 @color-thumbnail-background: @color-background-alt;
 @color-footer: #495057;
+@color-success: #3fb950;
+@color-error: #f85149;
 
 @color-dark-primary: darken(@color-primary, 30%);
 @color-dark-background-alt: rgba(255, 255, 255, 0.05);
@@ -35,6 +37,8 @@
   --rc-color-thumbnail-background: @color-thumbnail-background;
   --rc-color-footer: @color-footer;
   --rc-color-footer-hover: darken(@color-footer, 15%);
+  --rc-color-success: @color-success;
+  --rc-color-error: @color-error;
 }
 
 html[data-bs-theme="dark"] {
@@ -233,11 +237,13 @@ a.copy-link {
   &.complete:after {
     font: var(--fa-font-solid);
     content: @fa-var-check;
+    color: var(--rc-color-success);
   }
 
   &.error:after {
     font: var(--fa-font-solid);
     content: @fa-var-triangle-exclamation;
+    color: var(--rc-color-error);
   }
 }
 
