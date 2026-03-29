@@ -491,15 +491,16 @@ table.download-table {
 
   @media (min-width: @min-width-lg) {
     th.package {
-      width: 25%;
+      width: 30%;
     }
 
-    td.link {
+    td.link,
+    td.size {
       width: 15%;
     }
 
-    td.size {
-      width: 10%;
+    td.checksum > span > span.copy-target {
+      width: 300px;
     }
   }
 
@@ -511,6 +512,16 @@ table.download-table {
     td.link,
     td.size {
       width: 15%;
+    }
+
+    td.checksum > span > span.copy-target {
+      width: 480px;
+    }
+  }
+
+  @media (min-width: @min-width-xxl) {
+    td.checksum > span > span.copy-target {
+      width: auto;
     }
   }
 }
