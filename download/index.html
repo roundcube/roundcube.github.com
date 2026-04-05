@@ -24,20 +24,20 @@ lastmod: 2019-08-28T12:32:00Z
             <th class="package" scope="col">Package</th>
             <td class="link"></td>
             <th class="size text-nowrap" scope="col">Size</th>
-            <th class="checksum" scope="col"><span class="d-none d-lg-inline">SHA-256 checksum</span></th>
+            <th class="checksum" scope="col"><span class="d-none d-md-inline">SHA-256 checksum</span></th>
         </tr>
     </thead>
     <tbody>
         {% for package in params.packages %}
             <tr>
                 <th class="package fw-normal" scope="row">{% unless params.titleVersion %}{{ package.version }} - {% endunless %}{{ package.package }}{% if package.package == "Dependent" %}<sup><a href="#fn1" class="text-body-secondary">1</a></sup>{% endif %}</th>
-                <td class="link text-center text-lg-start"><a href="{{ package.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a></td>
+                <td class="link"><a href="{{ package.url }}" title="Download now!" class="btn rc-icon btn-rc-download btn-sm"><span>Download</span></a></td>
                 <td class="size text-nowrap">{{ package.size }}</td>
-                <td class="checksum font-monospace text-nowrap text-center text-lg-start pe-3">
-                    <span class="d-none d-lg-inline copy-popover-target">
-                        <span class="copy-target d-block d-lg-inline-block text-nowrap text-truncate align-middle py-3 py-lg-0">{{ package.checksum }}</span><span class="py-3 py-lg-0"><a class="copy-link" href="#" aria-label="Copy text"></a></span>
+                <td class="checksum font-monospace text-nowrap text-center text-md-start pe-3">
+                    <span class="d-none d-md-inline copy-popover-target">
+                        <span class="copy-target d-block d-md-inline-block text-nowrap text-truncate align-middle py-3 py-md-0">{{ package.checksum }}</span><span class="py-3 py-md-0"><a class="copy-link" href="#" aria-label="Copy text"></a></span>
                     </span>
-                    <a class="d-inline d-lg-none copy-popover-link checksum" href="#" aria-label="SHA-256 checksum" onclick="return false;" data-bs-title="SHA-256 checksum" data-bs-placement="left"></a>
+                    <a class="d-inline d-md-none copy-popover-link checksum" href="#" aria-label="SHA-256 checksum" onclick="return false;" data-bs-title="SHA-256 checksum" data-bs-placement="left"></a>
                 </td>
             </tr>
         {% endfor %}
