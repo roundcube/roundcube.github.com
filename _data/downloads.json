@@ -5,24 +5,24 @@
         "packages": [
             {
                 "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.15/roundcubemail-1.6.15.tar.gz",
-                "version": "1.6.15",
-                "size": "3.7 MB",
-                "checksum": "9e415d4f6c29a60c9495a614ffeb9e2786601f74093b4a0a2b9cba0c32535efa"
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.0/roundcubemail-1.7.0.tar.gz",
+                "version": "1.7.0",
+                "size": "4.0 MB",
+                "checksum": "d84fb637e4ec36be96f98e719f65fab3c17b1dace8d2a590f948111e51847cba"
             },
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.15/roundcubemail-1.6.15-complete.tar.gz",
-                "version": "1.6.15",
-                "size": "5.6 MB",
-                "checksum": "48c9f212c77460132491f670abaf440b765c8276268349a690913764d26afbef"
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.0/roundcubemail-1.7.0-complete.tar.gz",
+                "version": "1.7.0",
+                "size": "6.0 MB",
+                "checksum": "a34c366da2b7a24ad4a6382b4bb9a677cb581ee08bfc6304d0a9a721098e7a98"
             },
             {
                 "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.15/roundcube-framework-1.6.15.tar.gz",
-                "version": "1.6.15",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.0/roundcube-framework-1.7.0.tar.gz",
+                "version": "1.7.0",
                 "size": "1.1 MB",
-                "checksum": "a90770a8b0a17dfe4fe78d98abce1c4219c4c05bb2b6f08178d9cdff587434bf"
+                "checksum": "4dab0dae47c839f1cca9daac9438d80771bb94d177aaa59dbeeb63a06e9ef4bc"
             }
         ]
     },
@@ -39,11 +39,11 @@
         "packages": [
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.15/roundcubemail-1.5.15-complete.tar.gz",
-                "version": "1.5.15",
-                "size": "7.2 MB",
-                "checksum": "ed96857435066e8cedc0dfa7c3965fd89263e69ba4951385f09939a38b938c28"
-            }
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.15/roundcubemail-1.6.15-complete.tar.gz",
+                "version": "1.6.15",
+                "size": "5.6 MB",
+                "checksum": "48c9f212c77460132491f670abaf440b765c8276268349a690913764d26afbef"
+            },
         ]
     },
     "beta": {
@@ -58,27 +58,6 @@
         "titleVersion": true,
         "description": "We recommend to test pre-release versions on a separate environment, and don't forget to backup your data before installing.",
         "packages": [
-            {
-                "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc6/roundcubemail-1.7-rc6.tar.gz",
-                "version": "1.7-rc6",
-                "size": "4.0 MB",
-                "checksum": "97a2c6fa98d997a5a0689680d73586d3b120e44755704be5c612bcc7f46df75f"
-            },
-            {
-                "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc6/roundcubemail-1.7-rc6-complete.tar.gz",
-                "version": "1.7-rc6",
-                "size": "6.1 MB",
-                "checksum": "c68a7cf44c2f23adc76b3283aadb09c3d2921bd24efec1e9e14e57927c924265"
-            },
-            {
-                "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7-rc6/roundcube-framework-1.7-rc6.tar.gz",
-                "version": "1.7-rc6",
-                "size": "1.1 MB",
-                "checksum": "4ad67b65f28c4c15a8e16e93f2c6aa4c9ab05191fec796491980a88a1b4d0eff"
-            }
         ]
     }
 }
