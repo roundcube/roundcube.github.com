@@ -9,7 +9,7 @@ They both contain fixes for recently reported security vulnerabilities.
 
 ## Security fixes
 
-- Fix stored XSS/HTML/CSS injection in subject field of the draft restore dialog, reported by zazy
+- Fix stored XSS/HTML/CSS injection in subject field of the draft restore dialog, reported by Anand Jogawade (zazy)
 - Fix CSS injection bypass in HTML sanitizer via SVG `<animate attributeName="style">`, reported by wooseokdotkim
 - Fix pre-auth SQL injection in virtuser_query plugin via preg_replace backslash escape bypass, reported by skull
 - Fix SSRF bypass via specific local address URLs
