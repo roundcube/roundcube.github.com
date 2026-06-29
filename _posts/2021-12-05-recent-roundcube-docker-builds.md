@@ -26,7 +26,7 @@ file for detailed descriptions of these variables.
 ## Redis support built in
 
 The new images for versions 1.4.12 and 1.5.1 now have the PHP Redis module included
-which allows to configure Redis as caching engine or session storage backend.
+which allows one to configure Redis as caching engine or session storage backend.
 
 ## Image tagging schema
 
