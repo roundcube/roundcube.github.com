@@ -5,24 +5,24 @@
         "packages": [
             {
                 "package": "Dependent",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.1/roundcubemail-1.7.1.tar.gz",
-                "version": "1.7.1",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.2/roundcubemail-1.7.2.tar.gz",
+                "version": "1.7.2",
                 "size": "4.0 MB",
-                "checksum": "b302db11a30b99870dc5c9475cc7c4cce197acb89b8c35f51d08276fdd0d2de8"
+                "checksum": "18ea0458ef7212155979dd76cb00aec35f92e1e94a54263fb939adec28138da0"
             },
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.1/roundcubemail-1.7.1-complete.tar.gz",
-                "version": "1.7.1",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.2/roundcubemail-1.7.2-complete.tar.gz",
+                "version": "1.7.2",
                 "size": "6.0 MB",
-                "checksum": "1e0382bcefd627ab0b6285d3181ddfba5b444fdcf6d49f33f5ea15fbf97864ef"
+                "checksum": "01bf9ede1665e507db94bab1361ebed20ee353dba04bc628b00fb6eca05af3d1"
             },
             {
                 "package": "Framework",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.1/roundcube-framework-1.7.1.tar.gz",
-                "version": "1.7.1",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.2/roundcube-framework-1.7.2.tar.gz",
+                "version": "1.7.2",
                 "size": "1.0 MB",
-                "checksum": "ca73d8709fc5c8fe0a748f49dc10db3554c35ab6a0cf5f9bf91e9edadb5513e2"
+                "checksum": "990e82b1e7377b7cc85e622d77732c9508ca207a26ebbe770192bd57920f2b8f"
             }
         ]
     },
@@ -39,10 +39,10 @@
         "packages": [
             {
                 "package": "Complete",
-                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.16/roundcubemail-1.6.16-complete.tar.gz",
-                "version": "1.6.16",
+                "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.17/roundcubemail-1.6.17-complete.tar.gz",
+                "version": "1.6.17",
                 "size": "5.6 MB",
-                "checksum": "554f88f642d2d709916e9fd674239a83189a956e7258ce72a1d927c84ecd7e1a"
+                "checksum": "e1f6c437959cb8dffda1a3e59f0c0a2160b3d669948db69bb02edb218c8e69a1"
             },
         ]
     },
