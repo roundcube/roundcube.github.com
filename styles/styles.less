@@ -16,6 +16,8 @@
 @color-banner-background: fadeout(mix(@color-primary, #fff, 33%), 50%);
 @color-thumbnail-background: @color-background-alt;
 @color-footer: #495057;
+@color-success: #3fb950;
+@color-error: #f85149;
 
 @color-dark-primary: darken(@color-primary, 30%);
 @color-dark-background-alt: rgba(255, 255, 255, 0.05);
@@ -35,6 +37,8 @@
   --rc-color-thumbnail-background: @color-thumbnail-background;
   --rc-color-footer: @color-footer;
   --rc-color-footer-hover: darken(@color-footer, 15%);
+  --rc-color-success: @color-success;
+  --rc-color-error: @color-error;
 }
 
 html[data-bs-theme="dark"] {
@@ -233,11 +237,13 @@ a.copy-link {
   &.complete:after {
     font: var(--fa-font-solid);
     content: @fa-var-check;
+    color: var(--rc-color-success);
   }
 
   &.error:after {
     font: var(--fa-font-solid);
     content: @fa-var-triangle-exclamation;
+    color: var(--rc-color-error);
   }
 }
 
@@ -360,26 +366,22 @@ a.current-theme::after {
   }
 
   &::before {
-    margin-right: .5rem;
+    margin-right: 0;
     content: @fa-var-download;
   }
 
+  > span {
+    margin-left: @icon-margin * 2;
+  }
+
   &.btn-sm {
-    & > span {
+    > span {
       display: none;
     }
 
-    &::before {
-      margin-right: 0;
-    }
-
-    @media (min-width: @min-width-sm) {
-      & > span {
+    @media (min-width: @min-width-lg) {
+      > span {
         display: inline;
-      }
-
-      &::before {
-        margin-right: .5rem;
       }
     }
   }
@@ -466,34 +468,22 @@ table.download-table {
     vertical-align: middle;
   }
 
-  th.package {
-    width: 55%;
-  }
-
   td.link {
-    width: 20%;
+    width: 60px;
   }
 
   td.size {
-    width: 20%;
+    width: 80px;
   }
 
   td.checksum {
     font-size: 0.9em;
-    width: 5%;
+    width: 40px;
   }
 
   @media (min-width: @min-width-md) {
     th.package {
-      width: 40%;
-    }
-
-    td.link {
-      width: 35%;
-    }
-
-    td.size {
-      width: 20%;
+      width: 255px;
     }
 
     td.checksum {
@@ -502,13 +492,26 @@ table.download-table {
   }
 
   @media (min-width: @min-width-lg) {
-    th.package {
-      width: 20%;
+    td.link {
+      width: 170px;
     }
 
-    td.link,
     td.size {
-      width: 15%;
+      width: 120px;
+    }
+  }
+
+  td.checksum > span > span.copy-target {
+    @media (min-width: @min-width-md) {
+      width: 254px;
+    }
+
+    @media (min-width: @min-width-lg) {
+      width: 344px;
+    }
+
+    @media (min-width: @min-width-xl) {
+      width: auto;
     }
   }
 }
