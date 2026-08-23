@@ -18,7 +18,7 @@ They both contain fixes for recently reported security vulnerabilities.
 - Fix RCE via cmd_learn driver of markasjunk plugin, reported by nept1337
 - Fix IMAP command injection via mail search and LITERAL+ byte-count desynchronization, reported by Zach Hanley of Horizon3.ai
 - Fix password's modoboa driver leak of an authentication token to a user-controlled host, reported by [meifukun](https://github.com/meifukun)
-- Fix stored XSS in "Add to address book" action, reported by Paulos Yibelo from pwn.ai
+- Fix stored XSS in "Add to address book" action, reported by Paulos Yibelo from [pwn.ai](https://pwn.ai)
 - Fix HTML/CSS sanitization bypass via SVG animate `by` attribute, reported by vectrain
 
 See the full changelogs in the release notes on the Github download pages for the updated versions
