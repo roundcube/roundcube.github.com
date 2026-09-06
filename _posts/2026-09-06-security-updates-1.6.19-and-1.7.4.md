@@ -18,7 +18,7 @@ They both contain fixes for recently reported security vulnerabilities.
 - Fix XSS in the HTML editor using text/enriched part content, reported by Joshua Rogers
 - Fix cross-user access in contact group membership (add/remove) in the SQL address book, reported by Joshua Rogers
 - Fix is_local_url() bypass via trailing-dot FQDN in stylesheet URL, reported by nept1337
-- Fix remote content blocking bypass via CSS escapes in FuncIRI attributes, reported by neoxed
+- Fix remote content blocking bypass via CSS escapes in FuncIRI attributes, reported by Wahab KHADIR
 - Fix remote-content blocker bypass via SVG SMIL src animation
 - Fix SSRF bypass in Roundcube CSS proxy via hexadecimal IPv6-mapped IPv4 addresses, reported by faceless0x7 and Harish Annavisamy
 
