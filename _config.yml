@@ -1,7 +1,6 @@
 safe: true
 encoding: UTF-8
 url: https://roundcube.net
-hostname: "https://roundcube.net"
 permalink: news/:year/:month/:day/:title
 exclude: [vendor]
 plugins: [jekyll-paginate]
