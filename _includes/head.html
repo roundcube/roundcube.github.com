@@ -16,9 +16,3 @@
 {% endif %}
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="alternate" type="application/rss+xml" title="Roundcube News Feed" href="/feeds/atom.xml">
-<script>
-    var host = '{{ site.enforce_ssl }}';
-    if ((host == window.location.host) && (window.location.protocol != 'https:')) {
-        window.location.protocol = 'https';
-    }
-</script>
