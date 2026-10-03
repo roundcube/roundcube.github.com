@@ -75,7 +75,7 @@ html[data-bs-theme="dark"] {
 }
 
 a:not(.btn):not(.nav-link):not(.dropdown-item),
-.btn-link {
+a.btn-link {
   text-decoration: none;
 
   &.anchor {
@@ -217,7 +217,7 @@ a.anchor {
   }
 }
 
-a.copy-link {
+button.copy-link {
   color: var(--bs-secondary-color);
   font-size: .75rem;
   display: inline-block;
@@ -247,7 +247,7 @@ a.copy-link {
   }
 }
 
-a.copy-popover-link {
+button.copy-popover-link {
   color: var(--bs-body-color);
   text-decoration: none !important;
 
@@ -426,10 +426,14 @@ div.color-modes > ul.dropdown-menu {
 
     .modal-arrow {
       position: absolute;
+      display: block;
       top: 0;
       bottom: 0;
       height: 100%;
       width: 30%;
+      cursor: default;
+      background: none;
+      border: 0;
 
       &.right-arrow {
         right: 0;

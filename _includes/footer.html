@@ -76,24 +76,25 @@
     var copycomplete = "Copied";
     var copyerror = "Copy failed";
 
-    document.querySelectorAll('a.copy-popover-link').forEach((sumbtn) => {
+    document.querySelectorAll('button.copy-popover-link').forEach((sumbtn) => {
         var popover = new bootstrap.Popover(sumbtn, {
             content: sumbtn.closest('td').querySelector('.copy-popover-target').innerHTML,
             html: true,
+            allowList: { ...bootstrap.Popover.Default.allowList, button: [] },
             customClass: 'copy-popover'
         });
 
         sumbtn.addEventListener('shown.bs.popover', () => {
-            document.querySelectorAll('div.popover a.copy-link').forEach((copybtn) => {
+            document.querySelectorAll('div.popover button.copy-link').forEach((copybtn) => {
                 var tooltipInstance = new bootstrap.Tooltip(copybtn, {'title': copytext});
                 copybtn.addEventListener("click", function(e) { clipboard(this, tooltipInstance, e); }, false);
             });
         });
     });
 
-    if (document.querySelectorAll('a.copy-popover-link').length > 0) {
+    if (document.querySelectorAll('button.copy-popover-link').length > 0) {
         document.addEventListener("click", function(e) {
-            document.querySelectorAll('a.copy-popover-link').forEach((sumbtn) => {
+            document.querySelectorAll('button.copy-popover-link').forEach((sumbtn) => {
                 var popover = bootstrap.Popover.getInstance(sumbtn);
                 if (popover.tip && event.target.closest('.popover.show') == null && popover.tip.classList.contains('show')) {
                     popover.hide();
@@ -102,7 +103,7 @@
         }, false);
     }
 
-    document.querySelectorAll('a.copy-link').forEach((copybtn) => {
+    document.querySelectorAll('button.copy-link').forEach((copybtn) => {
         var tooltipInstance = new bootstrap.Tooltip(copybtn, {'title': copytext});
         copybtn.addEventListener("click", function(e) { clipboard(this, tooltipInstance, e); }, false);
     });

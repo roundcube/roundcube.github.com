@@ -16,7 +16,7 @@ libs: {
         url: 'https://cdn.jsdelivr.net/npm/less@4.9.1/dist/less.min.js',
         sri: 'sha384-kUPG/ocOAyxPfTNldBcWGi/mUWXMnP5nCc1KfuFrQI5L/Ka3i0+j9DF28u2/0l/w'
     },
-    css: '/styles/styles.min.css?v=2026051000',
+    css: '/styles/styles.min.css?v=2026100300',
     bootstrap: {
         css: {
             url: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css',

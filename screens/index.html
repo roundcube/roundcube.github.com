@@ -45,15 +45,15 @@ navtitle: Screenshots
         <div class="modal-content bg-transparent">
             <div class="modal-body text-center p-0 loading">
                 <div class="modal-loading text-center py-5"><span class="fa-solid fa-circle-notch fa-spin"></span></div>
-                <img src="data:," class="img-fluid mx-auto" onload="screen_loaded(this);" data-bs-dismiss="modal" alt="">
-                <div class="modal-arrow left-arrow" onclick="move_screen(true);"></div>
-                <div class="modal-arrow right-arrow" onclick="move_screen();"></div>
+                <img src="data:," class="img-fluid mx-auto" data-bs-dismiss="modal" alt="">
+                <button type="button" class="modal-arrow left-arrow" data-rc-navigation="previous"></button>
+                <button type="button" class="modal-arrow right-arrow" data-rc-navigation="next"></button>
             </div>
             <div class="modal-footer bg-footer d-block border-top-0">
                 <div class="nav float-end ps-2 mb-0" data-bs-theme="dark">
-                    <a href="#" onclick="move_screen(true); return false;" class="fa-solid fa-circle-chevron-left nav-link previous p-0 pe-1"></a>
-                    <a href="#" onclick="move_screen(); return false;" class="fa-solid fa-circle-chevron-right nav-link next p-0 px-1"></a>
-                    <a href="#" data-bs-dismiss="modal" class="fa-solid fa-circle-xmark nav-link p-0 ps-1"></a>
+                    <button type="button" data-rc-navigation="previous" class="fa-solid fa-circle-chevron-left nav-link previous p-0 pe-1"></button>
+                    <button type="button" data-rc-navigation="next" class="fa-solid fa-circle-chevron-right nav-link next p-0"></button>
+                    <button type="button" data-bs-dismiss="modal" class="fa-solid fa-circle-xmark nav-link p-0 ps-1"></button>
                 </div>
                 <p class="m-0"></p>
             </div>
@@ -63,6 +63,13 @@ navtitle: Screenshots
 
 <script>
     var viewer = document.getElementById('viewer');
+
+    viewer.querySelectorAll('button[data-rc-navigation]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            move_screen(link.dataset.rcNavigation === 'previous');
+        });
+    });
 
     viewer.addEventListener('show.bs.modal', function(e) {
         var source = e.relatedTarget;
@@ -136,6 +143,10 @@ navtitle: Screenshots
                 move_screen();
             }
         }
+    });
+
+    viewer.querySelector('.modal-body > img').addEventListener('load', (event) => {
+        screen_loaded(event.currentTarget);
     });
 
     function screen_loaded(img) {
