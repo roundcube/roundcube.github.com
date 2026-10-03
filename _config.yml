@@ -13,8 +13,8 @@ libs: {
         roboto: 'https://fonts.googleapis.com/css?family=Roboto&amp;display=swap',
     },
     less: {
-        url: 'https://cdn.jsdelivr.net/npm/less@4.6.4/dist/less.min.js',
-        sri: 'sha384-WR+iiQT+XSq8wDUutASKAXx1pZTJCLRyHfpwqBiL1ji4qd2BsJIPhn8k/s72NkPj'
+        url: 'https://cdn.jsdelivr.net/npm/less@4.9.1/dist/less.min.js',
+        sri: 'sha384-kUPG/ocOAyxPfTNldBcWGi/mUWXMnP5nCc1KfuFrQI5L/Ka3i0+j9DF28u2/0l/w'
     },
     css: '/styles/styles.min.css?v=2026051000',
     bootstrap: {
@@ -29,8 +29,8 @@ libs: {
     },
     fontawesome: {
         css: {
-            url: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css',
-            sri: 'sha384-EXatlQyrOJgDaM9/a74ArMzy7/2bTMSrZj8ID1IPeVmc3GncfCugefCFWSLj8JL/'
+            url: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css',
+            sri: 'sha384-qrALq7+6jBOZIQsNnT6xGkMDru64qD6uTlDra39xrt2SoXl4pO3FX6Roz/RpR/BS'
         },
     }
 }
