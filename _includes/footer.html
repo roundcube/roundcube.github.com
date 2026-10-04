@@ -40,5 +40,15 @@
 </footer>
 
 <script src="{{ site.libs.bootstrap.js.url }}" integrity="{{ site.libs.bootstrap.js.sri }}" crossorigin="anonymous"></script>
-<script type="module" src="/js/theme.js"></script>
-<script type="module" src="/js/copy.js"></script>
+
+{% assign scripts = "theme" | split: "," %}
+{% if page.scripts %}{% assign scripts = scripts | concat: page.scripts %}{% endif %}
+{% for script in scripts %}
+    {% assign js = site.libs.js[script] %}
+
+    {% if site.environment == "dev" %}
+    <script type="module" src="{{ js.url | replace: '.min.', '.' }}" crossorigin="anonymous"></script>
+    {% else %}
+    <script type="module" src="{{ js.url }}" integrity="{{ js.sri }}" crossorigin="anonymous"></script>
+    {% endif %}
+{% endfor %}
