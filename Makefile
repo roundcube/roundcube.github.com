@@ -22,7 +22,7 @@ css:
 
 js:
 	npm install
-	@for file in js/*.js screens/*.js; do \
+	@for file in js/*.js; do \
 		case "$$file" in \
 			*.min.js) continue ;; \
 		esac; \

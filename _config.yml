@@ -25,7 +25,7 @@ libs:
             url: '/js/theme.min.js?v=90f8a5c8'
             sri: 'sha384-UBlBOUHimVM1i1sIvJo4TVJ8fr9TjkPcs9o04WFmMo9B4n0I2GnIr+Oi/+dVo9fC'
         viewer:
-            url: '/screens/viewer.min.js?v=aa856a3e'
+            url: '/js/viewer.min.js?v=aa856a3e'
             sri: 'sha384-GAXwAANoAC9q7Io3UsPXHoNrQweVlGlKFr05eMDlxXYYo5B6saD5TQJqUxFmy7R7'
     less:
         js:
