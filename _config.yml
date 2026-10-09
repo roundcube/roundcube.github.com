@@ -11,6 +11,7 @@ num_related_items: 5
 exclude:
     - Gemfile
     - Gemfile.lock
+    - jsdelivr.json
     - node_modules/
     - Makefile
     - package.json
