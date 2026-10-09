@@ -1,0 +1,26 @@
+{
+  "doctype-first": true,
+  "doctype-html5": true,
+
+  "tagname-lowercase": true,
+  "attr-lowercase": true,
+  "attr-value-double-quotes": true,
+  "attr-no-duplication": true,
+  "attr-value-no-duplication": true,
+
+  "tag-pair": true,
+  "empty-tag-not-self-closed": true,
+  "tag-no-obsolete": true,
+
+  "spec-char-escape": true,
+  "src-not-empty": true,
+  "alt-require": true,
+  "id-unique": true,
+
+  "html-lang-require": true,
+  "title-require": true,
+
+  "button-type-require": true,
+  "input-requires-label": true,
+  "frame-title-require": true,
+}

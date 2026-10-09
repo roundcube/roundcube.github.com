@@ -3,5 +3,14 @@
     "less": "^4.4.0",
     "less-plugin-clean-css": "^1.6.0",
     "uglify-js": "^3.19.3"
+  },
+  "devDependencies": {
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard-less": "^4.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-unicorn": "^54.0.0",
+    "htmlhint": "^1.1.4"
   }
 }

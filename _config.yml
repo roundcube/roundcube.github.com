@@ -17,6 +17,7 @@ exclude:
     - package-lock.json
     - README.md
     - stylelint.config.mjs
+    - vendor
 libs:
     css:
         url: '/styles/styles.min.css?v=9bf32423'
