@@ -13,9 +13,9 @@
                                 <span class="fa-solid fa-palette me-1"></span> Switch theme
                             </a>
                             <ul class="dropdown-menu py-1">
-                                <li><a class="dropdown-item px-2 pe-3 py-1 rc-icon light-mode" href="#" onclick="switch_color_mode('light'); return false;">Light theme</a></li>
-                                <li><a class="dropdown-item px-2 pe-3 py-1 rc-icon dark-mode" href="#" onclick="switch_color_mode('dark'); return false;">Dark theme</a></li>
-                                <li><a class="dropdown-item px-2 pe-3 py-1 rc-icon auto-mode current-theme" href="#" onclick="switch_color_mode('auto'); return false;">Auto detect</a></li>
+                                <li><a class="dropdown-item px-2 pe-3 py-1 rc-icon light-mode" href="#" data-rc-color-mode="light">Light theme</a></li>
+                                <li><a class="dropdown-item px-2 pe-3 py-1 rc-icon dark-mode" href="#" data-rc-color-mode="dark">Dark theme</a></li>
+                                <li><a class="dropdown-item px-2 pe-3 py-1 rc-icon auto-mode current-theme" href="#" data-rc-color-mode="auto">Auto detect</a></li>
                             </ul>
                         </div>
                     </li>
@@ -41,91 +41,14 @@
 
 <script src="{{ site.libs.bootstrap.js.url }}" integrity="{{ site.libs.bootstrap.js.sri }}" crossorigin="anonymous"></script>
 
-<script>
-    var color_mode = 'auto';
-    if (typeof(Storage) !== "undefined" && window.localStorage.getItem("color-mode") !== null) {
-        color_mode = window.localStorage.getItem("color-mode");
-    }
-    switch_color_mode(color_mode, true);
+{% assign scripts = "theme" | split: "," %}
+{% if page.scripts %}{% assign scripts = scripts | concat: page.scripts %}{% endif %}
+{% for script in scripts %}
+    {% assign js = site.libs.js[script] %}
 
-    function switch_color_mode(mode, onload) {
-        var color_mode = mode;
-
-        if (mode == 'auto') {
-            color_mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-
-        document.getElementsByTagName('html')[0].setAttribute('data-bs-theme', color_mode)
-        document.querySelector('div.color-modes > ul.dropdown-menu a.current-theme').classList.remove('current-theme');
-        document.querySelector('div.color-modes > ul.dropdown-menu a.' + mode + '-mode').classList.add('current-theme');
-
-        if (!onload && typeof(Storage) !== "undefined") {
-            if (mode == 'auto') {
-                window.localStorage.removeItem('color-mode');
-            }
-            else {
-                window.localStorage.setItem('color-mode', mode);
-            }
-        }
-
-        var event = new Event('switch-color-mode');
-        document.dispatchEvent(event);
-    }
-
-    var copytext = "Copy to clipboard";
-    var copycomplete = "Copied";
-    var copyerror = "Copy failed";
-
-    document.querySelectorAll('a.copy-popover-link').forEach((sumbtn) => {
-        var popover = new bootstrap.Popover(sumbtn, {
-            content: sumbtn.closest('td').querySelector('.copy-popover-target').innerHTML,
-            html: true,
-            customClass: 'copy-popover'
-        });
-
-        sumbtn.addEventListener('shown.bs.popover', () => {
-            document.querySelectorAll('div.popover a.copy-link').forEach((copybtn) => {
-                var tooltipInstance = new bootstrap.Tooltip(copybtn, {'title': copytext});
-                copybtn.addEventListener("click", function(e) { clipboard(this, tooltipInstance, e); }, false);
-            });
-        });
-    });
-
-    if (document.querySelectorAll('a.copy-popover-link').length > 0) {
-        document.addEventListener("click", function(e) {
-            document.querySelectorAll('a.copy-popover-link').forEach((sumbtn) => {
-                var popover = bootstrap.Popover.getInstance(sumbtn);
-                if (popover.tip && event.target.closest('.popover.show') == null && popover.tip.classList.contains('show')) {
-                    popover.hide();
-                }
-            });
-        }, false);
-    }
-
-    document.querySelectorAll('a.copy-link').forEach((copybtn) => {
-        var tooltipInstance = new bootstrap.Tooltip(copybtn, {'title': copytext});
-        copybtn.addEventListener("click", function(e) { clipboard(this, tooltipInstance, e); }, false);
-    });
-
-    async function clipboard(copybtn, tooltipInstance, e) {
-        e.preventDefault();
-        var payload = copybtn.closest('p,td,div').querySelector('.copy-target').textContent.trimEnd();
-
-        try {
-            await navigator.clipboard.writeText(payload);
-            copybuttonupdate(copybtn, tooltipInstance, 'complete', copycomplete);
-        }
-        catch (err) {
-            copybuttonupdate(copybtn, tooltipInstance, 'error', copyerror);
-        }
-    }
-
-    function copybuttonupdate(copybtn, tooltipInstance, css, text) {
-        tooltipInstance.setContent({'.tooltip-inner': text});
-        copybtn.classList.add(css);
-        window.setTimeout(function() {
-            tooltipInstance.setContent({'.tooltip-inner': copytext});
-            copybtn.classList.remove(css);
-        }, 2500);
-    }
-</script>
+    {% if site.environment == "dev" %}
+    <script type="module" src="{{ js.url | replace: '.min.', '.' }}" crossorigin="anonymous"></script>
+    {% else %}
+    <script type="module" src="{{ js.url }}" integrity="{{ js.sri }}" crossorigin="anonymous"></script>
+    {% endif %}
+{% endfor %}

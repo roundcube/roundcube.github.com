@@ -1,0 +1,33 @@
+{
+  "less": {
+    "package": "less",
+    "version": "*",
+    "js": [
+      "/dist/less.min.js"
+    ]
+  },
+  "roboto": {
+    "package": "@fontsource/roboto",
+    "version": "*",
+    "css": [
+      "/400.css"
+    ]
+  },
+  "bootstrap": {
+    "package": "bootstrap",
+    "version": "5.3",
+    "css": [
+      "/dist/css/bootstrap.min.css"
+    ],
+    "js": [
+      "/dist/js/bootstrap.bundle.min.js"
+    ]
+  },
+  "fontawesome": {
+    "package": "@fortawesome/fontawesome-free",
+    "version": "7",
+    "css": [
+      "/css/all.min.css"
+    ]
+  }
+}
