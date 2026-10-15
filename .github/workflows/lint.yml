@@ -1,0 +1,45 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    if: "!contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, '[ci skip]') && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name)"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Install Node dependencies
+        run: npm install --omit=optional
+
+      - name: Lint JavaScript
+        run: npx eslint --ext .js .
+
+      - name: Lint Less
+        run: npx stylelint "./styles/styles.less"
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Lint HTML
+        # Find generated HTML, excluding news pages as then contain HTML4
+        run: find _site -name '*.html' ! -path '_site/news/*/*.html' -print0 | xargs -0 -r npx htmlhint -c .htmlhintrc.js
+

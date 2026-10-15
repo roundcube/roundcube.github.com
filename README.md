@@ -12,3 +12,7 @@ The pages are rendered with Jekyll and kindly hosted by github.
 ## Build CSS
 
 To build the stylesheets run `make css`.
+
+## Build JS
+
+To build the stylesheets run `make js`.
