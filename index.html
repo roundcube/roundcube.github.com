@@ -2,6 +2,8 @@
 layout: home
 title: Roundcube - Free and Open Source Webmail Software
 date: 2020-04-29T21:10:00Z
+scripts:
+  - banner
 ---
 <div id="banner" class="py-3 py-lg-2">
     <div class="container">
@@ -76,55 +78,3 @@ date: 2020-04-29T21:10:00Z
         </div>
     </div>
 </main>
-
-<script>
-    var announcements = document.getElementsByClassName('rc-announcement');
-    var currnet_date = new Date();
-    var expiry_date, announcement;
-
-    for (var i = 0; i < announcements.length; i++) {
-        announcement = announcements[i];
-
-        if (expiry = announcement.getAttribute('data-rc-expiry')) {
-            expiry_date = new Date(expiry);
-
-            if (currnet_date < expiry_date) {
-                announcement.classList.remove('d-none');
-            }
-        }
-        else if (announcement) {
-            announcement.classList.remove('d-none');
-        }
-    }
-
-    var switch_logo = function() {
-        var logo = document.getElementById('logo');
-        var banner = document.getElementById('bannerimg');
-
-        if (!logo.hasAttribute('data-rc-light')) {
-            logo.setAttribute('data-rc-light', logo.src);
-
-            if (banner.hasAttribute('data-rc-dark')) {
-                banner.setAttribute('data-rc-light', banner.src);
-            }
-        }
-
-        if (document.getElementsByTagName('html')[0].getAttribute('data-bs-theme') == 'dark') {
-            logo.src = logo.getAttribute('data-rc-dark');
-
-            if (banner.hasAttribute('data-rc-dark')) {
-                banner.src = banner.getAttribute('data-rc-dark');
-            }
-        }
-        else {
-            logo.src = logo.getAttribute('data-rc-light');
-
-            if (banner.hasAttribute('data-rc-dark')) {
-                banner.src = banner.getAttribute('data-rc-light');
-            }
-        }
-    };
-
-    switch_logo();
-    document.addEventListener('switch-color-mode', switch_logo, false);
-</script>
