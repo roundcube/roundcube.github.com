@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Roundcube Webmail 1.0.0 released
+title: Roundcube webmail 1.0.0 released
 date: 2014-04-07 21:44:23Z
 tags: releases stable
 ---

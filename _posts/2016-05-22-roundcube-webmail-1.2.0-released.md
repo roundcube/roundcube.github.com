@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Roundcube Webmail 1.2.0 released
+title: Roundcube webmail 1.2.0 released
 tags: releases stable
 ---
 We proudly announce the stable version 1.2.0 of Roundcube Webmail which is now available for download.

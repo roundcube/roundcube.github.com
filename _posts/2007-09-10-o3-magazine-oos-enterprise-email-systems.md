@@ -1,7 +1,7 @@
 ---
 layout: article
 # name: o3-magazine-oos-enterprise-email-systems
-title: ! 'o3 magazine: OOS Enterprise Email Systems'
+title: o3 magazine: OOS enterprise email systems
 date: 2007-09-10 09:19:26Z
 categories: []
 # permalink: /news/2007/09/o3-magazine-oos-enterprise-email-systems/

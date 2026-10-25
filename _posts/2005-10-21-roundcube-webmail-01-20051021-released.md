@@ -1,7 +1,7 @@
 ---
 layout: article
 # name: roundcube-webmail-01-20051021-released
-title: RoundCube Webmail 0.1-20051021 released
+title: Roundcube webmail 0.1-20051021 released
 date: 2005-10-21 13:16:20Z
 categories: []
 # permalink: /news/2005/10/roundcube-webmail-01-20051021-released/

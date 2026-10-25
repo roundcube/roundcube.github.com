@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Roundcube License Change to GPLv3
+title: Roundcube license change to GPLv3
 date: 2012-02-22 09:37:39Z
 ---
 Starting with the upcoming version 0.8, Roundcube will be licensed under the GNU General Public License (GPL) Version 3 or later (with exceptions for skins & plugins) while it was licensed under GPL (v2) before that change.

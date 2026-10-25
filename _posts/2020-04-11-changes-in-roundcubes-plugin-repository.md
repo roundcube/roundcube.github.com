@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Changes in Roundcube's Plugin Repository
+title: Changes in Roundcube's plugin repository
 tags: announcement
 ---
 

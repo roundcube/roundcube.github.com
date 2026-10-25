@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Patches for 0.1-beta"
+title: Patches for 0.1-beta
 date: 2006-02-22 20:53:56Z
 categories: []
 ---
