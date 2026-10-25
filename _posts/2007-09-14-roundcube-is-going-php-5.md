@@ -1,7 +1,7 @@
 ---
 layout: article
 # name: roundcube-is-going-php-5
-title: RoundCube is going PHP 5
+title: Roundcube is going PHP 5
 date: 2007-09-14 07:38:52Z
 categories: []
 # permalink: /news/2007/09/roundcube-is-going-php-5/

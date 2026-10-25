@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Phishing Alert
+title: Phishing alert
 tags: security
 ---
 We have been receiving many reports about phishing attempts appearing out in the wild which are targeting end users of webmail services powered by Roundcube.

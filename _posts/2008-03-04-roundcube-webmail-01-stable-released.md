@@ -1,7 +1,7 @@
 ---
 layout: article
 # name: roundcube-webmail-01-stable-released
-title: RoundCube Webmail 0.1-stable released
+title: Roundcube webmail 0.1-stable released
 date: 2008-03-04 15:47:39Z
 categories: []
 # permalink: /news/2008/03/roundcube-webmail-01-stable-released/

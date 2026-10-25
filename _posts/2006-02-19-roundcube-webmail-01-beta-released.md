@@ -1,7 +1,7 @@
 ---
 layout: article
 # name: roundcube-webmail-01-beta-released
-title: RoundCube Webmail 0.1 Beta released
+title: Roundcube webmail 0.1 beta released
 date: 2006-02-19 20:11:59Z
 categories: []
 # permalink: /news/2006/02/roundcube-webmail-01-beta-released/
