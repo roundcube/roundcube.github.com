@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Multi-arch Docker Images for Roundcube
+title: Multi-arch Docker images for Roundcube
 tags: releases docker
 ---
 With the latest release of Roundcube webmail we proudly announce that the Docker images

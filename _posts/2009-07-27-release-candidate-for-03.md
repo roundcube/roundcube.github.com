@@ -1,7 +1,7 @@
 ---
 layout: article
 # name: release-candidate-for-03
-title: Release Candidate for 0.3
+title: Release candidate for 0.3
 date: 2009-07-27 15:50:46Z
 categories: []
 # permalink: /news/2009/07/release-candidate-for-03/

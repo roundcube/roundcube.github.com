@@ -1,7 +1,7 @@
 ---
 layout: article
 # name: security-update-for-01-beta2
-title: Security Update for 0.1-beta2
+title: Security update for 0.1-beta2
 date: 2006-12-22 22:54:28Z
 categories: []
 # permalink: /news/2006/12/security-update-for-01-beta2/

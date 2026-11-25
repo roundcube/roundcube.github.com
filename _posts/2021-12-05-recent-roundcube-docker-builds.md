@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Recent Roundcube Docker Builds
+title: Recent Roundcube Docker builds
 tags: releases docker
 ---
 After the release of Roundcube 1.5 and the recent security updates we

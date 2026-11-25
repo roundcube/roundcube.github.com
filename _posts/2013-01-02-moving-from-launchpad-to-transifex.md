@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Moving from launchpad to Transifex
+title: Moving from Launchpad to Transifex
 date: 2013-01-02 17:23:23Z
 ---
 I'd like to inform you that we now decided to switch from launchpad to Transifex to maintain the translations for Roundcube. You can find Roundcube on Transifex.com at [https://www.transifex.com/projects/p/roundcube-webmail.](https://www.transifex.com/projects/p/roundcube-webmail.)

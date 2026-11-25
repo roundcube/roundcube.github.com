@@ -1,4 +1,4 @@
-<h1>{{ page.title }}</h1>
+<h1>Roundcube project news - latest {{ page.subtitle }}</h1>
 
 <div class="artical-list">
     {% for post in posts limit: site.paginate %}
@@ -6,4 +6,4 @@
     {% endfor %}
 </div>
 
-<a href="/news/" class="rc-icon back-link d-block mt-4">Return to News overview</a>
+<a href="/news/" class="rc-icon back-link d-block mt-4">Return to news overview</a>

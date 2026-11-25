@@ -1,10 +1,10 @@
 ---
 layout: article
-# name: roundcube-webmail-01-rc1-released--
-title: ! 'RoundCube Webmail 0.1-RC1 released  '
+# name: roundcube-webmail-01-rc1-released
+title: Roundcube webmail 0.1-rc1 released
 date: 2007-05-18 14:28:34Z
 categories: []
-# permalink: /news/2007/05/roundcube-webmail-01-rc1-released--/
+# permalink: /news/2007/05/roundcube-webmail-01-rc1-released/
 ---
 The Release Candidate number one has just been released. It includes a better and less memory consuming message parser and a neat integration of LDAP address directories. Also session authentication has changed to get rid of the annoying session-timeouts.
 

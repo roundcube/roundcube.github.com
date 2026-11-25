@@ -1,6 +1,6 @@
 ---
 layout: article
-title: RoundCube on cPanel and Mac OS X
+title: Roundcube on cPanel and Mac OS X
 date: 2006-03-05 15:11:57Z
 categories: []
 permalink: /news/2006/03/15/roundcube-on-cpanel-and-mac-os-x

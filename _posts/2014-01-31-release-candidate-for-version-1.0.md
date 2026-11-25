@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Release Candidate for version 1.0
+title: Release candidate for version 1.0
 date: 2014-01-30 10:22:16Z
 tags: releases
 ---

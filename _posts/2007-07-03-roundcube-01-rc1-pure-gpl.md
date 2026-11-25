@@ -1,7 +1,7 @@
 ---
 layout: article
 # name: roundcube-01-rc1-pure-gpl
-title: RoundCube 0.1-rc1 pure GPL
+title: Roundcube 0.1-rc1 pure GPL
 date: 2007-07-03 15:48:45Z
 categories: []
 # permalink: /news/2007/07/roundcube-01-rc1-pure-gpl/

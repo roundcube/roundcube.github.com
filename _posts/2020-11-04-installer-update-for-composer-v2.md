@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Installer Update for Composer 2.0
+title: Installer update for Composer 2.0
 tags: announcement
 ---
 
