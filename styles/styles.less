@@ -27,7 +27,7 @@
 @color-dark-footer: lighten(@color-footer, 30%);
 
 :root {
-  --bs-font-sans-serif: -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --bs-font-sans-serif: -apple-system,"Segoe UI",roboto,"Helvetica Neue",arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   --rc-color-primary: @color-primary;
   --rc-color-header-background: @color-header-background;
   --rc-color-banner-background: @color-banner-background;
@@ -74,8 +74,8 @@ html[data-bs-theme="dark"] {
   background-color: var(--rc-color-header-background) !important;
 }
 
-a:not(.btn):not(.nav-link):not(.dropdown-item),
-.btn-link {
+a:not(.btn, .nav-link, .dropdown-item),
+a.btn-link {
   text-decoration: none;
 
   &.anchor {
@@ -207,7 +207,7 @@ a.anchor {
     text-decoration: none !important;
   }
 
-  &:after {
+  &::after {
     font: var(--fa-font-solid);
     content: @fa-var-link;
   }
@@ -217,7 +217,7 @@ a.anchor {
   }
 }
 
-a.copy-link {
+button.copy-link {
   color: var(--bs-secondary-color);
   font-size: .75rem;
   display: inline-block;
@@ -229,29 +229,29 @@ a.copy-link {
     text-decoration: none !important;
   }
 
-  &:after {
+  &::after {
     font: var(--fa-font-regular);
     content: @fa-var-clipboard;
   }
 
-  &.complete:after {
+  &.complete::after {
     font: var(--fa-font-solid);
     content: @fa-var-check;
     color: var(--rc-color-success);
   }
 
-  &.error:after {
+  &.error::after {
     font: var(--fa-font-solid);
     content: @fa-var-triangle-exclamation;
     color: var(--rc-color-error);
   }
 }
 
-a.copy-popover-link {
+button.copy-popover-link {
   color: var(--bs-body-color);
   text-decoration: none !important;
 
-  &.checksum:after {
+  &.checksum::after {
     font: var(--fa-font-solid);
     content: @fa-var-file-shield;
   }
@@ -329,11 +329,13 @@ a.mail-list-link::before {
   font: var(--fa-font-regular);
   content: @fa-var-envelope;
 }
+
 /*
 a.asc-link::after {
   content: @fa-var-key;
 }
 */
+
 a.irc-link::after {
   content: @fa-var-comments;
 }
@@ -426,10 +428,14 @@ div.color-modes > ul.dropdown-menu {
 
     .modal-arrow {
       position: absolute;
+      display: block;
       top: 0;
       bottom: 0;
       height: 100%;
       width: 30%;
+      cursor: default;
+      background: none;
+      border: 0;
 
       &.right-arrow {
         right: 0;
