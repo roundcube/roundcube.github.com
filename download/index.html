@@ -3,6 +3,8 @@ layout: default
 title: Roundcube Webmail Downloads
 navtitle: Download
 lastmod: 2019-08-28T12:32:00Z
+scripts:
+  - copy
 ---
 <h1>Download your version of Roundcube</h1>
 
@@ -37,9 +39,9 @@ lastmod: 2019-08-28T12:32:00Z
                 <td class="size text-nowrap">{{ package.size }}</td>
                 <td class="checksum font-monospace text-nowrap text-center text-md-start pe-3">
                     <span class="d-none d-md-inline copy-popover-target">
-                        <span class="copy-target d-block d-md-inline-block text-nowrap text-truncate align-middle py-3 py-md-0">{{ package.checksum }}</span><span class="py-3 py-md-0"><a class="copy-link" href="#" aria-label="Copy text"></a></span>
+                        <span class="copy-target d-block d-md-inline-block text-nowrap text-truncate align-middle py-3 py-md-0">{{ package.checksum }}</span><span class="py-3 py-md-0 d-flex d-md-inline"><button type="button" class="btn btn-link p-0 text-decoration-none copy-link" aria-label="Copy text"></button></span>
                     </span>
-                    <a class="d-inline d-md-none copy-popover-link checksum" href="#" aria-label="SHA-256 checksum" onclick="return false;" data-bs-title="SHA-256 checksum" data-bs-placement="left"></a>
+                    <button type="button" class="btn btn-link d-inline d-md-none p-0 text-decoration-none copy-popover-link checksum" aria-label="SHA-256 checksum" data-bs-title="SHA-256 checksum" data-bs-placement="left"></button>
                 </td>
             </tr>
         {% endfor %}
@@ -115,7 +117,7 @@ lastmod: 2019-08-28T12:32:00Z
 
 <p>After downloading the <a href="/download/pubkey.asc" class="rc-icon asc-link">pubkey</a> and the signature file, verify packages with</p>
 <p class="bg-quote px-3 pe-2 font-monospace d-flex">
-    <span class="copy-target d-block text-nowrap overflow-auto py-3 flex-grow-1">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</span><span class="py-3"><a class="copy-link" href="#" aria-label="Copy text"></a></span>
+    <span class="copy-target d-block text-nowrap overflow-auto py-3 flex-grow-1">gpg --verify roundcubemail-&lt;version&gt;.tar.gz{.asc,}</span><span class="py-3"><button type="button" class="btn btn-link p-0 text-decoration-none copy-link" aria-label="Copy text"></button></span>
 </p>
 
 <h2 id="installation">Installation and upgrading <a class="anchor" href="#installation" aria-label="Link to this section: Installation and upgrading"></a></h2>
@@ -141,13 +143,12 @@ lastmod: 2019-08-28T12:32:00Z
             </div>
             <div class="card-body">
                 <p>
-                    <a href="https://apps.nextcloud.com/apps/mail_roundcube" target="_blank"><img src="/images/nextcloud-roundcube-main-window.png" style="max-width: 100%;" /></a>
+                    <a href="https://apps.nextcloud.com/apps/mail_roundcube" target="_blank"><img src="/images/nextcloud-roundcube-main-window.png" class="w-100" alt="Nextcloud webmail"></a>
                     The Nextcloud app <a href="https://apps.nextcloud.com/apps/mail_roundcube" target="_blank">"Roundcube Mail"</a> integrates an existing Roundcube standalone email-webapp into Nextcloud, with optional SSO.
                 </p>
             </div>
         </div>
     </div>
-
 </div>
 
 
@@ -161,7 +162,7 @@ lastmod: 2019-08-28T12:32:00Z
             </div>
             <div class="card-body">
                 <p><a href="https://nextcloud.com/roundcube/" class="fw-bold" target="_blank">Roundcube for Enterprises</a>
-                    is a stand-alone, all-in-one email solution for service providers by Nextcloud. Your customers need a reliable, dependable and performant email service. The Nextcloud Roundcube Enterprise subscription helps you deliver exactly that.
+                    is a stand-alone, all-in-one email solution for service providers by Nextcloud. Your customers need a reliable, dependable and performant email service. The Nextcloud Roundcube Enterprise subscription helps you deliver exactly that.</p>
             </div>
         </div>
     </div>

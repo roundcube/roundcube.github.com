@@ -5,7 +5,7 @@
 {% for page in site.pages %}
 	{% if page.layout != 'nil' %}
 	<url>
-		<loc>{{site.hostname }}{{ page.url | remove:'index.html' }}</loc>
+		<loc>{{site.url}}{{ page.url | remove:'index.html' }}</loc>
 		{% if page.lastmod != nil %}
 		<lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>
 		{% endif %}
@@ -15,7 +15,7 @@
 {% endfor %}
 {% for post in site.posts %}
 	<url>
-		<loc>{{site.hostname }}{{ post.url | remove:'index.html' }}</loc>
+		<loc>{{site.url}}{{ post.url | remove:'index.html' }}</loc>
 		{% if post.lastmod == nil %}
 		<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 		{% else %}
