@@ -29,8 +29,7 @@
     "old-stable": {
         "title": "Old stable",
         "titleVersion": true,
-        "packages": [
-        ]
+        "packages": []
     },
     "lts": {
         "title": "LTS versions",
@@ -41,23 +40,21 @@
                 "package": "Complete",
                 "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.22/roundcubemail-1.6.22-complete.tar.gz",
                 "version": "1.6.22",
-                "size": "5.6 MB",
+                "size": "5.7 MB",
                 "checksum": "09bb4c7f0cf24039e28c73f349d5eb99a1297a423c886230fd8d4e32b091b1c2"
-            },
+            }
         ]
     },
     "beta": {
         "title": "Beta version",
         "titleVersion": true,
         "description": "We recommend to test pre-release versions on a separate environment, and don't forget to backup your data before installing.",
-        "packages": [
-        ]
+        "packages": []
     },
     "rc": {
         "title": "Release candidate",
         "titleVersion": true,
         "description": "We recommend to test pre-release versions on a separate environment, and don't forget to backup your data before installing.",
-        "packages": [
-        ]
+        "packages": []
     }
 }

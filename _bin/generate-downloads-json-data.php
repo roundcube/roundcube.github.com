@@ -4,14 +4,35 @@
 /**
  * Retrieve release assest from the GitHub API
  */
+define('BASE_PATH', realpath(__DIR__ . '/..') . '/');
 define('GITHUB_API', 'https://api.github.com/repos/roundcube/roundcubemail');
 
-if (!isset($argv[1])) {
-    echo 'Usage: ' . basename(__FILE__) . " VERSION\n";
+$downloads_file = BASE_PATH . '_data/downloads.json';
+if (!file_exists($downloads_file) || !is_writable($downloads_file)) {
+    throw new RuntimeException(
+        '_data/downloads.json file not found or not writable'
+    );
+}
+
+$downloads = json_decode(file_get_contents($downloads_file), true);
+
+if (!isset($argv[1]) || !isset($argv[2])) {
+    echo 'Usage: ' . basename(__FILE__) . " PACKAGE_TYPE VERSION\n";
+    echo 'Supported package types: ' . implode('|', array_keys($downloads)) ."\n";
     exit(1);
 }
 
-$version = $argv[1];
+$type = $argv[1];
+$version = $argv[2];
+
+if (!array_key_exists($type, $downloads)) {
+    throw new RuntimeException(
+        sprintf(
+            'Unknown package type: %s',
+            $type
+        )
+    );
+}
 
 /**
  * Make an HTTP GET request and decode the JSON response.
@@ -141,8 +162,27 @@ function generateData($github_assets, $version, $package_name, $filename)
 
 $github_assets = retrieveAssets($version);
 
-echo json_encode([
-    generateData($github_assets, $version, 'Dependent', "roundcubemail-{$version}.tar.gz"),
-    generateData($github_assets, $version, 'Complete', "roundcubemail-{$version}-complete.tar.gz"),
-    generateData($github_assets, $version, 'Framework', "roundcube-framework-{$version}.tar.gz"),
-], \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES) . "\n";
+switch ($type) {
+    case 'lts':
+        $packages = [
+            generateData($github_assets, $version, 'Complete', "roundcubemail-{$version}-complete.tar.gz"),
+        ];
+        break;
+    case 'old-stable':
+        $packages = [
+            generateData($github_assets, $version, 'Dependent', "roundcubemail-{$version}.tar.gz"),
+            generateData($github_assets, $version, 'Complete', "roundcubemail-{$version}-complete.tar.gz"),
+        ];
+        break;
+    default:
+        $packages = [
+            generateData($github_assets, $version, 'Dependent', "roundcubemail-{$version}.tar.gz"),
+            generateData($github_assets, $version, 'Complete', "roundcubemail-{$version}-complete.tar.gz"),
+            generateData($github_assets, $version, 'Framework', "roundcube-framework-{$version}.tar.gz"),
+        ];
+}
+
+$downloads[$type]['packages'] = $packages;
+file_put_contents($downloads_file, json_encode($downloads, \JSON_PRETTY_PRINT | \JSON_UNESCAPED_SLASHES) . "\n");
+
+echo "_data/downloads.json updated.\n";
